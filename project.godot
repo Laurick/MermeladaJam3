@@ -11,10 +11,10 @@ config_version=5
 [application]
 
 config/name="Gemas-para-colosos"
-config/version="1.0"
 run/main_scene="res://scenes/main.tscn"
-config/features=PackedStringArray("4.2", "Forward Plus")
+config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+config/version="1.0"
 
 [autoload]
 
@@ -31,4 +31,4 @@ enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://scenes/main.tscn", "res://test.dialogue", "res://dialogue/test.dialogue")
+locale/translations_pot_files=PackedStringArray("res://scenes/main.tscn", "res://dialogue/test.dialogue", "res://dialogues/test.dialogue")
