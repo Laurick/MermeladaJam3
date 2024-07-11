@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dfsgn4i0tfipk"]
+[gd_scene load_steps=3 format=3 uid="uid://dfsgn4i0tfipk"]
 
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_6ykpe"]
 [ext_resource type="Script" path="res://components/version_label.gd" id="1_vblcm"]
 
 [node name="Main" type="Control"]
@@ -9,6 +10,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_vertical = 4
+script = ExtResource("1_6ykpe")
 
 [node name="VersionLabel" type="Label" parent="."]
 layout_mode = 1
@@ -22,3 +25,34 @@ offset_top = -23.0
 grow_horizontal = 0
 grow_vertical = 0
 script = ExtResource("1_vblcm")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -20.0
+offset_right = 100.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 14
+
+[node name="PlayButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "PLAY"
+
+[node name="OptionsButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "OPTIONS"
+
+[node name="CreditsButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "CREDITS"
+
+[connection signal="pressed" from="HBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
