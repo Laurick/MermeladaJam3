@@ -1,5 +1,6 @@
 # LANGUAGE translation for Gemas-para-colosos for the following files:
 # res://scenes/main.tscn
+# res://dialogue/test.dialogue
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -10,3 +11,40 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8-bit\n"
+
+#: scenes/main.tscn
+msgid "Titulo prueba"
+msgstr ""
+
+#: dialogue/test.dialogue
+msgctxt "dialogue"
+msgid "Nathan"
+msgstr ""
+
+#: dialogue/test.dialogue
+msgid "[[Hi|Hello|Howdy]], this is some dialogue."
+msgstr ""
+
+#: dialogue/test.dialogue
+msgid "Here are some choices."
+msgstr ""
+
+#: dialogue/test.dialogue
+msgid "Soy él"
+msgstr ""
+
+#: dialogue/test.dialogue
+msgid "Soy ella"
+msgstr ""
+
+#: dialogue/test.dialogue
+msgid "Soy elle"
+msgstr ""
+
+#: dialogue/test.dialogue
+msgid "For more information see the online documentation."
+msgstr ""
+
+#: dialogue/test.dialogue
+msgid "Hello [if Global.gender == 0]él[/if][if Global.gender == 1]ella[/if][if Global.gender == 2]elle[/if], nice!"
+msgstr ""
