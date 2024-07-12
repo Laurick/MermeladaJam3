@@ -1,13 +1,14 @@
 ~ this_is_a_node_title
 
 Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => this_is_a_node_title
-- End the conversation => END
-Nathan: For more information see the online documentation.
 
+Nathan: Here are some choices.
+- Soy él
+	do Global.gender = 0
+- Soy ella
+	do Global.gender = 1
+- Soy elle
+	do Global.gender = 2
+Nathan: For more information see the online documentation.
+Nathan: Hello [if Global.gender == 0]él[/if][if Global.gender == 1]ella[/if][if Global.gender == 2]elle[/if], nice!
 => END
