@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7v2i7lwmp3yp"]
+
+[ext_resource type="Script" path="res://components/edit.gd" id="1_bl7kd"]
+
+[node name="Edit" type="Control"]
+layout_mode = 3
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bl7kd")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Pon tu nombre aqui"
+
+[node name="ButtonSubmitEdit" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "Aceptar"
+
+[connection signal="text_changed" from="HBoxContainer/LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="text_submitted" from="HBoxContainer/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="HBoxContainer/ButtonSubmitEdit" to="." method="_on_button_submit_edit_pressed"]

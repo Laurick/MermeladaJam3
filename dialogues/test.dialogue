@@ -3,8 +3,10 @@
 Bueno, ya lo tengo todo listo. Solo me queda rellenar la tarjeta de empleado y lo tengo todo.
 
 Me llamo...
-#Patrick: aquí no sé codificar que el jugadore pueda escribir el nombre.
+~ name
+=> END
 
+~ gender
 {{player_name}}: 
 - Soy él
 	do Global.gender = 0
@@ -14,22 +16,17 @@ Me llamo...
 	do Global.gender = 2
 	
 	*suspiras* Vaya letra de mierda, pero qué le vamos a hacer...
-=> END
 
 ~ set_stones
-
 {{player_name}}: Vale, ahora a colocar todas las piedras que tenemos...
-=> END 
 
 ~ find_manual
-
 {{player_name}}: Que, la verdad, son muy pocas. Pero bueno.
 En fin, el stock ahora mismo es lo de menos. Voy a echar un vistazo al mostrador.
 ...
 ...
 ¡Oh! Aquí hay un manual.
 Ya sé lo que tengo que hacer, pero no creo que me haga daño leerlo de nuevo, por si hay algo que se les haya olvidado decirme en la formación.
-=> END 
 
 ~ read_manual
 
