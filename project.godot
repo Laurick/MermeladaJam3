@@ -32,4 +32,4 @@ enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://scenes/main.tscn", "res://dialogue/test.dialogue", "res://dialogues/test.dialogue")
+locale/translations_pot_files=PackedStringArray("res://scenes/main.tscn", "res://dialogues/test.dialogue")

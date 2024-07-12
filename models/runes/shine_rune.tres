@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("2_ci5nq")
-name = "Dry"
-description = "Es una runa seca"
+name = "Sirius"
+description = "La runa más brillante."
 image = ExtResource("1_rb7fw")

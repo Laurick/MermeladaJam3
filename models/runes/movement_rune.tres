@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("1_k74x4")
-name = "Movement"
-description = "Esta es una runa de movimiento"
+name = "Movimiento. "
+description = "La runa para no quedarse quieto. "
 image = ExtResource("1_b1y2a")

@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Stone" load_steps=2 format=3 uid="uid://crhi6fh1vowgk"]
+[gd_resource type="Resource" script_class="Stone" load_steps=3 format=3 uid="uid://coqxwe86fjbch"]
 
 [ext_resource type="Script" path="res://models/stones/stone.gd" id="1_a8g1y"]
+[ext_resource type="Texture2D" uid="uid://cnhg8gs0xnmeh" path="res://images/stone_D.tres" id="1_su1nf"]
 
 [resource]
 script = ExtResource("1_a8g1y")
 name = "Citrino"
-description = "Cosas, buenas"
+description = "Tiene un enorme poder para afectar a la humedad de aquello que toca."
+image = ExtResource("1_su1nf")

@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Stone" load_steps=2 format=3 uid="uid://cq5cgfqagww0e"]
+[gd_resource type="Resource" script_class="Stone" load_steps=3 format=3 uid="uid://cq5cgfqagww0e"]
 
 [ext_resource type="Script" path="res://models/stones/stone.gd" id="1_0l6xb"]
+[ext_resource type="Texture2D" uid="uid://ejvj2xyd1l4p" path="res://images/stone_C.tres" id="1_v5t50"]
 
 [resource]
 script = ExtResource("1_0l6xb")
-name = ""
-description = ""
+name = "Cuarzo azul"
+description = "Se respira tranquilidad y calma a su alrededor."
+image = ExtResource("1_v5t50")
