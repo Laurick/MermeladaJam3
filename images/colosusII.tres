@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://bt8cy8otu8fqm"]
+
+[ext_resource type="Texture2D" uid="uid://emxsyr7j4jkc" path="res://images/COLOSOS_1_DRAFT.png" id="1_e70ys"]
+
+[resource]
+atlas = ExtResource("1_e70ys")
+region = Rect2(154.228, 32.568, 865.83, 1245.58)

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Stone" load_steps=2 format=3 uid="uid://crhi6fh1vowgk"]
+
+[ext_resource type="Script" path="res://models/stones/stone.gd" id="1_a8g1y"]
+
+[resource]
+script = ExtResource("1_a8g1y")
+name = "Citrino"
+description = "Cosas, buenas"

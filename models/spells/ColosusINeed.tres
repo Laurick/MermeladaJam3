@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://d4i2y22umannr"]
+
+[ext_resource type="Script" path="res://models/spells/spell.gd" id="1_v7f7g"]
+
+[resource]
+script = ExtResource("1_v7f7g")
+runes = Array[Resource("res://models/runes/rune.gd")]([])
+stones = Array[Resource("res://models/stones/stone.gd")]([])

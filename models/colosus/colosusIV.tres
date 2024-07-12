@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Colosus" load_steps=4 format=3 uid="uid://d32fanlh2nmvj"]
+
+[ext_resource type="Texture2D" uid="uid://dtlo2cefidku" path="res://images/colosusIII.tres" id="1_26sd0"]
+[ext_resource type="Resource" uid="uid://b50kl66wldvxg" path="res://models/spells/ColosusIIINeed.tres" id="2_x8big"]
+[ext_resource type="Script" path="res://models/colosus/colosus.gd" id="3_qsq30"]
+
+[resource]
+script = ExtResource("3_qsq30")
+name = "Colose III"
+needs = ExtResource("2_x8big")
+image = ExtResource("1_26sd0")

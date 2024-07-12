@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Stone" load_steps=2 format=3 uid="uid://cboxivp1k1uua"]
+
+[ext_resource type="Script" path="res://models/stones/stone.gd" id="1_5fcqw"]
+
+[resource]
+script = ExtResource("1_5fcqw")
+name = "Obsidiana"
+description = "Crecimiento, curación, protección"
