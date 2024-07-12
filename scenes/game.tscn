@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c7k424rithh80"]
+[gd_scene load_steps=19 format=3 uid="uid://c7k424rithh80"]
 
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_p64r6"]
 [ext_resource type="Script" path="res://components/StoneButton.gd" id="2_4heph"]
@@ -8,6 +8,16 @@
 [ext_resource type="Resource" uid="uid://j8yde08310qx" path="res://models/stones/turquoise.tres" id="3_v03xb"]
 [ext_resource type="Resource" uid="uid://cqk07mdes8r0i" path="res://models/runes/dry_rune.tres" id="4_3llky"]
 [ext_resource type="Resource" uid="uid://ca70mw4l360k2" path="res://models/runes/hair_rune.tres" id="5_5okme"]
+[ext_resource type="Resource" uid="uid://001wpo6evy5v" path="res://models/stones/obsidian.tres" id="5_sctr1"]
+[ext_resource type="Resource" uid="uid://dfs0c5knxh6hy" path="res://models/stones/diamond.tres" id="6_wes5p"]
+[ext_resource type="Resource" uid="uid://coqxwe86fjbch" path="res://models/stones/citrine.tres" id="7_si8p0"]
+[ext_resource type="Resource" uid="uid://cq5cgfqagww0e" path="res://models/stones/blue_quartz.tres" id="8_cb1xa"]
+[ext_resource type="Resource" uid="uid://chejal5adpcgs" path="res://models/runes/clay_rune.tres" id="12_amsbb"]
+[ext_resource type="Resource" uid="uid://brvr623cv7lh" path="res://models/runes/exclude_rune.tres" id="13_xm1ed"]
+[ext_resource type="Resource" uid="uid://byooehvynad3e" path="res://models/runes/pain_rune.tres" id="14_134kj"]
+[ext_resource type="Resource" uid="uid://7idqp2bxie3c" path="res://models/runes/shine_rune.tres" id="15_iijds"]
+[ext_resource type="Resource" uid="uid://scg2b3pl2lyg" path="res://models/runes/union_rune.tres" id="16_yfnrx"]
+[ext_resource type="Resource" uid="uid://c8amg2qwsubuc" path="res://models/runes/water_rune.tres" id="17_qj2yk"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -44,12 +54,40 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="StoneButton" type="TextureButton" parent="Stones"]
+[node name="TurquoiseButton" type="TextureButton" parent="Stones"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_4heph")
 stone = ExtResource("3_v03xb")
+
+[node name="ObsidianButton" type="TextureButton" parent="Stones"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_4heph")
+stone = ExtResource("5_sctr1")
+
+[node name="DiamondButton" type="TextureButton" parent="Stones"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_4heph")
+stone = ExtResource("6_wes5p")
+
+[node name="CitrineButton" type="TextureButton" parent="Stones"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_4heph")
+stone = ExtResource("7_si8p0")
+
+[node name="BlueQuartzButton" type="TextureButton" parent="Stones"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_4heph")
+stone = ExtResource("8_cb1xa")
 
 [node name="Runes" type="Control" parent="."]
 anchors_preset = 0
@@ -84,6 +122,48 @@ offset_right = 323.0
 offset_bottom = -2.0
 script = ExtResource("3_delqg")
 rune = ExtResource("5_5okme")
+
+[node name="ClayRuneButton" type="TextureButton" parent="Runes"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_delqg")
+rune = ExtResource("12_amsbb")
+
+[node name="ExcludeRuneButton" type="TextureButton" parent="Runes"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_delqg")
+rune = ExtResource("13_xm1ed")
+
+[node name="PainRuneButton" type="TextureButton" parent="Runes"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_delqg")
+rune = ExtResource("14_134kj")
+
+[node name="ShineRuneButton" type="TextureButton" parent="Runes"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_delqg")
+rune = ExtResource("15_iijds")
+
+[node name="UnionRuneButton" type="TextureButton" parent="Runes"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_delqg")
+rune = ExtResource("16_yfnrx")
+
+[node name="WaterRuneButton" type="TextureButton" parent="Runes"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_delqg")
+rune = ExtResource("17_qj2yk")
 
 [node name="Fader" type="ColorRect" parent="."]
 layout_mode = 1

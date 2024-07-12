@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Rune" load_steps=3 format=3 uid="uid://chejal5adpcgs"]
+
+[ext_resource type="Script" path="res://models/runes/rune.gd" id="1_h058n"]
+[ext_resource type="Texture2D" uid="uid://cl03ucj5j2ma5" path="res://images/rune_H.tres" id="1_vb550"]
+
+[resource]
+script = ExtResource("1_h058n")
+name = "Arcilla."
+description = "Runa que alberga el poder de transformar del barro."
+image = ExtResource("1_vb550")

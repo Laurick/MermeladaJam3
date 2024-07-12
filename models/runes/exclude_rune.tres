@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Rune" load_steps=3 format=3 uid="uid://brvr623cv7lh"]
+
+[ext_resource type="Texture2D" uid="uid://bbxjbyhwpnuhg" path="res://images/rune_F.tres" id="1_f1hth"]
+[ext_resource type="Script" path="res://models/runes/rune.gd" id="1_oyc4c"]
+
+[resource]
+script = ExtResource("1_oyc4c")
+name = "Excluir."
+description = "Runa para limitar el alcance."
+image = ExtResource("1_f1hth")
