@@ -1,14 +1,58 @@
-~ this_is_a_node_title
+~ intro
 
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
+Bueno, ya lo tengo todo listo. Solo me queda rellenar la tarjeta de empleado y lo tengo todo.
 
-Nathan: Here are some choices.
+Me llamo...
+#Patrick: aquí no sé codificar que el jugadore pueda escribir el nombre.
+#Patrick: hay que crear la variable player_name en algún sitio también, pero no sé dónde.
+#Dejo comentados todos los #{{player_name}} hasta que esté la variable pa que no dé error.
+#{{player_name}}: 
 - Soy él
 	do Global.gender = 0
 - Soy ella
 	do Global.gender = 1
 - Soy elle
 	do Global.gender = 2
-Nathan: For more information see the online documentation.
-Nathan: Hello [if Global.gender == 0]él[/if][if Global.gender == 1]ella[/if][if Global.gender == 2]elle[/if], nice!
+	
+	*suspiras* Vaya letra de mierda, pero qué le vamos a hacer...
 => END
+
+~ set_stones
+
+#{{player_name}}: Vale, ahora a colocar todas las piedras que tenemos...
+=> END 
+
+~ find_manual
+
+#{{player_name}}: Que, la verdad, son muy pocas. Pero bueno.
+En fin, el stock ahora mismo es lo de menos. Voy a echar un vistazo al mostrador.
+...
+...
+¡Oh! Aquí hay un manual.
+Ya sé lo que tengo que hacer, pero no creo que me haga daño leerlo de nuevo, por si hay algo que se les haya olvidado decirme en la formación.
+=> END 
+
+~ read_manual
+
+if Global.gender == 0
+	¡Bienvenido a tu nueva aventura en Piedras Salubles SA!
+elif Global.gender == 1
+	¡Bienvenida a tu nueva aventura en Piedras Salubles SA!
+elif Global.gender == 2
+	¡Bienvenide a tu nueva aventura en Piedras Salubles SA!
+
+Como ya te habrán informado en el curso de formación, tu deber como dependiente es ayudar a los clientes con sus necesidades más importantes. ¡Del tipo que sean! Un buen profesional siempre sabrá cuál es el producto que más le conviene a su cliente. 
+
+Para ello, lo único que tendrás que hacer es elegir las runas y piedras que mejor se ajusten a las necesidades del cliente. Fácil, ¿verdad? Desde Piedras Salubles SA nos comprometemos a facilitar todo el trabajo a nuestros empleados, de manera que, junto a este manual, habrá un vademécum en el que podrás consultar cualquier duda que tengas respecto a las piedras y a las runas. ¡Esto está chupado!
+
+La satistacción del cliente es nuestro beneficio y, para asegurarnos de ello, cada cierto tiempo irá a visitar la tienda un representante de ventas para evaluarte. Si la opinión de la tienda es negativa, recibirás menos cargamentos de piedras y runas. ¡Pero no temas! Eso no complicará tu función aquí.
+
+Y, ahora, ¡ponte detrás del mostrador y ayuda a cuantos más clientes puedas!
+
+Atentamente,\n el equipo comercial de Piedras Salubres SA. 
+
+=> END 
+
+
+
+
