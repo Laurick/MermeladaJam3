@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Stone" load_steps=3 format=3 uid="uid://dfs0c5knxh6hy"]
+
+[ext_resource type="Texture2D" uid="uid://rjf5k7rvcoyc" path="res://images/stone_E.tres" id="1_1q0s7"]
+[ext_resource type="Script" path="res://models/stones/stone.gd" id="1_ebik3"]
+
+[resource]
+script = ExtResource("1_ebik3")
+name = "Diamante"
+description = "Símbolo de pureza y fuerza."
+image = ExtResource("1_1q0s7")

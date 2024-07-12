@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("2_totcp")
-name = "Pelo"
+name = "Pelo."
 description = "La runa más peliaguda. Usar con precaución. "
 image = ExtResource("1_3q6ty")

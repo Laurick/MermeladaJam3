@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Rune" load_steps=3 format=3 uid="uid://byooehvynad3e"]
+
+[ext_resource type="Script" path="res://models/runes/rune.gd" id="1_bdsk5"]
+[ext_resource type="Texture2D" uid="uid://k6lcvkumqkbn" path="res://images/rune_E.tres" id="1_ca52x"]
+
+[resource]
+script = ExtResource("1_bdsk5")
+name = "Molestia."
+description = "Runa que apacigua el malestar."
+image = ExtResource("1_ca52x")
