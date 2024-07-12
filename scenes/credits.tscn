@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://jtjsja3atsjg"]
+[gd_scene load_steps=2 format=3 uid="uid://jtjsja3atsjg"]
+
+[ext_resource type="Script" path="res://scenes/credits.gd" id="1_hw64p"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -7,3 +9,111 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_hw64p")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Despedrado"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="AGameByLabel" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "A game by"
+horizontal_alignment = 1
+
+[node name="JamTeDigoLabel" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Jam te Digo"
+
+[node name="ProgrammingLabel" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Programing"
+horizontal_alignment = 1
+
+[node name="ProgrammingPeopleLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "Ildesir -> [url]https://ildesir.itch.io[/url]
+SailorFu -> [url]https://sailorfu.itch.io[/url]
+Locrio -> [url]https://locrio.itch.io[/url]"
+fit_content = true
+
+[node name="MusicTitle" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Music
+"
+horizontal_alignment = 1
+
+[node name="MusicPeopleLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "Monkos -> [url]https://locrio.itch.io[/url]
+LocrioPerdido -> [url]https://soundcloud.com/11monkos[/url]"
+fit_content = true
+
+[node name="ArtTitle" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Art
+"
+horizontal_alignment = 1
+
+[node name="ArtPeopleLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "Claratmente -> [url]https://linktr.ee/clarartmente[/url]
+PSuzume -> [url]https://psuzume.itch.io/[/url]
+SailorFu -> [url]https://sailorfu.itch.io/[/url]
+Noa Cuadrado -> [url]https://noahuxui.itch.io[/url]"
+fit_content = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="WriterTitle" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Writer
+"
+horizontal_alignment = 1
+
+[node name="WriterPeopleLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+bbcode_enabled = true
+text = "Nora Kaals -> [url]https://teconkaals.itch.io[/url]"
+fit_content = true
+
+[node name="AssetsTitle" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Assets used:"
+horizontal_alignment = 1
+
+[node name="AssetsLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+bbcode_enabled = true
+text = "Dialoge Manager by Nathan hoad -> [url]https://github.com/nathanhoad/godot_dialogue_manager[/url] "
+fit_content = true
+
+[node name="BackButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "BACK"
+
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
