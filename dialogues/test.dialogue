@@ -66,11 +66,11 @@ Me faltan piedras y runas. Menudo marrón. *suspiro* Espero que nadie me pida na
 ~ first_customer
 
 {{player_name}}: ¡Buenos días! Le doy la bienvenida a nuestra tienda. ¿En qué puedo ayudar?
-{{customer_1}}: ...
+Venus: ...
 {{player_name}}: ...
-{{customer_1}}: ...
+Venus: ...
 {{player_name}}: Oiga...¿puede dejar de mirarme?
-{{customer_1}}: ¡Oh! Lo siento. Es que...
+Venus: ¡Oh! Lo siento. Es que...
 
 if Global.gender == 0
 	...eres un coloso un poco raro. 
@@ -80,18 +80,18 @@ elif Global.gender == 2
 	...eres une colose un poco rare.
 
 {{player_name}}: ¿Perdón? (¿Me está insultando?)
-{{customer_1}}: Ah, no me hagas caso. *sonríe* Cuando llega gente nueva siempre llama la atención. Es como la novedad, ¿sabes?
+Venus: Ah, no me hagas caso. *sonríe* Cuando llega gente nueva siempre llama la atención. Es como la novedad, ¿sabes?
 {{player_name}}: *sonríes* Creo que le entiendo.
-{{customer_1}}: Claro que sí. Tienes pinta de ser muy [if Global.gender == 0]listo[/if][if Global.gender == 1]lista[/if][if Global.gender == 2]liste[/if], lo que hace que me pregunte...¿qué se te ha perdido en un sitio tan lejos de todo como lo es Rocaburgo?
+Venus: Claro que sí. Tienes pinta de ser muy [if Global.gender == 0]listo[/if][if Global.gender == 1]lista[/if][if Global.gender == 2]liste[/if], lo que hace que me pregunte...¿qué se te ha perdido en un sitio tan lejos de todo como lo es Rocaburgo?
 {{player_name}}: La necesidad de trabajar, supongo.
-{{customer_1}}: Hmm. *sacude la cabeza* Si es lo que dices, te creeré.
+Venus: Hmm. *sacude la cabeza* Si es lo que dices, te creeré.
 {{player_name}}: ¿Piensa que no es la verdadera razón?
-{{customer_1}}: *se ríe* No lo sé. ¿Lo es?
+Venus: *se ríe* No lo sé. ¿Lo es?
 He vivido mucho y he conocido a mucha gente y tú no eres [if Global.gender == 0]un simple dependiente. [/if][if Global.gender == 1]una simple dependienta.[/if][if Global.gender == 2]une simple dependiente.[/if]
 {{player_name}}: Creo que se está equivocando conmigo.
-{{customer_1}}: Es posible. *se encoge de hombros* Solo digo lo que veo, rapaz. 
+Venus: Es posible. *se encoge de hombros* Solo digo lo que veo, rapaz. 
 {{player_name}}: *te ríes por compromiso* Quizá, lo mejor será que nos centremos en lo que necesita usted. \n (Además, no es como si pudiera contarle algo. No recuerdo nada antes del último año).
-{{customer_1}}: Ah, sí. Perdona, que una se pone a hablar y no para.
+Venus: Ah, sí. Perdona, que una se pone a hablar y no para.
 Verás, hace días que me duele la rodilla derecha; creo que es un poco por la humedad, ¿sabes? Se te mete ahí en la articulación y no permite bien la movilidad y no veas qué dolor.
 No tendrás algo para ello, ¿verdad?
 {{player_name}}: Deje que eche un vistazo y le comento.
@@ -101,28 +101,60 @@ No tendrás algo para ello, ¿verdad?
 
 ~ first_correct
 
-{{customer_1}}: ¡Oye! Menos mal que he llegado antes de que cerrases la tienda. 
-#{{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
-#{{customer_1}}: Nada, nada. Solo quería decirte que tengo la rodilla mucho mejor. \n ¡Esa piedra con runas que me diste funcionó a las mil maravillas!
-#{{player_name}}: Ah...me alegro de oírlo. 
-#{{customer_1}}: ¡Pondré una buena reseña en la página web!
-#{{player_name}}: Gracias.
-#{{customer_1}}: Gracias a ti, [if Global.gender == 0]majo[/if][if Global.gender == 1]maja[/if][if Global.gender == 2]maje[/if].
+Venus: ¡Oye! Menos mal que he llegado antes de que cerrases la tienda. 
+{{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
+Venus: Nada, nada. Solo quería decirte que tengo la rodilla mucho mejor. \n ¡Esa piedra con runas que me diste funcionó a las mil maravillas!
+{{player_name}}: Ah...me alegro de oírlo. 
+Venus: ¡Pondré una buena reseña en la página web!
+{{player_name}}: Gracias.
+Venus: Gracias a ti, [if Global.gender == 0]majo[/if][if Global.gender == 1]maja[/if][if Global.gender == 2]maje[/if].
 
 => END 
 
 ~ first_incorrect
 
-{{customer_1}}: ¡Oye! Menos mal que he llegado antes de que cerrases la tienda. 
-#{{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
-#{{customer_1}}: ¿Que en qué puedes ayudarme? Pues en darme la hoja de reclamaciones, eso para empezar. La piedra con runas que me diste no ha servido para nada.
-#{{player_name}}: Oh...lo...lo siento. 
-#{{customer_1}}: Disculparte no servirá de nada. Tengo que ir al escultor para que me vuelva a tallar la rodilla porque, con la humedad, la tierra se ha convertido en un bloque y no puedo doblar la pierna.
-#{{player_name}}: Lo lamento.
-#{{customer_1}}: No pienso volver a este sitio. ¡Y dejaré una mala reseña en la página web!
-#{{player_name}}: Genial.
+Venus: ¡Oye! Menos mal que he llegado antes de que cerrases la tienda. 
+{{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
+Venus: ¿Que en qué puedes ayudarme? Pues en darme la hoja de reclamaciones, eso para empezar. La piedra con runas que me diste no ha servido para nada.
+{{player_name}}: Oh...lo...lo siento. 
+Venus: Disculparte no servirá de nada. Tengo que ir al escultor para que me vuelva a tallar la rodilla porque, con la humedad, la tierra se ha convertido en un bloque y no puedo doblar la pierna.
+{{player_name}}: Lo lamento.
+Venus: No pienso volver a este sitio. ¡Y dejaré una mala reseña en la página web!
+{{player_name}}: Genial.
 
 => END 
+
+~ first_goodbye
+
+{{player_name}}: Bueno, aquí tiene. Creo que le será útil.
+Venus: ¡Ay, espero que sí! Estoy cansada de utilizar el bastón. En unos días te ocmento. ¡Gracias!
+{{player_name}}: A usted.
+
+=> END
+
+~ mirror
+
+{{player_name}}: Bueno...no ha ideo del todo mal.
+{{player_name}}: Me pregunto por qué se me habrá quedado mirando. *te giras hacia el espejo* Tengo la arcilla en su sitio y la ropa bien colocada. ¿Será porque soy más joven?
+
+=> END
+
+~ second_customer
+
+{{player_name}}: ¡Buenos días! ¿En qué puedo ayudar?
+Columbo: Pareces muy joven para llevar un negocio tan importante como este, ¿no te parece?
+{{player_name}}: ¿Disculpe?
+Columbo: Sí, haces bien en disculparte. Las necesidades de la gente no son un juego. ¡Es algo muy importante!
+{{player_name}}: Me tomo mi trabajo muy en serio.
+Columbo: *resopla* Bueno, eso ya lo veremos.
+Verás, tengo un problema. 
+{{player_name}}: (No me digas).
+Columbo: NECESITO PELO.
+{{player_name}}: ...
+¿Perdón?
+Columbo: ¿Estás [if Global.gender == 0]sordo[/if][if Global.gender == 1]sorda[/if][if Global.gender == 2]sorde[/if]
+
+
 
 
 
