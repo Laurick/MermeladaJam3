@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c7k424rithh80"]
+[gd_scene load_steps=21 format=3 uid="uid://c7k424rithh80"]
 
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_p64r6"]
 [ext_resource type="Script" path="res://components/StoneButton.gd" id="2_4heph"]
@@ -19,6 +19,7 @@
 [ext_resource type="Resource" uid="uid://7idqp2bxie3c" path="res://models/runes/shine_rune.tres" id="15_iijds"]
 [ext_resource type="Resource" uid="uid://dee5d8uemmfrf" path="res://models/runes/union_rune.tres" id="16_yfnrx"]
 [ext_resource type="Resource" uid="uid://c8amg2qwsubuc" path="res://models/runes/water_rune.tres" id="17_qj2yk"]
+[ext_resource type="PackedScene" uid="uid://c4yx11bhnumfk" path="res://components/trophies.tscn" id="20_ky87n"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -35,20 +36,22 @@ offset_right = 42.0
 offset_bottom = 31.0
 text = "Salir"
 
-[node name="BookButton" type="Button" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -111.0
-offset_bottom = 31.0
+offset_bottom = 66.0
 grow_horizontal = 0
+
+[node name="BookButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
 text = "mostrar libro"
 
-[node name="Book" parent="." instance=ExtResource("2_cewk2")]
-layout_mode = 1
-offset_top = 1296.0
-offset_bottom = 1296.0
+[node name="TrophiesButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Trofeos"
 
 [node name="Stones" type="Control" parent="."]
 anchors_preset = 0
@@ -200,53 +203,6 @@ offset_bottom = 168.0
 script = ExtResource("3_delqg")
 rune = ExtResource("17_qj2yk")
 
-[node name="Fader" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_roeqh")
-
-[node name="Control" type="Control" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Manual" type="RichTextLabel" parent="Control"]
-modulate = Color(1, 1, 1, 0)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -200.0
-offset_top = -250.0
-offset_right = 200.0
-offset_bottom = 250.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Trophies" type="Control" parent="."]
-visible = false
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="ItemList" type="ItemList" parent="Trophies"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-item_count = 1
-item_0/text = ""
-
 [node name="GiveButton" type="Button" parent="."]
 visible = false
 layout_mode = 1
@@ -262,8 +218,76 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Entregar"
 
+[node name="Book" parent="." instance=ExtResource("2_cewk2")]
+layout_mode = 1
+offset_top = 1296.0
+offset_bottom = 1296.0
+
+[node name="Fader" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("2_roeqh")
+
+[node name="ControlManual" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Manual" type="RichTextLabel" parent="ControlManual"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -250.0
+offset_right = 200.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ControlTrophies" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ControlTrophies"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Trophies" parent="ControlTrophies/VBoxContainer" instance=ExtResource("20_ky87n")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BackTrophiesButton" type="Button" parent="ControlTrophies/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "VOLVER"
+
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
-[connection signal="pressed" from="BookButton" to="." method="_on_book_button_pressed"]
-[connection signal="gui_input" from="Control" to="." method="_on_manual_gui_input"]
-[connection signal="gui_input" from="Control/Manual" to="." method="_on_manual_gui_input"]
+[connection signal="pressed" from="VBoxContainer/BookButton" to="." method="_on_book_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/TrophiesButton" to="." method="_on_trophies_button_pressed"]
 [connection signal="pressed" from="GiveButton" to="." method="_on_give_button_pressed"]
+[connection signal="gui_input" from="ControlManual" to="." method="_on_manual_gui_input"]
+[connection signal="gui_input" from="ControlManual/Manual" to="." method="_on_manual_gui_input"]
+[connection signal="pressed" from="ControlTrophies/VBoxContainer/BackTrophiesButton" to="." method="_on_back_trophies_button_pressed"]

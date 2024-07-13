@@ -16,3 +16,8 @@ func _on_options_button_pressed():
 func _on_credits_button_pressed():
 	Audio.play_click_sound()
 	get_tree().change_scene_to_file("res://scenes/credits.tscn")
+
+
+func _on_trophies_button_pressed():
+	Audio.play_click_sound()
+	get_tree().change_scene_to_file("res://scenes/thropies.tscn")

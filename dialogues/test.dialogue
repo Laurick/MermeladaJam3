@@ -53,7 +53,9 @@ Ya sé lo que tengo que hacer, pero no creo que me haga daño leerlo de nuevo, p
 
 ~ first_customer
 
+# change the caracter shown 
 do show_chartacter("Venus")
+# activate riddle
 do new_colosus("Venus")
 {{player_name}}: ¡Buenos días! Le doy la bienvenida a nuestra tienda. ¿En qué puedo ayudar?
 Venus: ...
@@ -86,11 +88,13 @@ Verás, hace días que me duele la rodilla derecha; creo que es un poco por la h
 No tendrás algo para ello, ¿verdad?
 {{player_name}}: Deje que eche un vistazo y le comento.
 {{player_name}}: (Voy a ver qué piedras y runas tengo).
+# use for wait riddle
 ~ wait_for_riddle
 => END 
 
+# use {{name}} _correct for correct flow ones
+# Venus is correct
 ~ Venus_correct
-
 Venus: ¡Oye! Menos mal que he llegado antes de que cerrases la tienda. 
 {{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
 Venus: Nada, nada. Solo quería decirte que tengo la rodilla mucho mejor. \n ¡Esa piedra con runas que me diste funcionó a las mil maravillas!
@@ -101,8 +105,9 @@ Venus: Gracias a ti, [if Global.gender == 0]majo[/if][if Global.gender == 1]maja
 
 => END 
 
+# use {{name}} _correct for incorrect flow ones
+# Venus is NOT correct 
 ~ Venus_incorrect
-
 Venus: ¡Oye! Menos mal que he llegado antes de que cerrases la tienda. 
 {{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
 Venus: ¿Que en qué puedes ayudarme? Pues en darme la hoja de reclamaciones, eso para empezar. La piedra con runas que me diste no ha servido para nada.
@@ -113,10 +118,3 @@ Venus: No pienso volver a este sitio. ¡Y dejaré una mala reseña en la página
 {{player_name}}: Genial.
 
 => END 
-
-
-
-
-
-   
-

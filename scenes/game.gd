@@ -2,9 +2,12 @@ extends Control
 
 var edit_scene:PackedScene = preload("res://components/edit.tscn")
 @onready var fader:Fader = $Fader
-@onready var book_button = $BookButton
+@onready var book_button = $VBoxContainer/TrophiesButton
 @onready var book = $Book
-@onready var manual = $Control/Manual
+@onready var manual = $ControlManual/Manual
+@onready var control_trophies = $ControlTrophies
+
+
 @onready var give_button = $GiveButton
 
 @onready var runes = $Runes
@@ -149,6 +152,16 @@ func _on_give_button_pressed():
 			spell.stones.push_front(stone_selected.stone)
 		
 		if colosus.needs.is_equals(spell):
+			Audio.play_sfx("352657__foolboymedia__bong-chime-1.mp3")
 			DialogueManager.show_dialogue_balloon(load("res://dialogues/test.dialogue"), colosus.name+"_correct")
 		else:
+			Audio.play_sfx("351565__bertrof__game-sound-incorrect-organic-violin.wav")
 			DialogueManager.show_dialogue_balloon(load("res://dialogues/test.dialogue"), colosus.name+"_incorrect")
+
+
+func _on_trophies_button_pressed():
+	control_trophies.show()
+
+
+func _on_back_trophies_button_pressed():
+	control_trophies.hide()

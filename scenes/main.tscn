@@ -43,16 +43,21 @@ theme_override_constants/separation = 14
 
 [node name="PlayButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-text = "PLAY"
+text = "JUGAR"
 
 [node name="OptionsButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-text = "OPTIONS"
+text = "OPCIONES"
+
+[node name="TrophiesButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "TROFEOS"
 
 [node name="CreditsButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-text = "CREDITS"
+text = "CREDITOS"
 
 [connection signal="pressed" from="HBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/TrophiesButton" to="." method="_on_trophies_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
