@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trophie" load_steps=3 format=3 uid="uid://dachlcgav03jd"]
+
+[ext_resource type="Script" path="res://models/trophies/trophies.gd" id="1_hetaw"]
+[ext_resource type="Texture2D" uid="uid://cmvve4yor23qv" path="res://images/platinum_trophie.tres" id="1_qw57v"]
+
+[resource]
+script = ExtResource("1_hetaw")
+name = "Colosal."
+description = "Por haber completado la lista de trofeos."
+image = ExtResource("1_qw57v")

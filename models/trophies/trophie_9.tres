@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trophie" load_steps=3 format=3 uid="uid://bnv7flgpp4ijg"]
+
+[ext_resource type="Script" path="res://models/trophies/trophies.gd" id="1_4am6a"]
+[ext_resource type="Texture2D" uid="uid://db5gka7vlixrh" path="res://images/trophie.tres" id="1_wn4ki"]
+
+[resource]
+script = ExtResource("1_4am6a")
+name = "Lo lograste."
+description = "Por terminar esta historia recuperando la memoria."
+image = ExtResource("1_wn4ki")

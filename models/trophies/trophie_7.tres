@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trophie" load_steps=3 format=3 uid="uid://bteb4m8s52ea4"]
+
+[ext_resource type="Texture2D" uid="uid://db5gka7vlixrh" path="res://images/trophie.tres" id="1_4yo5m"]
+[ext_resource type="Script" path="res://models/trophies/trophies.gd" id="1_pva7f"]
+
+[resource]
+script = ExtResource("1_pva7f")
+name = "Enano"
+description = "Por conseguir la máxima puntuación."
+image = ExtResource("1_4yo5m")

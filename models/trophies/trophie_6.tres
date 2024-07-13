@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trophie" load_steps=3 format=3 uid="uid://qyilfmlpk3cg"]
+
+[ext_resource type="Texture2D" uid="uid://db5gka7vlixrh" path="res://images/trophie.tres" id="1_tudvh"]
+[ext_resource type="Script" path="res://models/trophies/trophies.gd" id="1_yjcjv"]
+
+[resource]
+script = ExtResource("1_yjcjv")
+name = "Chancay"
+description = "Siempre fue una diva, pero ahora mira desde arriba."
+image = ExtResource("1_tudvh")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trophie" load_steps=3 format=3 uid="uid://chli2hn5yaddh"]
+
+[ext_resource type="Script" path="res://models/trophies/trophies.gd" id="1_43al0"]
+[ext_resource type="Texture2D" uid="uid://db5gka7vlixrh" path="res://images/trophie.tres" id="1_xp17o"]
+
+[resource]
+script = ExtResource("1_43al0")
+name = "Venció el amor."
+description = "Lo estabas deseando. "
+image = ExtResource("1_xp17o")

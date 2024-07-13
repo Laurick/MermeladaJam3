@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trophie" load_steps=3 format=3 uid="uid://b4lxfqndcruye"]
+
+[ext_resource type="Texture2D" uid="uid://db5gka7vlixrh" path="res://images/trophie.tres" id="1_7c5u4"]
+[ext_resource type="Script" path="res://models/trophies/trophies.gd" id="1_hewig"]
+
+[resource]
+script = ExtResource("1_hewig")
+name = "Tlatoani"
+description = "Le arreglaste el brazo y reseñó que molas mazo."
+image = ExtResource("1_7c5u4")
