@@ -8,7 +8,8 @@ signal achivement_unlocked(archivement)
 var gender: int = -1
 var score: int = 0
 var affection_tomeu: int = 0
-var player_name
+var player_name = ""
+var colosus_happy = {}
 var achivements_unlocked = {}
 
 func _ready():
@@ -19,7 +20,14 @@ func reset_game():
 	score = 0
 	affection_tomeu = 0
 	player_name = ""
+	colosus_happy = {}
 
+func change_affection_tome_by(amount:int):
+	affection_tomeu += amount
+
+func change_score_by(amount:int):
+	score += amount
+	
 var save_path = "user://achivements.save"
 
 func save_score():
@@ -46,3 +54,12 @@ func is_achivements_locked(name:String):
 		return achivements_unlocked[name]
 	else:
 		return true
+
+func add_customer_mood(name:String, happy:bool):
+	colosus_happy[name] = happy
+
+func check_customer_mood(name:String):
+	if colosus_happy.has(name):
+		return colosus_happy[name]
+	else:
+		return false

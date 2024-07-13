@@ -6,8 +6,6 @@ var edit_scene:PackedScene = preload("res://components/edit.tscn")
 @onready var book = $Book
 @onready var manual = $ControlManual/Manual
 @onready var control_trophies = $ControlTrophies
-@onready var game_progress_bar = $GameProgressBar
-@onready var tomeu_affinity_progress_bar = $TomeuAffinityProgressBar
 @onready var trophy_achivements = $TrophyAchivements
 
 @onready var give_button = $GiveButton
@@ -28,7 +26,8 @@ func _ready():
 	DialogueManager.mutated.connect(mutation_found)
 	Global.achivement_unlocked.connect(show_achivement)
 	await get_tree().create_timer(1).timeout
-	DialogueManager.show_dialogue_balloon(load("res://dialogues/test.dialogue"), "intro")
+	DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), "intro")
+	book.book_closed.connect(on_book_closed)
 
 
 func title_pased(title:String):
@@ -39,17 +38,20 @@ func title_pased(title:String):
 		await get_tree().create_timer(2).timeout
 		for rune:RuneButton in runes.get_children():
 			rune.on_rune_selected.connect(rune_selected)
-			create_tween().tween_property(rune, "modulate:a", 1, 0.7)
-			await get_tree().create_timer(0.2).timeout
+			create_tween().tween_property(rune, "modulate:a", 1, 0.6)
+			await get_tree().create_timer(0.1).timeout
 			
 		for stone:StoneButton in stones.get_children():
 			stone.on_stone_selected.connect(stone_selected)
-			create_tween().tween_property(stone, "modulate:a", 1, 0.7)
-			await get_tree().create_timer(0.2).timeout
+			create_tween().tween_property(stone, "modulate:a", 1, 0.6)
+			await get_tree().create_timer(0.1).timeout
 	elif title == "read_manual":
 		show_manual()
 		await get_tree().create_timer(0.7).timeout
 		state = "manual"
+	elif title == "open_vademecum":
+		_on_book_button_pressed()
+		state = "vademecum"
 	elif title == "wait_for_riddle":
 		state = "wait_for_riddle"
 		give_button.visible = true
@@ -70,7 +72,7 @@ func show_name_edit():
 
 func on_name_summited(new_text):
 	Global.player_name = new_text
-	DialogueManager.show_dialogue_balloon(load("res://dialogues/test.dialogue"), "gender")
+	DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), "gender")
 
 
 func _on_exit_button_pressed():
@@ -81,6 +83,10 @@ func _on_exit_button_pressed():
 func _on_book_button_pressed():
 	Audio.play_sfx("res://sounds/422870__ipaddeh__pressure_plate_stone.wav")
 	book._show()
+
+func on_book_closed():
+	if state == "vademecum":
+		DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), "close_vademecum")
 
 func show_manual():
 	Audio.play_sfx("Cut_560310__garuda1982__stone-rubs-grinds-on-stone-sound-effect.mp3")
@@ -101,11 +107,8 @@ func get_tutorial_text() -> String:
 		text += "¡Bienvenida"
 	elif Global.gender == 2:
 		text += "¡Bienvenide"
-	text += " a tu nueva aventura en Piedras Salubles SA!\n\nComo ya te habrán informado en el curso de formación, tu deber como dependiente es ayudar a los clientes con sus necesidades más importantes. ¡Del tipo que sean! Un buen profesional siempre sabrá cuál es el producto que más le conviene a su cliente.\n\n
-Para ello, lo único que tendrás que hacer es elegir las runas y piedras que mejor se ajusten a las necesidades del cliente. Fácil, ¿verdad? Desde Piedras Salubles SA nos comprometemos a facilitar todo el trabajo a nuestros empleados, de manera que, junto a este manual, habrá un vademécum en el que podrás consultar cualquier duda que tengas respecto a las piedras y a las runas. ¡Esto está chupado!\n\n
-La satistacción del cliente es nuestro beneficio y, para asegurarnos de ello, cada cierto tiempo irá a visitar la tienda un representante de ventas para evaluarte. Si la opinión de la tienda es negativa, recibirás menos cargamentos de piedras y runas. ¡Pero no temas! Eso no complicará tu función aquí.\n\n
-Y, ahora, ¡ponte detrás del mostrador y ayuda a cuantos más clientes puedas!\n\n
-Atentamente,\nel equipo comercial de Piedras Salubres SA."
+	text += "  a tu nueva aventura en Piedras Salubres SA!\n\nComo ya te habrán informado en el curso de formación, tu deber como dependiente es ayudar a los clientes con sus necesidades más importantes. ¡Del tipo que sean! Un
+buen profesional siempre sabrá cuál es el producto que más le conviene a su cliente.\n\nPara ello, lo único que tendrás que hacer es elegir las runas y la piedra que mejor seajusten a las necesidades del cliente. Fácil, ¿verdad? Desde Piedras Salubres SA noscomprometemos a facilitar todo el trabajo a nuestros empleados, de manera que,junto a este manual, habrá un vademécum en el que podrás consultar cualquier dudaque tengas con respecto a las piedras y a las runas. ¡Esto está chupado\n\nLa satisfacción del cliente es nuestro benecio y, para asegurarnos de ello, cada ciertotiempo irá a visitar la tienda un representante de ventas para evaluarte. Si la opiniónde la tienda es negativa, recibirás menos cargamentos de piedras y runas. ¡Pero notemas! Eso no complicará tu función aquí.\n\nY, ahora, ¡ponte detrás del mostrador y ayuda a cuantos más clientes puedas!\n\nAtentamente, el equipo comercial de Piedras Salubres SA."
 	return text
 
 func rune_selected(rune:RuneButton, is_selected):
@@ -131,7 +134,7 @@ func stone_selected(stone:StoneButton, is_selected):
 func _on_manual_gui_input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and state == "manual":
 		hide_manual()
-		DialogueManager.show_dialogue_balloon(load("res://dialogues/test.dialogue"), "first_customer")
+		DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), "find_vademecum")
 
 func mutation_found(dict: Dictionary):
 	if dict.has("expression"):
@@ -146,7 +149,7 @@ func mutation_found(dict: Dictionary):
 func _on_give_button_pressed():
 	give_button.visible = false
 	if len(runes_selected) < 2 or len(stones_selected) < 1:
-		DialogueManager.show_dialogue_balloon(load("res://dialogues/test.dialogue"), "error_spell")
+		DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), "error_spell")
 	else:
 		var spell = Spell.new()
 		for rune_selected in runes_selected:
@@ -156,13 +159,13 @@ func _on_give_button_pressed():
 		
 		if colosus.needs.is_equals(spell):
 			Global.unlock_achivement(colosus.name)
-			Audio.play_sfx("352657__foolboymedia__bong-chime-1.mp3")
-			game_progress_bar.value = game_progress_bar.value + 1
-			DialogueManager.show_dialogue_balloon(load("res://dialogues/test.dialogue"), colosus.name+"_correct")
+			Global.change_score_by(1)
+			Global.add_customer_mood(colosus.name, true)
 		else:
-			Audio.play_sfx("351565__bertrof__game-sound-incorrect-organic-violin.wav")
-			game_progress_bar.value = game_progress_bar.value - 1
-			DialogueManager.show_dialogue_balloon(load("res://dialogues/test.dialogue"), colosus.name+"_incorrect")
+			Global.change_score_by(-1)
+			Global.add_customer_mood(colosus.name, false)
+
+		DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), colosus.name+"_end")
 
 
 func _on_trophies_button_pressed():

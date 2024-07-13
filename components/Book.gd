@@ -1,5 +1,7 @@
 extends Control
 
+signal book_closed()
+
 const SHOW_TIME:float = 0.7
 
 @onready var HIDE_POSITION = size.y * 2 
@@ -18,3 +20,4 @@ func _hide():
 
 func _on_close_button_pressed():
 	_hide()
+	book_closed.emit()

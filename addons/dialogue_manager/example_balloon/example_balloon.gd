@@ -170,7 +170,11 @@ func new_colosus(name:String):
 func show_chartacter(name:String):
 	var path = "res://images/"+name+".tres"
 	avatar.texture = load(path)
-	
+
+func leave_chartacter(name:String):
+	await create_tween().tween_property(avatar, "modulate:a", 0, 0.7).finished
+	avatar.texture = null
+	avatar.modulate = Color.WHITE
 
 func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 	next(response.next_id)

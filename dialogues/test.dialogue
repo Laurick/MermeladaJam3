@@ -6,15 +6,6 @@ Me llamo...
 ~ name
 => END
 
-~ open_vademecum
-
-...
-Voy a ver el vademécum ese.
-
-=> END 
-
-~ close_vademecum
-
 {{player_name}}: Bueno, la verdad es que viene todo muy bien explicado, pero...
 Me faltan piedras y runas. Menudo marrón. *suspiro* Espero que nadie me pida nada que las necesite.
 ¡En fin! Allá vamos. Que no se diga que no lo he intentado.
@@ -45,6 +36,15 @@ Ya sé lo que tengo que hacer, pero no creo que me haga daño leerlo de nuevo, p
 
 ~ read_manual
 => END
+
+~ open_vademecum
+
+...
+Voy a ver el vademécum ese.
+
+=> END 
+
+~ close_vademecum
 
 ~ error_spell
 {{player_name}}: No... debería entregar DOS runas y UNA piedra para ayudar correctamente

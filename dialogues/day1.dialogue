@@ -1,0 +1,294 @@
+~ intro
+Bueno, ya lo tengo todo listo. Solo me queda rellenar la tarjeta de empleado y lo
+tengo todo.
+Nombre...
+~ name
+=> END
+
+~ gender
+{{player_name}}: Ah? Tambien me pregunta el género. Vamos a rellenarlo
+- Soy él
+	do Global.gender = 0
+- Soy ella
+	do Global.gender = 1
+- Soy elle
+	do Global.gender = 2
+	
+{{player_name}}: *suspiras* Vaya letra de mierda, pero qué le vamos a hacer...
+
+~ set_stones
+{{player_name}}: Vale, ahora a colocar todas las piedras que tenemos...
+
+~ find_manual
+{{player_name}}: Bueno, el stock ahora mismo es lo de menos. Voy a echar un vistazo al mostrador.
+{{player_name}}: En fin, el stock ahora mismo es lo de menos. Voy a echar un vistazo al mostrador.
+{{player_name}}: ...
+{{player_name}}: ...
+{{player_name}}: ¡Oh! Aquí hay un manual.
+{{player_name}}: a sé lo que tengo que hacer, pero no creo que me haga daño leerlo de nuevo, por si hay alguna cosa que se les haya olvidado decirme en la formación.
+~ read_manual
+=> END
+
+~ find_vademecum
+{{player_name}}: ...
+{{player_name}}: Voy a ver el vademécum ese.
+~ open_vademecum
+=> END 
+
+~ close_vademecum
+{{player_name}}: Bueno, la verdad es que viene todo muy bien explicado, pero...
+{{player_name}}: Me faltan piedras y runas. Menudo marrón. *suspiro* Espero que nadie me pida nada que las necesite.
+{{player_name}}: ¡En fin! Allá vamos. Que no se diga que no lo he intentado.
+=> Venus_start
+
+~ error_spell
+{{player_name}}: No... debería entregar DOS runas y UNA piedra para ayudar correctamente
+~ continue_for_riddle
+=> END
+
+~ Venus_start
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do show_chartacter("Venus")
+do new_colosus("Venus")
+{{player_name}}: ¡Buenos días! Le doy la bienvenida a nuestra tienda. ¿En qué puedo ayudar?
+Venus: ...
+{{player_name}}: ...
+Venus: ...
+{{player_name}}: Oiga...¿puede dejar de mirarme?
+Venus: ¡Oh! Lo siento. Es que... [if Global.gender == 0] eres un coloso un poco raro.[/if][if Global.gender == 1]eres una colosa un poco rara.[/if][if Global.gender == 2] eres une colose un poco rare.
+{{player_name}}: ¿Perdón? (¿Me está insultando?)
+Venus: Ah, no me hagas caso. *sonríe* Cuando llega gente nueva siempre llama la atención. Es como la novedad, ¿sabes?
+{{player_name}}: *sonríes* Creo que le entiendo.
+Venus: *asiente* Claro que sí. Tienes pinta de ser muy [if Global.gender == 0]listo[/if][if Global.gender == 1]lista[/if][if Global.gender == 2]liste[/if], lo que hace que me pregunte...¿qué se te ha perdido en un sitio tan lejos de todo como lo es Rocaburgo?
+{{player_name}}: La necesidad de trabajar, supongo.
+Venus: Hmm. *sacude la cabeza* Si es lo que dices, te creeré.
+{{player_name}}: ¿Piensa que no es la verdadera razón?
+Venus: *se ríe* No lo sé. ¿Lo es?
+Venus: He vivido mucho y he conocido a mucha gente y tú no eres [if Global.gender == 0]un simple dependiente. [/if][if Global.gender == 1]una simple dependienta.[/if][if Global.gender == 2]une simple dependiente.[/if]
+{{player_name}}: Creo que se está equivocando conmigo.
+Venus: Es posible. *se encoge de hombros* Solo digo lo que veo, rapaz. 
+{{player_name}}: *te ríes por compromiso* Quizá, lo mejor será que nos centremos en lo que necesita usted.
+{{player_name}}: (Además, no es como si pudiera contarle algo. No recuerdo nada antes del último año).
+Venus: Ah, sí. Perdona, que una se pone a hablar y no para.
+Venus: Verás, hace días que me duele la rodilla derecha; creo que es un poco por la humedad, ¿sabes?
+Venus: Se te mete ahí en la articulación y no permite bien la movilidad y no veas qué dolor.
+Venus: No tendrás algo para ello, ¿verdad?
+{{player_name}}: Deje que eche un vistazo y le comento.
+{{player_name}}: (Voy a ver qué piedras y runas tengo).
+=> wait_for_riddle
+
+~ wait_for_riddle
+=> END
+
+~ Venus_correct
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do show_chartacter("Venus")
+Venus: ¡Oye! Menos mal que he llegado antes de que cerrases la tienda. 
+{{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
+Venus: Nada, nada. Solo quería decirte que tengo la rodilla mucho mejor. \n ¡Esa piedra con runas que me diste funcionó a las mil maravillas!
+{{player_name}}: Ah...me alegro de oírlo. 
+Venus: ¡Pondré una buena reseña en la página web!
+{{player_name}}: Gracias.
+Venus: Gracias a ti, [if Global.gender == 0]majo[/if][if Global.gender == 1]maja[/if][if Global.gender == 2]maje[/if].
+do Audio.play_sfx("352657__foolboymedia__bong-chime-1.mp3")
+do leave_chartacter()
+=> END 
+
+~ Venus_incorrect
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do show_chartacter("Venus")
+Venus: ¡Oye! Menos mal que he llegado antes de que cerrases la tienda. 
+{{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
+Venus: ¿Que en qué puedes ayudarme? Pues en darme la hoja de reclamaciones, eso para empezar. La piedra con runas que me diste no ha servido para nada.
+{{player_name}}: Oh...lo...lo siento. 
+Venus: Disculparte no servirá de nada. Tengo que ir al escultor para que me vuelva a tallar la rodilla porque, con la humedad, la tierra se ha convertido en un bloque y no puedo doblar la pierna.
+{{player_name}}: Lo lamento.
+Venus: No pienso volver a este sitio. ¡Y dejaré una mala reseña en la página web!
+{{player_name}}: Genial.
+do Audio.play_sfx("351565__bertrof__game-sound-incorrect-organic-violin.wav")
+do leave_chartacter()
+=> END 
+
+~ Venus_end
+{{player_name}}: Bueno, aquí tiene. Creo que le será útil.
+Venus: ¡Ay, espero que sí! Estoy cansada de utilizar el bastón. En unos días te comento. 
+Venus: ¡Gracias!
+{{player_name}}: A usted.
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do leave_chartacter()
+{{player_name}}: Bueno... no ha ido del todo mal.
+{{player_name}}: Me pregunto por qué se me habrá quedado mirando. *te giras hacia el espejo* Tengo la arcilla en su sitio y la ropa bien colocada. ¿Será porque soy más joven?
+
+~ MC_friend
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do show_chartacter("Djinn")
+{{player_name}}: ¡Buenos días! ¿En qué puedo ayudar?
+¿?: ...
+{{player_name}}: ...
+¿?: ...
+{{player_name}}: *gesticulas con las manos al tiempo que hablas* Sé lengua de signos, si por alguna razón ha perdido la audición.
+¿?: No. Escucho perfectamente.
+{{player_name}}: Ah, genial. (¿Y por qué no has dicho ni una palabra?) Entonces, ¿hay algo que pueda
+hacer por usted?
+¿?: ...
+¿?: Me resultas familiar
+{{player_name}}: Bueno, soy [if Global.gender == 0]un coloso[/if][if Global.gender == 1]una colosa[/if][if Global.gender == 2]une colose[/if], nos parecemos bastante.
+¿?:  No es cierto. Vuestro foco mágico es único y el tuyo no parece... acorde.
+{{player_name}}: ¿Cómo dice? (No me pagan lo suciente como para aguantar que me insulten dos veces en un día.)
+¿?: ...
+¿?: Parece que aún es pronto. echa un vistazo a su alrededor Y me temo que no tienes los materiales que necesito.
+{{player_name}}: Oh, lo lamento. Hemos abierto hoy y el distribuidor está teniendo problemas a la hora de abastecernos.
+{{player_name}}: Al parecer, una serie de comerrocas merodean por la zona y tienen debilidad por las piedras utilizadas en rocaterapia.
+¿?: *enarca una ceja* Ya... veo.
+¿?: Me pasaré más adelante. A ver si esos comerrocas se han empachado y dejan llegar la mercancía.
+{{player_name}}: ¡Claro! Que tenga un...
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do leave_chartacter()
+{{player_name}}: ...buen día.
+{{player_name}}: *suspiras * ¿Qué le pasa hoy a la gente?
+
+~ Columbo_start
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do show_chartacter("Columbo")
+do new_colosus("Columbo")
+{{player_name}}: ¡Buenas tardes! ¿En qué puedo ayudar?
+Columbo: Pareces muy joven para llevar un negocio tan importante como este, ¿no te parece?
+{{player_name}}: ¿Disculpe?
+Columbo: Sí, haces bien en disculparte. Las necesidades de la gente no son un juego. ¡Es algo muy importante!
+{{player_name}}: Me tomo mi trabajo muy en serio.
+Columbo: *resopla* Bueno, eso ya lo veremos.
+Columbo: Verás, tengo un problema.
+{{player_name}}: (No me digas.)
+Columbo: NECESITO PELO.
+{{player_name}}: ...
+{{player_name}}: ¿Perdón?
+Columbo: ¿Estás [if Global.gender == 0]sordo[/if][if Global.gender == 1]sorda[/if][if Global.gender == 2]sorde[/if]? ¡Dame algo para que me crezca una brillante cabellera!
+{{player_name}}: ...
+{{player_name}}: Es... Usted es consciente de que es un coloso, ¿verdad? Estamos hechos de arena, arcilla, piedras y un poco de magia.
+Columbo: ¡Eso ya lo sé! No soy un ignorante.
+{{player_name}}: Pero quiere pelo.
+Columbo: ¡Pues claro que quiero pelo!
+{{player_name}}: Aquí tenéis runas y piedras mágicas. ¡Alguna tendrá que servir!
+Columbo: Aquí tenéis runas y piedras mágicas. ¡Alguna tendrá que servir!ç
+{{player_name}}: ...
+{{player_name}}: Veré qué puedo hacer. (Dioses, dadme paciencia porque la voy a necesitar.)
+=> wait_for_riddle
+ 
+~ Columbo_correct
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do show_chartacter("Columbo")
+Columbo: ¡Ahí estás!
+{{player_name}}: ...
+Columbo: Oh, no. (Seguro que viene a echarme un rapapolvo.)
+Columbo: ¡Quería darte las gracias! La piedra que me diste funcionó.
+{{player_name}}: ...
+{{player_name}}: Lo mira de arriba abajo * Está... está usted cubierto de pelo.
+Columbo: ¡Exactamente!
+{{player_name}}: Pero usted pidió una melena.
+Columbo: ¿Quién quiere una melena cuando se uno mismo puede ser su propia melena?
+{{player_name}}: La verdad es que tiene toda la razón. (¡Ningún sentido! ¿De qué va?)
+Columbo: No debí dudar de ti, rapaz. Has hecho un buen trabajo, ¡voy a dejar una reseña positiva en la web!
+{{player_name}}: Ah gracias.
+do Audio.play_sfx("352657__foolboymedia__bong-chime-1.mp3")
+do leave_chartacter()
+=> END 
+
+~ Columbo_incorrect
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do show_chartacter("Columbo")
+Columbo: ¡Ahí estás!
+{{player_name}}: ...
+{{player_name}}: Oh, no. (Seguro que viene a echarme un rapapolvo.)
+Columbo: ¡Te pedí una piedra para el crecimiento del pelo! ¡DEL PELO! ¿A ti esto te parece pelo?
+{{player_name}}: Eh...
+Columbo: ¡No respondas porque es evidente que no es pelo! ¿Quién querría una piedra para que le creciesen malas hierbas? 
+Columbo: Ahora tendré que tomar herbicida durante meses para que se mueran todas.
+{{player_name}}: Lo... lo siento.
+Columbo: ¡Pienso poner una reseña negativa en la web!
+{{player_name}}: Ups.
+do Audio.play_sfx("351565__bertrof__game-sound-incorrect-organic-violin.wav")
+do leave_chartacter()
+=> END
+
+~ Columbo_end
+{{player_name}}: Aquí la tiene. Espero que le sea útil.
+Columbo: ¡Más te vale! O vendré aquí en forma de tormenta de arena iracunda.
+{{player_name}}: Esperemos que no sea necesario. (Por favor, no. Que luego me tocará limpiar la arena
+a mí.)
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do leave_chartacter()
+{{player_name}}: Realmente acaba de venir un coloso pidiendo un crecepelos.
+{{player_name}}: Es que creo que hoy no podría pasar nada más raro.
+
+~ Tome_start
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do show_chartacter("Tome")
+{{player_name}}: *respiras hondo* ¡Buenas tardes! ¿En qué...?
+Tomé: ¡Buenas tardes tendrás tú!
+{{player_name}}: ¿Disculpe?
+{{player_name}}: (¿Es que este pueblo está lleno de bordes o qué?)
+Tomé: Pues claro que acepto las disculpas, pero ¡las aceptaré de mejor grado si cerrases esta tienducha tuya!
+{{player_name}}: Me temo que eso no va a ser posible. No soy [if Global.gender == 0]el dueño[/if][if Global.gender == 1]la dueña[/if][if Global.gender == 2]le dueñe[/if] el local.
+Tomé: ¿No? *gruñe una maldición* ¡Entonces, ponme en contacto con la persona al cargo!
+{{player_name}}: (Pero, ¿este mequetrefe de dónde ha salido?)
+{{player_name}}: *rebuscas en un cajón y sacas un papel* Mire, aquí tiene los números de teléfono y el correo electrónico de contacto con la empresa.
+Tomé: ...
+Tomé: ¿Es una broma?
+{{player_name}}: Desde luego que no, caballero. 
+{{player_name}}: El procedimiento a seguir cuando una persona solicita el contacto con la empresa, es facilitarle los números de teléfono y el correo electrónico para que la persona interesada pueda establecer una comunicación adecuada.
+Tomé: ¿Te has tragado un diccionario? Hablas muy raro.
+Tomé: ¡Pues si no me vas a poner en contacto con tus superiores, dame la hoja de reclamaciones!
+{{player_name}}: (Este tipo es tonto.)
+{{player_name}}: Según la ley 89/750, apartado 7, epígrafe 12, sección 9: Las hojas de reclamación solo se podrán ofrecer al cliente siempre y cuando haga una compra en el destablecimiento.
+Tomé: *se acerca para tocarte*
+Tomé: ¡Oiga! ¡No toque!
+Tomé: Pareces un coloso de verdad pero hablas como si fueses uno de esos colosos de metal.
+{{player_name}}: ¿Me está llamando robot?
+Tomé: *entrecierra* los ojos ¿Lo eres?
+{{player_name}}: ¡Desde luego que no!
+{{player_name}}: ¿A qué ha venido?
+Tomé: Ya te lo he dicho: ¡para que cierres el negocio!
+{{player_name}}: ¡Y yo le digo que no puedo hacer eso!
+Tomé: ¿Cuánto te pagan? Te ofrezco la mitad.
+{{player_name}}: (¡Menuda oferta de mierda!) Señor, si no va a comprar nada, haga el favor de salir del establecimiento.
+Tomé: ¡Que no me voy!
+{{player_name}}: ¡No me obligue a sacar la escoba!
+Tomé: ¡Ah, violencia contra el consumidor!
+{{player_name}}: ¡Pero si ha entrado como un golem iracundo en la tienda lanzando improperios!
+Tomé: *levanta el dedo índice para señalarte* ¡Tu palabrería no conseguirá confundirme!
+{{player_name}}: *respiras hondo* (¿Cómo me libro de este espécimen?)
+{{player_name}}: A ver, si le doy una muestra gratis, ¿se irá y me dejará en paz?
+Tomé: *trepa al mostrador con los ojos brillantes* ¿Muestra gratis?
+{{player_name}}: Eso he dicho y ¡bájese de ahí!
+{{player_name}}: (¿Y ahora qué le doy yo a esta pulga rabiosa?)
+- Entregarle una runa de Molestia.
+	do Global.change_affection_tome_by(-1)
+	{{player_name}}: Mire, aquí tiene una runa. ¿Está contento?
+	Tomé: *la examina* ¿Esto es una indirecta?
+	{{player_name}}: (¡Pues claro que sí!) No. Pero la mayor parte de la gente que necesita piedras con runas es por tema de molestias o dolor, así que seguro que la utiliza.
+- Entregarle una runa de Cuarzo Azul.
+	do Global.change_affection_tome_by(1)
+	{{player_name}}: Tenga, un cuarzo azul.
+	Tomé: *examina la piedra* ¿Intentas decirme algo?
+	{{player_name}}: (¿Para qué? Si es igual que hablarle a la pared.) Claro que no. Pero es bonita y por esta zona no suele haber muchos cuarzos azules.
+Tomé: *entrecierra los ojos* No está mal.
+{{player_name}}: Claro que no. Y, ahora, por favor, abandone la tienda.
+Tomé: ¡Me voy porque así lo quiero!
+{{player_name}}: (Desde luego.)
+Tomé: Pero volveré. Ya nos veremos.
+{{player_name}}: *suspiras* Pienso pedir un aumento de sueldo.
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do leave_chartacter()
+
+~ end_of_day_1
+{{player_name}}: *suspiras* Menudo día, pero no ha estado tan mal para ser el primero.
+{{player_name}}: Espero que mañana vaya mejor.
+{{player_name}}: Por mi salud mental.
+if Global.check_customer_mood("Venus")
+	=> Venus_correct
+else
+	=> Venus_incorrect
+if Global.check_customer_mood("Columbo")
+	=> Columbo_correct
+else
+	=> Columbo_incorrect
