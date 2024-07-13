@@ -9,13 +9,17 @@ var edit_scene:PackedScene = preload("res://components/edit.tscn")
 @onready var runes = $Runes
 @onready var stones = $Stones
 
+var colosus = null
+
 var state = "none"
 
 func _ready():
 	Global.reset_game()
 	DialogueManager.passed_title.connect(title_pased)
+	DialogueManager.mutated.connect(mutation_found)
 	await get_tree().create_timer(1).timeout
 	DialogueManager.show_dialogue_balloon(load("res://dialogues/test.dialogue"), "intro")
+
 
 func title_pased(title:String):
 	if title == "name":
@@ -89,4 +93,13 @@ func _on_manual_gui_input(event):
 		hide_manual()
 		DialogueManager.show_dialogue_balloon(load("res://dialogues/test.dialogue"), "first_customer")
 
-
+func mutation_found(dict: Dictionary):
+	#{ "expression": [{ "function": "show_chartacter", "type": &"function", "value": [[{ "type": "string", "value": "Venus" }]] }], "is_blocking": true }
+	if dict.has("expression"):
+		var expression:Dictionary = dict["expression"][0];
+		if expression.has("function"):
+			if expression["function"] == "new_colosus":
+				var args = expression["value"][0]
+				var name = args[0]["value"]
+				var colosus = load("res://models/colosus/"+name+".tres")
+				print("new colosus: "+name)

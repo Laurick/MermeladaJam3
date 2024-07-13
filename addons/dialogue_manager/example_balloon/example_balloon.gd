@@ -52,12 +52,6 @@ var dialogue_line: DialogueLine:
 		#if dialogue_line.get_tag_value("mood") != "":
 			#mood = "_"+dialogue_line.get_tag_value("mood")
 
-		var path = "res://images/"+pj+".tres"
-		print(path)
-		if ResourceLoader.exists(path):
-			avatar.texture = load(path)
-		else:
-			print_debug("resource not found: "+path)
 		dialogue_label.hide()
 		if dialogue_line.character == "":
 			dialogue_line.text = "[i]"+dialogue_line.text+"[/i]"
@@ -169,6 +163,14 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 	elif event.is_action_pressed(next_action) and get_viewport().gui_get_focus_owner() == balloon:
 		next(dialogue_line.next_id)
 
+func new_colosus(name:String):
+	#used for mutration go to game and see the mutation
+	pass
+	
+func show_chartacter(name:String):
+	var path = "res://images/"+name+".tres"
+	avatar.texture = load(path)
+	
 
 func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 	next(response.next_id)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=11 format=3 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_36de5"]
+[ext_resource type="Script" path="res://components/WobbleComponent.gd" id="2_1opkw"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
 [ext_resource type="AudioStream" uid="uid://ckajqc1y4xfrr" path="res://sounds/rollover5.ogg" id="4_sbgjj"]
@@ -78,17 +79,28 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_qq3yp")
 
+[node name="Control" type="Control" parent="Balloon"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
 [node name="Avatar" type="TextureRect" parent="Balloon"]
 layout_mode = 1
 anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -300.0
+offset_left = -648.0
 grow_horizontal = 0
 grow_vertical = 2
 expand_mode = 2
 stretch_mode = 5
+
+[node name="WobbleComponent" type="Node" parent="Balloon/Avatar" node_paths=PackedStringArray("target")]
+script = ExtResource("2_1opkw")
+big_scale = Vector2(1.01, 1.01)
+small_scale = Vector2(0.99, 0.99)
+target = NodePath("..")
 
 [node name="Panel" type="Panel" parent="Balloon"]
 clip_children = 2

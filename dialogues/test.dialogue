@@ -48,6 +48,8 @@ Ya sé lo que tengo que hacer, pero no creo que me haga daño leerlo de nuevo, p
 
 ~ first_customer
 
+do show_chartacter("Venus")
+do new_colosus("Venus")
 {{player_name}}: ¡Buenos días! Le doy la bienvenida a nuestra tienda. ¿En qué puedo ayudar?
 Venus: ...
 {{player_name}}: ...

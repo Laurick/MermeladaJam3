@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="Colosus" load_steps=2 format=3 uid="uid://b72hj5insg4bt"]
-
-[ext_resource type="Script" path="res://models/colosus/colosus.gd" id="1_ix6xh"]
-
-[resource]
-script = ExtResource("1_ix6xh")
-name = ""

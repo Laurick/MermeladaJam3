@@ -12,7 +12,10 @@ var tween:Tween
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if target:
+		target.pivot_offset = Vector2(target.size.x/2, target.size.y/2)
 	if auto_start:
+		running = true
 		expand()
 
 func start():
@@ -21,8 +24,6 @@ func start():
 	
 func stop():
 	running = false
-	if tween:
-		tween.star
 	tween = get_tree().create_tween()
 	tween.tween_property(target, "scale", Vector2.ONE, 0.1)
 
@@ -31,11 +32,9 @@ func expand():
 	tween.tween_property(target, "scale", big_scale, time)
 	if running:
 		tween.finished.connect(contract)
-	tween.start()
 
 func contract():
 	tween = get_tree().create_tween()
 	tween.tween_property(target, "scale", small_scale, time)
 	if running:
 		tween.finished.connect(expand)
-	tween.start()

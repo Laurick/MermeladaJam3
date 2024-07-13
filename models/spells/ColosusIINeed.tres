@@ -3,7 +3,7 @@
 [ext_resource type="Resource" uid="uid://ca70mw4l360k2" path="res://models/runes/hair_rune.tres" id="1_br2xk"]
 [ext_resource type="Resource" uid="uid://7idqp2bxie3c" path="res://models/runes/shine_rune.tres" id="2_8ftfx"]
 [ext_resource type="Script" path="res://models/spells/spell.gd" id="3_4llhs"]
-[ext_resource type="Resource" uid="uid://cboxivp1k1uua" path="res://models/stones/obsidian.tres" id="4_67g0s"]
+[ext_resource type="Resource" uid="uid://001wpo6evy5v" path="res://models/stones/obsidian.tres" id="4_67g0s"]
 
 [resource]
 script = ExtResource("3_4llhs")
