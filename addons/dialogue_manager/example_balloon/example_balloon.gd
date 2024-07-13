@@ -10,6 +10,9 @@ extends CanvasLayer
 @onready var character_label: RichTextLabel = %CharacterLabel
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
+@onready var audio_stream_player:AudioStreamPlayer = $AudioStreamPlayer
+@onready var skip_button = $Balloon/Panel/Dialogue/SkipDialogue
+@onready var avatar = $Balloon/Avatar
 
 ## The dialogue resource
 var resource: DialogueResource
@@ -43,13 +46,25 @@ var dialogue_line: DialogueLine:
 
 		character_label.visible = not dialogue_line.character.is_empty()
 		character_label.text = tr(dialogue_line.character, "dialogue")
+		var pj = dialogue_line.character
+			
+		#check tags here
+		#if dialogue_line.get_tag_value("mood") != "":
+			#mood = "_"+dialogue_line.get_tag_value("mood")
 
+		var path = "res://images/"+pj+".tres"
+		print(path)
+		if ResourceLoader.exists(path):
+			avatar.texture = load(path)
+		else:
+			print_debug("resource not found: "+path)
 		dialogue_label.hide()
+		if dialogue_line.character == "":
+			dialogue_line.text = "[i]"+dialogue_line.text+"[/i]"
 		dialogue_label.dialogue_line = dialogue_line
 
 		responses_menu.hide()
 		responses_menu.set_responses(dialogue_line.responses)
-
 		# Show our balloon
 		balloon.show()
 		will_hide_balloon = false
@@ -62,12 +77,15 @@ var dialogue_line: DialogueLine:
 		# Wait for input
 		if dialogue_line.responses.size() > 0:
 			balloon.focus_mode = Control.FOCUS_NONE
+			skip_button.visible = false
 			responses_menu.show()
 		elif dialogue_line.time != "":
+			skip_button.visible = false
 			var time = dialogue_line.text.length() * 0.02 if dialogue_line.time == "auto" else dialogue_line.time.to_float()
 			await get_tree().create_timer(time).timeout
 			next(dialogue_line.next_id)
 		else:
+			skip_button.visible = true
 			is_waiting_for_input = true
 			balloon.focus_mode = Control.FOCUS_ALL
 			balloon.grab_focus()
@@ -75,6 +93,12 @@ var dialogue_line: DialogueLine:
 		return dialogue_line
 
 
+func jump() -> void:
+	var tween = create_tween()
+	tween.chain().tween_property(avatar,"position",Vector2(0,120),0.2).set_ease(Tween.EASE_OUT)
+	tween.chain().tween_property(avatar,"position",Vector2(0,160),0.1).set_ease(Tween.EASE_IN)
+	tween.play()
+	
 func _ready() -> void:
 	balloon.hide()
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
@@ -149,5 +173,21 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 	next(response.next_id)
 
+func _on_dialogue_label_spoke(letter, letter_index, speed):
+	audio_stream_player.play()
 
 #endregion
+
+func _on_skip_dialogue_pressed():
+	Audio.play_click_sound()
+	var exit: bool = false
+	var volume = audio_stream_player.volume_db
+	audio_stream_player.volume_db = -80
+	while (!exit):
+		dialogue_line = await resource.get_next_dialogue_line(dialogue_line.next_id)
+		balloon.visible = false
+		await get_tree().process_frame
+		if (dialogue_line.responses && len(dialogue_line.responses) > 0) or (dialogue_line.text.is_empty()):
+			exit = true
+	audio_stream_player.volume_db = volume
+	balloon.visible = true
