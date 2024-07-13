@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Rune" load_steps=3 format=3 uid="uid://ca70mw4l360k2"]
 
-[ext_resource type="Texture2D" uid="uid://cecl1y2aetlkt" path="res://images/rune_B.tres" id="1_3q6ty"]
+[ext_resource type="Texture2D" uid="uid://rtuq8cg6tmjl" path="res://images/rune_D.tres" id="1_rx02l"]
 [ext_resource type="Script" path="res://models/runes/rune.gd" id="2_totcp"]
 
 [resource]
 script = ExtResource("2_totcp")
 name = "Pelo."
 description = "La runa más peliaguda. Usar con precaución. "
-image = ExtResource("1_3q6ty")
+image = ExtResource("1_rx02l")

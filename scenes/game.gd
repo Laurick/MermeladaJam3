@@ -5,13 +5,17 @@ var edit_scene:PackedScene = preload("res://components/edit.tscn")
 @onready var book_button = $BookButton
 @onready var book = $Book
 @onready var manual = $Control/Manual
+@onready var give_button = $GiveButton
 
 @onready var runes = $Runes
 @onready var stones = $Stones
 
-var colosus = null
+var colosus:Colosus = null
 
 var state = "none"
+
+var stones_selected:Array[StoneButton] = []
+var runes_selected:Array[RuneButton] = []
 
 func _ready():
 	Global.reset_game()
@@ -27,17 +31,26 @@ func title_pased(title:String):
 	elif title == "set_stones":
 		fader.force_fade_out()
 		await get_tree().create_timer(2).timeout
-		for rune in runes.get_children():
+		for rune:RuneButton in runes.get_children():
+			rune.on_rune_selected.connect(rune_selected)
 			create_tween().tween_property(rune, "modulate:a", 1, 0.7)
 			await get_tree().create_timer(0.2).timeout
 			
-		for stone in stones.get_children():
+		for stone:StoneButton in stones.get_children():
+			stone.on_stone_selected.connect(stone_selected)
 			create_tween().tween_property(stone, "modulate:a", 1, 0.7)
 			await get_tree().create_timer(0.2).timeout
 	elif title == "read_manual":
 		show_manual()
 		await get_tree().create_timer(0.7).timeout
 		state = "manual"
+	elif title == "wait_for_riddle":
+		state = "wait_for_riddle"
+		give_button.visible = true
+		stones_selected = []
+		runes_selected = []
+	elif title == "continue_for_riddle":
+		give_button.visible = true
 
 func game_over():
 	fader.fade_in()
@@ -66,11 +79,13 @@ func _on_book_button_pressed():
 func show_manual():
 	Audio.play_sfx("Cut_560310__garuda1982__stone-rubs-grinds-on-stone-sound-effect.mp3")
 	manual.text = get_tutorial_text()
-	create_tween().tween_property(manual, "modulate:a", 1, 0.7)
+	manual.get_parent().show()
+	await create_tween().tween_property(manual, "modulate:a", 1, 0.7).finished
 	
 func hide_manual():
 	Audio.play_sfx("Cut_560310__garuda1982__stone-rubs-grinds-on-stone-sound-effect.mp3")
-	create_tween().tween_property(manual, "modulate:a", 0, 0.7)
+	await create_tween().tween_property(manual, "modulate:a", 0, 0.7).finished
+	manual.get_parent().hide()
 
 func get_tutorial_text() -> String:
 	var text = ""
@@ -87,6 +102,25 @@ Y, ahora, ¡ponte detrás del mostrador y ayuda a cuantos más clientes puedas!\
 Atentamente,\nel equipo comercial de Piedras Salubres SA."
 	return text
 
+func rune_selected(rune:RuneButton, is_selected):
+	if is_selected:
+		if len(runes_selected) >= 2:
+			runes_selected[0].button_pressed = false
+			runes_selected.push_back(rune)
+		else:
+			runes_selected.push_back(rune)
+	else:
+		runes_selected.erase(rune)
+
+func stone_selected(stone:StoneButton, is_selected):
+	if is_selected:
+		if len(stones_selected) >= 1:
+			stones_selected[0].button_pressed = false
+			stones_selected.push_back(stone)
+		else:
+			stones_selected.push_back(stone)
+	else:
+		stones_selected.erase(stone)
 
 func _on_manual_gui_input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and state == "manual":
@@ -94,12 +128,27 @@ func _on_manual_gui_input(event):
 		DialogueManager.show_dialogue_balloon(load("res://dialogues/test.dialogue"), "first_customer")
 
 func mutation_found(dict: Dictionary):
-	#{ "expression": [{ "function": "show_chartacter", "type": &"function", "value": [[{ "type": "string", "value": "Venus" }]] }], "is_blocking": true }
 	if dict.has("expression"):
 		var expression:Dictionary = dict["expression"][0];
 		if expression.has("function"):
 			if expression["function"] == "new_colosus":
 				var args = expression["value"][0]
 				var name = args[0]["value"]
-				var colosus = load("res://models/colosus/"+name+".tres")
-				print("new colosus: "+name)
+				colosus = load("res://models/colosus/"+name+".tres")
+
+
+func _on_give_button_pressed():
+	give_button.visible = false
+	if len(runes_selected) < 2 or len(stones_selected) < 1:
+		DialogueManager.show_dialogue_balloon(load("res://dialogues/test.dialogue"), "error_spell")
+	else:
+		var spell = Spell.new()
+		for rune_selected in runes_selected:
+			spell.runes.push_front(rune_selected.rune)
+		for stone_selected in stones_selected:
+			spell.stones.push_front(stone_selected.stone)
+		
+		if colosus.needs.is_equals(spell):
+			DialogueManager.show_dialogue_balloon(load("res://dialogues/test.dialogue"), colosus.name+"_correct")
+		else:
+			DialogueManager.show_dialogue_balloon(load("res://dialogues/test.dialogue"), colosus.name+"_incorrect")

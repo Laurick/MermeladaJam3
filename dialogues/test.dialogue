@@ -46,6 +46,11 @@ Ya sé lo que tengo que hacer, pero no creo que me haga daño leerlo de nuevo, p
 ~ read_manual
 => END
 
+~ error_spell
+{{player_name}}: No... debería entregar DOS runas y UNA piedra para ayudar correctamente
+~ continue_for_riddle
+=> END
+
 ~ first_customer
 
 do show_chartacter("Venus")
@@ -81,31 +86,31 @@ Verás, hace días que me duele la rodilla derecha; creo que es un poco por la h
 No tendrás algo para ello, ¿verdad?
 {{player_name}}: Deje que eche un vistazo y le comento.
 {{player_name}}: (Voy a ver qué piedras y runas tengo).
+~ wait_for_riddle
+=> END 
+
+~ Venus_correct
+
+Venus: ¡Oye! Menos mal que he llegado antes de que cerrases la tienda. 
+{{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
+Venus: Nada, nada. Solo quería decirte que tengo la rodilla mucho mejor. \n ¡Esa piedra con runas que me diste funcionó a las mil maravillas!
+{{player_name}}: Ah...me alegro de oírlo. 
+Venus: ¡Pondré una buena reseña en la página web!
+{{player_name}}: Gracias.
+Venus: Gracias a ti, [if Global.gender == 0]majo[/if][if Global.gender == 1]maja[/if][if Global.gender == 2]maje[/if].
 
 => END 
 
-~ first_correct
+~ Venus_incorrect
 
 Venus: ¡Oye! Menos mal que he llegado antes de que cerrases la tienda. 
-#{{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
-#Venus: Nada, nada. Solo quería decirte que tengo la rodilla mucho mejor. \n ¡Esa piedra con runas que me diste funcionó a las mil maravillas!
-#{{player_name}}: Ah...me alegro de oírlo. 
-#Venus: ¡Pondré una buena reseña en la página web!
-#{{player_name}}: Gracias.
-#Venus: Gracias a ti, [if Global.gender == 0]majo[/if][if Global.gender == 1]maja[/if][if Global.gender == 2]maje[/if].
-
-=> END 
-
-~ first_incorrect
-
-Venus: ¡Oye! Menos mal que he llegado antes de que cerrases la tienda. 
-#{{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
-#Venus: ¿Que en qué puedes ayudarme? Pues en darme la hoja de reclamaciones, eso para empezar. La piedra con runas que me diste no ha servido para nada.
-#{{player_name}}: Oh...lo...lo siento. 
-#Venus: Disculparte no servirá de nada. Tengo que ir al escultor para que me vuelva a tallar la rodilla porque, con la humedad, la tierra se ha convertido en un bloque y no puedo doblar la pierna.
-#{{player_name}}: Lo lamento.
-#Venus: No pienso volver a este sitio. ¡Y dejaré una mala reseña en la página web!
-#{{player_name}}: Genial.
+{{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
+Venus: ¿Que en qué puedes ayudarme? Pues en darme la hoja de reclamaciones, eso para empezar. La piedra con runas que me diste no ha servido para nada.
+{{player_name}}: Oh...lo...lo siento. 
+Venus: Disculparte no servirá de nada. Tengo que ir al escultor para que me vuelva a tallar la rodilla porque, con la humedad, la tierra se ha convertido en un bloque y no puedo doblar la pierna.
+{{player_name}}: Lo lamento.
+Venus: No pienso volver a este sitio. ¡Y dejaré una mala reseña en la página web!
+{{player_name}}: Genial.
 
 => END 
 
