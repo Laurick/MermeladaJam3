@@ -1,16 +1,16 @@
 [gd_scene load_steps=12 format=3 uid="uid://c4yx11bhnumfk"]
 
 [ext_resource type="PackedScene" uid="uid://bobmkqocj4js4" path="res://components/TrophyItem.tscn" id="1_7c7pa"]
-[ext_resource type="Resource" uid="uid://dachlcgav03jd" path="res://models/trophies/platinum_trophie.tres" id="2_jxb51"]
-[ext_resource type="Resource" uid="uid://b5hdi6yyifvv2" path="res://models/trophies/trophie_1.tres" id="3_15ve5"]
-[ext_resource type="Resource" uid="uid://dx32osbnchp3s" path="res://models/trophies/trophie_2.tres" id="4_dp70o"]
-[ext_resource type="Resource" uid="uid://bhttkk1xlj8ad" path="res://models/trophies/trophie_3.tres" id="5_v7l0c"]
-[ext_resource type="Resource" uid="uid://b4lxfqndcruye" path="res://models/trophies/trophie_4.tres" id="6_wnjnr"]
-[ext_resource type="Resource" uid="uid://bl80xjxnte1tk" path="res://models/trophies/trophie_5.tres" id="7_kjk52"]
-[ext_resource type="Resource" uid="uid://qyilfmlpk3cg" path="res://models/trophies/trophie_6.tres" id="8_153me"]
-[ext_resource type="Resource" uid="uid://bteb4m8s52ea4" path="res://models/trophies/trophie_7.tres" id="9_eegje"]
-[ext_resource type="Resource" uid="uid://chli2hn5yaddh" path="res://models/trophies/trophie_8.tres" id="10_kq4g1"]
-[ext_resource type="Resource" uid="uid://bnv7flgpp4ijg" path="res://models/trophies/trophie_9.tres" id="11_jeq8o"]
+[ext_resource type="Resource" uid="uid://dachlcgav03jd" path="res://models/trophies/Colosal.tres" id="2_d01hj"]
+[ext_resource type="Resource" uid="uid://b5hdi6yyifvv2" path="res://models/trophies/Venus.tres" id="3_cbj7b"]
+[ext_resource type="Resource" uid="uid://dx32osbnchp3s" path="res://models/trophies/Columbo.tres" id="4_3t2pe"]
+[ext_resource type="Resource" uid="uid://bhttkk1xlj8ad" path="res://models/trophies/Tiki.tres" id="5_yhi8c"]
+[ext_resource type="Resource" uid="uid://b4lxfqndcruye" path="res://models/trophies/Tlatoani.tres" id="6_tk0fu"]
+[ext_resource type="Resource" uid="uid://bl80xjxnte1tk" path="res://models/trophies/Dogu.tres" id="7_6hna4"]
+[ext_resource type="Resource" uid="uid://qyilfmlpk3cg" path="res://models/trophies/Chancay.tres" id="8_p3x3v"]
+[ext_resource type="Resource" uid="uid://bteb4m8s52ea4" path="res://models/trophies/Enano.tres" id="9_284y4"]
+[ext_resource type="Resource" uid="uid://chli2hn5yaddh" path="res://models/trophies/Amor.tres" id="10_wtsy2"]
+[ext_resource type="Resource" uid="uid://bnv7flgpp4ijg" path="res://models/trophies/Al fin.tres" id="11_lwljf"]
 
 [node name="Trophies" type="Control"]
 layout_mode = 3
@@ -41,40 +41,40 @@ size_flags_vertical = 3
 
 [node name="TrophyItem" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_7c7pa")]
 layout_mode = 2
-trophy = ExtResource("2_jxb51")
+trophy = ExtResource("2_d01hj")
 
 [node name="TrophyItem2" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_7c7pa")]
 layout_mode = 2
-trophy = ExtResource("3_15ve5")
+trophy = ExtResource("3_cbj7b")
 
 [node name="TrophyItem3" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_7c7pa")]
 layout_mode = 2
-trophy = ExtResource("4_dp70o")
+trophy = ExtResource("4_3t2pe")
 
 [node name="TrophyItem4" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_7c7pa")]
 layout_mode = 2
-trophy = ExtResource("5_v7l0c")
+trophy = ExtResource("5_yhi8c")
 
 [node name="TrophyItem5" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_7c7pa")]
 layout_mode = 2
-trophy = ExtResource("6_wnjnr")
+trophy = ExtResource("6_tk0fu")
 
 [node name="TrophyItem6" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_7c7pa")]
 layout_mode = 2
-trophy = ExtResource("7_kjk52")
+trophy = ExtResource("7_6hna4")
 
 [node name="TrophyItem7" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_7c7pa")]
 layout_mode = 2
-trophy = ExtResource("8_153me")
+trophy = ExtResource("8_p3x3v")
 
 [node name="TrophyItem8" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_7c7pa")]
 layout_mode = 2
-trophy = ExtResource("9_eegje")
+trophy = ExtResource("9_284y4")
 
 [node name="TrophyItem9" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_7c7pa")]
 layout_mode = 2
-trophy = ExtResource("10_kq4g1")
+trophy = ExtResource("10_wtsy2")
 
 [node name="TrophyItem10" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_7c7pa")]
 layout_mode = 2
-trophy = ExtResource("11_jeq8o")
+trophy = ExtResource("11_lwljf")

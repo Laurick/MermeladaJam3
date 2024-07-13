@@ -6,7 +6,9 @@ var edit_scene:PackedScene = preload("res://components/edit.tscn")
 @onready var book = $Book
 @onready var manual = $ControlManual/Manual
 @onready var control_trophies = $ControlTrophies
-
+@onready var game_progress_bar = $GameProgressBar
+@onready var tomeu_affinity_progress_bar = $TomeuAffinityProgressBar
+@onready var trophy_achivements = $TrophyAchivements
 
 @onready var give_button = $GiveButton
 
@@ -24,6 +26,7 @@ func _ready():
 	Global.reset_game()
 	DialogueManager.passed_title.connect(title_pased)
 	DialogueManager.mutated.connect(mutation_found)
+	Global.achivement_unlocked.connect(show_achivement)
 	await get_tree().create_timer(1).timeout
 	DialogueManager.show_dialogue_balloon(load("res://dialogues/test.dialogue"), "intro")
 
@@ -152,10 +155,13 @@ func _on_give_button_pressed():
 			spell.stones.push_front(stone_selected.stone)
 		
 		if colosus.needs.is_equals(spell):
+			Global.unlock_achivement(colosus.name)
 			Audio.play_sfx("352657__foolboymedia__bong-chime-1.mp3")
+			game_progress_bar.value = game_progress_bar.value + 1
 			DialogueManager.show_dialogue_balloon(load("res://dialogues/test.dialogue"), colosus.name+"_correct")
 		else:
 			Audio.play_sfx("351565__bertrof__game-sound-incorrect-organic-violin.wav")
+			game_progress_bar.value = game_progress_bar.value - 1
 			DialogueManager.show_dialogue_balloon(load("res://dialogues/test.dialogue"), colosus.name+"_incorrect")
 
 
@@ -165,3 +171,14 @@ func _on_trophies_button_pressed():
 
 func _on_back_trophies_button_pressed():
 	control_trophies.hide()
+
+func _input(event):
+	if event is InputEventKey and event.keycode == KEY_B:
+		show_achivement(load("res://models/trophies/Venus.tres"))
+		
+func show_achivement(achivement):
+	Audio.play_sfx("427570__maria_mannone__flute-a-short-sequence.wav")
+	trophy_achivements.setup(achivement)
+	await get_tree().create_tween().tween_property(trophy_achivements, "position", Vector2(trophy_achivements.position.x,trophy_achivements.position.y+150), 0.5).finished
+	await get_tree().create_timer(2).timeout
+	get_tree().create_tween().tween_property(trophy_achivements, "position", Vector2(trophy_achivements.position.x,trophy_achivements.position.y-150), 0.2).finished

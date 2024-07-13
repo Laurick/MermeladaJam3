@@ -1,5 +1,7 @@
 extends Node
 
+signal achivement_unlocked(archivement)
+
 #he/him = 0
 #she/her = 1
 #they/them = 2
@@ -32,8 +34,12 @@ func load_score():
 		achivements_unlocked = {}
 
 func unlock_achivement(name:String):
-	achivements_unlocked[name] = true
-	save_score()
+	if !achivements_unlocked.has(name):
+		achivements_unlocked[name] = true
+		if len(achivements_unlocked) == 9:
+			achivements_unlocked["Colosal"] = true
+		achivement_unlocked.emit(load("res://models/trophies/"+name+".tres"))
+		save_score()
 
 func is_achivements_locked(name:String):
 	if achivements_unlocked.has(name):
