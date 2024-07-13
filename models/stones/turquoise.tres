@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Stone" load_steps=2 format=3 uid="uid://j8yde08310qx"]
+[gd_resource type="Resource" script_class="Stone" load_steps=3 format=3 uid="uid://j8yde08310qx"]
 
 [ext_resource type="Script" path="res://models/stones/stone.gd" id="1_1s48m"]
+[ext_resource type="Texture2D" uid="uid://d2aargeabnjxv" path="res://images/stone_A.tres" id="1_kpme3"]
 
 [resource]
 script = ExtResource("1_1s48m")
 name = "Turquesa"
 description = "CuAl6(PO4)4(OH)8·4H2O. Como buen tetrahidrato, absorbe la humedad de maravilla.  "
+image = ExtResource("1_kpme3")

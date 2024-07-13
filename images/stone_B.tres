@@ -1,7 +1,7 @@
 [gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cgfi0mx5n3wrd"]
 
-[ext_resource type="Texture2D" path="res://images/OIP.jpeg" id="1_k10ac"]
+[ext_resource type="Texture2D" uid="uid://ksx4xxqc5ic8" path="res://images/piedras_preciosas_joyeria_schumacher.jpg" id="1_v0bwp"]
 
 [resource]
-atlas = ExtResource("1_k10ac")
-region = Rect2(31.8589, 105.151, 160.341, 267.849)
+atlas = ExtResource("1_v0bwp")
+region = Rect2(109, 660.5, 78, 78)

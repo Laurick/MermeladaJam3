@@ -6,45 +6,6 @@ Me llamo...
 ~ name
 => END
 
-~ gender
-{{player_name}}: 
-- Soy él
-	do Global.gender = 0
-- Soy ella
-	do Global.gender = 1
-- Soy elle
-	do Global.gender = 2
-	
-	*suspiras* Vaya letra de mierda, pero qué le vamos a hacer...
-
-~ set_stones
-{{player_name}}: Vale, ahora a colocar todas las piedras que tenemos...
-
-~ find_manual
-{{player_name}}: Que, la verdad, son muy pocas. Pero bueno.
-En fin, el stock ahora mismo es lo de menos. Voy a echar un vistazo al mostrador.
-...
-...
-¡Oh! Aquí hay un manual.
-Ya sé lo que tengo que hacer, pero no creo que me haga daño leerlo de nuevo, por si hay algo que se les haya olvidado decirme en la formación.
-
-~ read_manual
-
-if Global.gender == 0
-	¡Bienvenido a tu nueva aventura en Piedras Salubles SA!
-elif Global.gender == 1
-	¡Bienvenida a tu nueva aventura en Piedras Salubles SA!
-elif Global.gender == 2
-	¡Bienvenide a tu nueva aventura en Piedras Salubles SA!
-
-Como ya te habrán informado en el curso de formación, tu deber como dependiente es ayudar a los clientes con sus necesidades más importantes. ¡Del tipo que sean! Un buen profesional siempre sabrá cuál es el producto que más le conviene a su cliente. 
-Para ello, lo único que tendrás que hacer es elegir las runas y piedras que mejor se ajusten a las necesidades del cliente. Fácil, ¿verdad? Desde Piedras Salubles SA nos comprometemos a facilitar todo el trabajo a nuestros empleados, de manera que, junto a este manual, habrá un vademécum en el que podrás consultar cualquier duda que tengas respecto a las piedras y a las runas. ¡Esto está chupado!
-La satistacción del cliente es nuestro beneficio y, para asegurarnos de ello, cada cierto tiempo irá a visitar la tienda un representante de ventas para evaluarte. Si la opinión de la tienda es negativa, recibirás menos cargamentos de piedras y runas. ¡Pero no temas! Eso no complicará tu función aquí.
-Y, ahora, ¡ponte detrás del mostrador y ayuda a cuantos más clientes puedas!
-Atentamente,\n el equipo comercial de Piedras Salubres SA. 
-
-=> END 
-
 ~ open_vademecum
 
 ...
@@ -59,6 +20,31 @@ Me faltan piedras y runas. Menudo marrón. *suspiro* Espero que nadie me pida na
 ¡En fin! Allá vamos. Que no se diga que no lo he intentado.
 
 => END 
+
+~ gender
+{{player_name}}: Soy... 
+- Soy él
+	do Global.gender = 0
+- Soy ella
+	do Global.gender = 1
+- Soy elle
+	do Global.gender = 2
+	
+*suspiras* Vaya letra de mierda, pero qué le vamos a hacer...
+
+~ set_stones
+{{player_name}}: Vale, ahora a colocar todas las piedras que tenemos...
+
+~ find_manual
+{{player_name}}: Que, la verdad, son muy pocas. Pero bueno.
+En fin, el stock ahora mismo es lo de menos. Voy a echar un vistazo al mostrador.
+...
+...
+¡Oh! Aquí hay un manual.
+Ya sé lo que tengo que hacer, pero no creo que me haga daño leerlo de nuevo, por si hay algo que se les haya olvidado decirme en la formación.
+
+~ read_manual
+=> END
 
 ~ first_customer
 
@@ -92,66 +78,34 @@ Venus: Ah, sí. Perdona, que una se pone a hablar y no para.
 Verás, hace días que me duele la rodilla derecha; creo que es un poco por la humedad, ¿sabes? Se te mete ahí en la articulación y no permite bien la movilidad y no veas qué dolor.
 No tendrás algo para ello, ¿verdad?
 {{player_name}}: Deje que eche un vistazo y le comento.
-{{player_name}}: (VOy a ver qué piedras y runas tengo).
+{{player_name}}: (Voy a ver qué piedras y runas tengo).
 
 => END 
 
 ~ first_correct
 
 Venus: ¡Oye! Menos mal que he llegado antes de que cerrases la tienda. 
-{{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
-Venus: Nada, nada. Solo quería decirte que tengo la rodilla mucho mejor. \n ¡Esa piedra con runas que me diste funcionó a las mil maravillas!
-{{player_name}}: Ah...me alegro de oírlo. 
-Venus: ¡Pondré una buena reseña en la página web!
-{{player_name}}: Gracias.
-Venus: Gracias a ti, [if Global.gender == 0]majo[/if][if Global.gender == 1]maja[/if][if Global.gender == 2]maje[/if].
+#{{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
+#Venus: Nada, nada. Solo quería decirte que tengo la rodilla mucho mejor. \n ¡Esa piedra con runas que me diste funcionó a las mil maravillas!
+#{{player_name}}: Ah...me alegro de oírlo. 
+#Venus: ¡Pondré una buena reseña en la página web!
+#{{player_name}}: Gracias.
+#Venus: Gracias a ti, [if Global.gender == 0]majo[/if][if Global.gender == 1]maja[/if][if Global.gender == 2]maje[/if].
 
 => END 
 
 ~ first_incorrect
 
 Venus: ¡Oye! Menos mal que he llegado antes de que cerrases la tienda. 
-{{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
-Venus: ¿Que en qué puedes ayudarme? Pues en darme la hoja de reclamaciones, eso para empezar. La piedra con runas que me diste no ha servido para nada.
-{{player_name}}: Oh...lo...lo siento. 
-Venus: Disculparte no servirá de nada. Tengo que ir al escultor para que me vuelva a tallar la rodilla porque, con la humedad, la tierra se ha convertido en un bloque y no puedo doblar la pierna.
-{{player_name}}: Lo lamento.
-Venus: No pienso volver a este sitio. ¡Y dejaré una mala reseña en la página web!
-{{player_name}}: Genial.
+#{{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
+#Venus: ¿Que en qué puedes ayudarme? Pues en darme la hoja de reclamaciones, eso para empezar. La piedra con runas que me diste no ha servido para nada.
+#{{player_name}}: Oh...lo...lo siento. 
+#Venus: Disculparte no servirá de nada. Tengo que ir al escultor para que me vuelva a tallar la rodilla porque, con la humedad, la tierra se ha convertido en un bloque y no puedo doblar la pierna.
+#{{player_name}}: Lo lamento.
+#Venus: No pienso volver a este sitio. ¡Y dejaré una mala reseña en la página web!
+#{{player_name}}: Genial.
 
 => END 
-
-~ first_goodbye
-
-{{player_name}}: Bueno, aquí tiene. Creo que le será útil.
-Venus: ¡Ay, espero que sí! Estoy cansada de utilizar el bastón. En unos días te ocmento. ¡Gracias!
-{{player_name}}: A usted.
-
-=> END
-
-~ mirror
-
-{{player_name}}: Bueno...no ha ideo del todo mal.
-{{player_name}}: Me pregunto por qué se me habrá quedado mirando. *te giras hacia el espejo* Tengo la arcilla en su sitio y la ropa bien colocada. ¿Será porque soy más joven?
-
-=> END
-
-~ second_customer
-
-{{player_name}}: ¡Buenos días! ¿En qué puedo ayudar?
-Columbo: Pareces muy joven para llevar un negocio tan importante como este, ¿no te parece?
-{{player_name}}: ¿Disculpe?
-Columbo: Sí, haces bien en disculparte. Las necesidades de la gente no son un juego. ¡Es algo muy importante!
-{{player_name}}: Me tomo mi trabajo muy en serio.
-Columbo: *resopla* Bueno, eso ya lo veremos.
-Verás, tengo un problema. 
-{{player_name}}: (No me digas).
-Columbo: NECESITO PELO.
-{{player_name}}: ...
-¿Perdón?
-Columbo: ¿Estás [if Global.gender == 0]sordo[/if][if Global.gender == 1]sorda[/if][if Global.gender == 2]sorde[/if]
-
-
 
 
 

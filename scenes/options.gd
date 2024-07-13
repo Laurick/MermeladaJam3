@@ -16,6 +16,7 @@ func _ready():
 	
 	
 func _on_idiomas_item_selected(index):
+	Audio.play_click_sound()
 	match index: 
 		0:
 			TranslationServer.set_locale("es")
@@ -37,4 +38,5 @@ func _on_sfx_drag_ended(value_changed):
 
 
 func _on_back_pressed():
+	Audio.play_click_sound()
 	get_tree().change_scene_to_file("res://scenes/main.tscn")

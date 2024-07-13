@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Stone" load_steps=2 format=3 uid="uid://001wpo6evy5v"]
+[gd_resource type="Resource" script_class="Stone" load_steps=3 format=3 uid="uid://001wpo6evy5v"]
 
 [ext_resource type="Script" path="res://models/stones/stone.gd" id="1_5fcqw"]
+[ext_resource type="Texture2D" uid="uid://cgfi0mx5n3wrd" path="res://images/stone_B.tres" id="1_vply6"]
 
 [resource]
 script = ExtResource("1_5fcqw")
 name = "Obsidiana"
 description = "Tiene propiedades regenerativas. (¿O era generativas?)"
+image = ExtResource("1_vply6")

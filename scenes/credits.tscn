@@ -123,7 +123,11 @@ horizontal_alignment = 1
 [node name="AssetsLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 bbcode_enabled = true
-text = "Dialoge Manager by Nathan hoad -> [url]https://github.com/nathanhoad/godot_dialogue_manager[/url] "
+text = "Dialoge Manager by Nathan hoad -> [url]https://github.com/nathanhoad/godot_dialogue_manager[/url] 
+Pressure_Plate_Stone by IPaddeh -> [url] https://freesound.org/s/422870[/url]
+Stone rubs grinds on stone sound effect by Garuda1982 -> [url]https://freesound.org/s/560310/[/url]
+Videogame Menu Button Clicking Sound 13  by Christopherderp -> [url]https://freesound.org/s/333038/[/url]
+"
 fit_content = true
 
 [node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer"]

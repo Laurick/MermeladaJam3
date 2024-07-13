@@ -9,14 +9,14 @@
 [ext_resource type="Resource" uid="uid://cqk07mdes8r0i" path="res://models/runes/dry_rune.tres" id="4_3llky"]
 [ext_resource type="Resource" uid="uid://ca70mw4l360k2" path="res://models/runes/hair_rune.tres" id="5_5okme"]
 [ext_resource type="Resource" uid="uid://001wpo6evy5v" path="res://models/stones/obsidian.tres" id="5_sctr1"]
-[ext_resource type="Resource" uid="uid://dfs0c5knxh6hy" path="res://models/stones/diamond.tres" id="6_wes5p"]
+[ext_resource type="Resource" path="res://models/stones/diamond.tres" id="6_wes5p"]
 [ext_resource type="Resource" uid="uid://coqxwe86fjbch" path="res://models/stones/citrine.tres" id="7_si8p0"]
 [ext_resource type="Resource" uid="uid://cq5cgfqagww0e" path="res://models/stones/blue_quartz.tres" id="8_cb1xa"]
-[ext_resource type="Resource" uid="uid://chejal5adpcgs" path="res://models/runes/clay_rune.tres" id="12_amsbb"]
-[ext_resource type="Resource" uid="uid://brvr623cv7lh" path="res://models/runes/exclude_rune.tres" id="13_xm1ed"]
-[ext_resource type="Resource" uid="uid://byooehvynad3e" path="res://models/runes/pain_rune.tres" id="14_134kj"]
+[ext_resource type="Resource" path="res://models/runes/clay_rune.tres" id="12_amsbb"]
+[ext_resource type="Resource" path="res://models/runes/exclude_rune.tres" id="13_xm1ed"]
+[ext_resource type="Resource" path="res://models/runes/pain_rune.tres" id="14_134kj"]
 [ext_resource type="Resource" uid="uid://7idqp2bxie3c" path="res://models/runes/shine_rune.tres" id="15_iijds"]
-[ext_resource type="Resource" uid="uid://scg2b3pl2lyg" path="res://models/runes/union_rune.tres" id="16_yfnrx"]
+[ext_resource type="Resource" path="res://models/runes/union_rune.tres" id="16_yfnrx"]
 [ext_resource type="Resource" uid="uid://c8amg2qwsubuc" path="res://models/runes/water_rune.tres" id="17_qj2yk"]
 
 [node name="Game" type="Control"]
@@ -51,117 +51,151 @@ offset_bottom = 1296.0
 
 [node name="Stones" type="Control" parent="."]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1.0
+offset_bottom = 1.0
 
 [node name="TurquoiseButton" type="TextureButton" parent="Stones"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 723.0
+offset_top = 150.0
+offset_right = 763.0
+offset_bottom = 190.0
 script = ExtResource("2_4heph")
 stone = ExtResource("3_v03xb")
 
 [node name="ObsidianButton" type="TextureButton" parent="Stones"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 853.0
+offset_top = 145.0
+offset_right = 893.0
+offset_bottom = 185.0
 script = ExtResource("2_4heph")
 stone = ExtResource("5_sctr1")
 
 [node name="DiamondButton" type="TextureButton" parent="Stones"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 987.0
+offset_top = 172.0
+offset_right = 1027.0
+offset_bottom = 212.0
 script = ExtResource("2_4heph")
 stone = ExtResource("6_wes5p")
 
 [node name="CitrineButton" type="TextureButton" parent="Stones"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 858.0
+offset_top = 308.0
+offset_right = 898.0
+offset_bottom = 348.0
 script = ExtResource("2_4heph")
 stone = ExtResource("7_si8p0")
 
 [node name="BlueQuartzButton" type="TextureButton" parent="Stones"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 991.0
+offset_top = 343.0
+offset_right = 1031.0
+offset_bottom = 383.0
 script = ExtResource("2_4heph")
 stone = ExtResource("8_cb1xa")
 
 [node name="Runes" type="Control" parent="."]
 anchors_preset = 0
-offset_left = 202.0
-offset_top = 188.0
-offset_right = 242.0
-offset_bottom = 228.0
+offset_right = 1.0
+offset_bottom = 1.0
 
 [node name="DryRuneButton" type="TextureButton" parent="Runes"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = -202.0
-offset_top = -188.0
-offset_right = -162.0
-offset_bottom = -148.0
+offset_left = 132.0
+offset_top = 189.0
+offset_right = 172.0
+offset_bottom = 229.0
 script = ExtResource("3_delqg")
 rune = ExtResource("4_3llky")
 
 [node name="HairRuneButton" type="TextureButton" parent="Runes"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 283.0
-offset_top = -42.0
-offset_right = 323.0
-offset_bottom = -2.0
+offset_left = 227.0
+offset_top = 177.0
+offset_right = 267.0
+offset_bottom = 217.0
 script = ExtResource("3_delqg")
 rune = ExtResource("5_5okme")
 
 [node name="MovementRuneButton" type="TextureButton" parent="Runes"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 283.0
-offset_top = -42.0
-offset_right = 323.0
-offset_bottom = -2.0
+offset_left = 498.0
+offset_top = 213.0
+offset_right = 538.0
+offset_bottom = 253.0
 script = ExtResource("3_delqg")
 rune = ExtResource("5_5okme")
 
 [node name="ClayRuneButton" type="TextureButton" parent="Runes"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 177.0
+offset_top = 392.0
+offset_right = 217.0
+offset_bottom = 432.0
 script = ExtResource("3_delqg")
 rune = ExtResource("12_amsbb")
 
 [node name="ExcludeRuneButton" type="TextureButton" parent="Runes"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 304.0
+offset_top = 392.0
+offset_right = 344.0
+offset_bottom = 432.0
 script = ExtResource("3_delqg")
 rune = ExtResource("13_xm1ed")
 
 [node name="PainRuneButton" type="TextureButton" parent="Runes"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 452.0
+offset_top = 414.0
+offset_right = 492.0
+offset_bottom = 454.0
 script = ExtResource("3_delqg")
 rune = ExtResource("14_134kj")
 
 [node name="ShineRuneButton" type="TextureButton" parent="Runes"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 558.0
+offset_top = 409.0
+offset_right = 598.0
+offset_bottom = 449.0
 script = ExtResource("3_delqg")
 rune = ExtResource("15_iijds")
 
 [node name="UnionRuneButton" type="TextureButton" parent="Runes"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 212.0
+offset_top = 109.0
+offset_right = 252.0
+offset_bottom = 149.0
 script = ExtResource("3_delqg")
 rune = ExtResource("16_yfnrx")
 
 [node name="WaterRuneButton" type="TextureButton" parent="Runes"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 420.0
+offset_top = 128.0
+offset_right = 460.0
+offset_bottom = 168.0
 script = ExtResource("3_delqg")
 rune = ExtResource("17_qj2yk")
 
@@ -172,8 +206,33 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0)
+color = Color(0, 0, 0, 1)
 script = ExtResource("2_roeqh")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Manual" type="RichTextLabel" parent="Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -250.0
+offset_right = 200.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="BookButton" to="." method="_on_book_button_pressed"]
+[connection signal="gui_input" from="Control" to="." method="_on_manual_gui_input"]
+[connection signal="gui_input" from="Control/Manual" to="." method="_on_manual_gui_input"]

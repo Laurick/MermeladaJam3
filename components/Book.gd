@@ -8,9 +8,11 @@ func _ready():
 	position = Vector2(0, HIDE_POSITION)
 
 func _show():
+	Audio.play_sfx("422870__ipaddeh__pressure_plate_stone.wav")
 	await get_tree().create_tween().tween_property(self, "position", Vector2.ZERO, SHOW_TIME).finished
 
 func _hide():
+	Audio.play_sfx("422870__ipaddeh__pressure_plate_stone.wav")
 	await get_tree().create_tween().tween_property(self, "position", Vector2(0, HIDE_POSITION), SHOW_TIME).finished
 
 
