@@ -9,7 +9,7 @@ func _ready():
 	if Global.is_achivements_locked(trophy.name):
 		title_label.text = "?"
 		description_label.text = "???"
-		texture_icon.texture = preload("res://icon.svg")
+		texture_icon.texture = preload("res://images/Logro_Base_1.png")
 	else:
 		title_label.text = trophy.name
 		description_label.text = trophy.description

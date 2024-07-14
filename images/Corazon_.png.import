@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu8lk2lfpvsmn"
-path="res://.godot/imported/platino.jpeg-48e5d9fdec7998eb51031e2c7570dc19.ctex"
+uid="uid://88ncka6rs6qb"
+path="res://.godot/imported/Corazon_.png-90b229171b11ce639693a719b079db4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/platino.jpeg"
-dest_files=["res://.godot/imported/platino.jpeg-48e5d9fdec7998eb51031e2c7570dc19.ctex"]
+source_file="res://images/Corazon_.png"
+dest_files=["res://.godot/imported/Corazon_.png-90b229171b11ce639693a719b079db4b.ctex"]
 
 [params]
 

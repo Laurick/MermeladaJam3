@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Trophie" load_steps=3 format=3 uid="uid://dx32osbnchp3s"]
 
 [ext_resource type="Script" path="res://models/trophies/trophies.gd" id="1_2eiii"]
-[ext_resource type="Texture2D" uid="uid://db5gka7vlixrh" path="res://images/trophie.tres" id="1_apwqh"]
+[ext_resource type="Texture2D" uid="uid://b1igxqmopa2jv" path="res://images/Logro_Columbo__1.png" id="1_fo3os"]
 
 [resource]
 script = ExtResource("1_2eiii")
 name = "Columbo"
 description = "Te miraba con recelo, pero le diste pelo."
-image = ExtResource("1_apwqh")
+image = ExtResource("1_fo3os")

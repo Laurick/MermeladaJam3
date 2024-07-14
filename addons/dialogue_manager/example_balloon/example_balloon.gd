@@ -166,12 +166,14 @@ func new_colosus(name:String):
 	pass
 	
 func show_chartacter(name:String):
+	print("show_chartacter in balloon")
 	var path = "res://images/"+name+".tres"
 	avatar.modulate = Color(255, 255, 255, 1)
 	await create_tween().tween_property(avatar, "modulate:a", 1, 0.7).finished
 	avatar.texture = load(path)
 
 func leave_chartacter():
+	print("leave_chartacter in balloon")
 	await create_tween().tween_property(avatar, "modulate:a", 0, 0.7).finished
 	avatar.texture = null
 	avatar.modulate = Color.WHITE
@@ -190,10 +192,13 @@ func _on_skip_dialogue_pressed():
 	var volume = audio_stream_player.volume_db
 	audio_stream_player.volume_db = -80
 	while (!exit):
+		var input = InputEventMouseButton.new()
+		input.button_index = MOUSE_BUTTON_LEFT
+		input.pressed = true
 		dialogue_line = await resource.get_next_dialogue_line(dialogue_line.next_id)
-		balloon.visible = false
+		balloon.modulate = Color.TRANSPARENT
 		await get_tree().process_frame
-		if (dialogue_line.responses && len(dialogue_line.responses) > 0) or (dialogue_line.text.is_empty()):
+		if (dialogue_line.responses && len(dialogue_line.responses) > 0) or (dialogue_line.text.is_empty()) or dialogue_line.type == &"title":
 			exit = true
 	audio_stream_player.volume_db = volume
-	balloon.visible = true
+	balloon.modulate = Color.WHITE

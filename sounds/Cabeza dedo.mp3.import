@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://idis316geo1g"
+path="res://.godot/imported/Cabeza dedo.mp3-6535fcc8ccfe059d6535f34029d586ea.mp3str"
+
+[deps]
+
+source_file="res://sounds/Cabeza dedo.mp3"
+dest_files=["res://.godot/imported/Cabeza dedo.mp3-6535fcc8ccfe059d6535f34029d586ea.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

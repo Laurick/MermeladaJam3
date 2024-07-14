@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Trophie" load_steps=3 format=3 uid="uid://bl80xjxnte1tk"]
 
 [ext_resource type="Script" path="res://models/trophies/trophies.gd" id="1_80586"]
-[ext_resource type="Texture2D" uid="uid://db5gka7vlixrh" path="res://images/trophie.tres" id="1_uq4tm"]
+[ext_resource type="Texture2D" uid="uid://dmh2weqsvnknu" path="res://images/Logro_Dogu.png" id="1_rx17u"]
 
 [resource]
 script = ExtResource("1_80586")
 name = "Dogu"
 description = "Su nuevo material le sentó fenomenal."
-image = ExtResource("1_uq4tm")
+image = ExtResource("1_rx17u")

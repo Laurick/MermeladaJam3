@@ -24,6 +24,11 @@ func play_click_sound():
 	audio_stream_player_ui.stream = preload("res://sounds/333038__christopherderp__videogame-menu-button-clicking-sound-13.wav")
 	audio_stream_player_ui.play()
 
+func play_music_by_path(music_path:String):
+	audio_stream_player_music.stop()
+	audio_stream_player_music.stream = load(music_path)
+	audio_stream_player_music.play()
+
 func play_music(music:AudioStream):
 	if audio_stream_player_music.stream != music:
 		audio_stream_player_music.stream = music

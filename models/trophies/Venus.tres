@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Trophie" load_steps=3 format=3 uid="uid://b5hdi6yyifvv2"]
 
-[ext_resource type="Texture2D" uid="uid://db5gka7vlixrh" path="res://images/trophie.tres" id="1_8e4u7"]
 [ext_resource type="Script" path="res://models/trophies/trophies.gd" id="1_r0o0l"]
+[ext_resource type="Texture2D" uid="uid://dix40le56nh21" path="res://images/Logro_Venus.png" id="1_uls6c"]
 
 [resource]
 script = ExtResource("1_r0o0l")
 name = "Venus"
 description = "Vivía una pesadilla y le sanaste la rodilla. "
-image = ExtResource("1_8e4u7")
+image = ExtResource("1_uls6c")

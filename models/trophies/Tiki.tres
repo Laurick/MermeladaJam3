@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Trophie" load_steps=3 format=3 uid="uid://bhttkk1xlj8ad"]
 
-[ext_resource type="Texture2D" uid="uid://db5gka7vlixrh" path="res://images/trophie.tres" id="1_440ws"]
+[ext_resource type="Texture2D" uid="uid://dt122s5acnw5w" path="res://images/Logro_Tiki.png" id="1_jrt2e"]
 [ext_resource type="Script" path="res://models/trophies/trophies.gd" id="1_mwh88"]
 
 [resource]
 script = ExtResource("1_mwh88")
 name = "Tiki"
 description = "No el coloso más amable, pero ahora el más hermoso."
-image = ExtResource("1_440ws")
+image = ExtResource("1_jrt2e")

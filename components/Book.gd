@@ -7,7 +7,8 @@ const SHOW_TIME:float = 0.7
 @onready var HIDE_POSITION = size.y * 2 
 
 func _ready():
-	position = Vector2(0, HIDE_POSITION)
+	#position = Vector2(0, HIDE_POSITION)
+	pass
 
 func _show():
 	Audio.play_sfx("422870__ipaddeh__pressure_plate_stone.wav")

@@ -1,36 +1,39 @@
-[gd_scene load_steps=2 format=3 uid="uid://c7v2i7lwmp3yp"]
+[gd_scene load_steps=4 format=3 uid="uid://c7v2i7lwmp3yp"]
 
 [ext_resource type="Script" path="res://components/edit.gd" id="1_bl7kd"]
+[ext_resource type="FontFile" uid="uid://c762n5plv5aww" path="res://images/UI/fonts/Skranji-Regular.ttf" id="2_s6tsr"]
+[ext_resource type="Theme" uid="uid://dc6dlmiffd7ot" path="res://theme/buton_theme.tres" id="3_lmuth"]
 
 [node name="Edit" type="Control"]
 layout_mode = 3
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_bl7kd")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-alignment = 1
+script = ExtResource("1_bl7kd")
 
-[node name="LineEdit" type="LineEdit" parent="HBoxContainer"]
+[node name="LineEdit" type="LineEdit" parent="."]
 layout_mode = 2
+offset_left = 328.0
+offset_top = 283.0
+offset_right = 824.0
+offset_bottom = 363.0
 size_flags_horizontal = 3
-placeholder_text = "Pon tu nombre aqui"
+theme_override_fonts/font = ExtResource("2_s6tsr")
+theme_override_font_sizes/font_size = 24
+placeholder_text = "Pon tu nombre aquí"
 
-[node name="ButtonSubmitEdit" type="Button" parent="HBoxContainer"]
+[node name="ButtonSubmitEdit" type="Button" parent="."]
 layout_mode = 2
+offset_left = 641.0
+offset_top = 366.0
+offset_right = 823.0
+offset_bottom = 435.0
+theme = ExtResource("3_lmuth")
 disabled = true
-text = "Aceptar"
+text = "ACEPTAR"
 
-[connection signal="text_changed" from="HBoxContainer/LineEdit" to="." method="_on_line_edit_text_changed"]
-[connection signal="text_submitted" from="HBoxContainer/LineEdit" to="." method="_on_line_edit_text_submitted"]
-[connection signal="pressed" from="HBoxContainer/ButtonSubmitEdit" to="." method="_on_button_submit_edit_pressed"]
+[connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="ButtonSubmitEdit" to="." method="_on_button_submit_edit_pressed"]

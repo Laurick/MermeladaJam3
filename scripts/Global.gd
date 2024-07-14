@@ -51,7 +51,7 @@ func unlock_achivement(name:String):
 
 func is_achivements_locked(name:String):
 	if achivements_unlocked.has(name):
-		return achivements_unlocked[name]
+		return !achivements_unlocked[name]
 	else:
 		return true
 

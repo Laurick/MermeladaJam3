@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_5fcqw")
 name = "Obsidiana"
-description = "Tiene propiedades regenerativas. (¿O era generativas?)"
+description = "Tiene propiedades regenerativas.\\n(¿O era generativas?)"
 image = ExtResource("1_vply6")

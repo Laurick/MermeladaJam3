@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn0cx3b8jfu8h"
-path="res://.godot/imported/trophie.jpeg-126b859e64e8a54bc9e888e2936f7298.ctex"
+uid="uid://gaqei252p0p1"
+path="res://.godot/imported/Logro_Chancay.png-80fef151f38283013bbc7ad6ab6e6daf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/trophie.jpeg"
-dest_files=["res://.godot/imported/trophie.jpeg-126b859e64e8a54bc9e888e2936f7298.ctex"]
+source_file="res://images/Logro_Chancay.png"
+dest_files=["res://.godot/imported/Logro_Chancay.png-80fef151f38283013bbc7ad6ab6e6daf.ctex"]
 
 [params]
 

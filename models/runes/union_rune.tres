@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_3npqb")
 name = "Unión."
-description = "Runa para aquellas cosas que no deberían estar separadas."
+description = "Runa para aquellas cosas que\\nno deberían estar separadas."
 image = ExtResource("1_vdybo")

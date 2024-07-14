@@ -138,7 +138,7 @@ layout_mode = 2
 mouse_filter = 1
 theme_override_fonts/normal_font = ExtResource("3_6egty")
 theme_override_fonts/bold_font = ExtResource("4_jvk4s")
-theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/normal_font_size = 32
 bbcode_enabled = true
 text = "Character"
 fit_content = true
@@ -150,7 +150,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/normal_font = ExtResource("3_6egty")
 theme_override_fonts/bold_font = ExtResource("4_jvk4s")
-theme_override_font_sizes/normal_font_size = 18
+theme_override_font_sizes/normal_font_size = 24
 text = "Dialogue..."
 
 [node name="SkipDialogue" type="Button" parent="Balloon/Panel/Dialogue"]
@@ -159,7 +159,7 @@ size_flags_horizontal = 8
 size_flags_vertical = 8
 theme = ExtResource("4_jjiub")
 theme_override_font_sizes/font_size = 14
-text = "Saltar diálogo"
+text = "SALTAR"
 
 [node name="Responses" type="MarginContainer" parent="Balloon"]
 layout_mode = 1

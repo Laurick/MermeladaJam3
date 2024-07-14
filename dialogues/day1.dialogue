@@ -1,4 +1,5 @@
 ~ intro
+do Audio.stop_music()
 Bueno, ya lo tengo todo listo. Solo me queda rellenar la tarjeta de empleado y lo tengo todo.
 Nombre...
 ~ name
@@ -6,11 +7,11 @@ Nombre...
 
 ~ gender
 {{player_name}}: Ah? Tambien me pregunta el género. Vamos a rellenarlo
-- Soy él
+- SOY ÉL
 	do Global.gender = 0
-- Soy ella
+- SOY ELLA
 	do Global.gender = 1
-- Soy elle
+- SOY ELLE
 	do Global.gender = 2
 	
 {{player_name}}: *suspiras* Vaya letra de mierda, pero qué le vamos a hacer...
@@ -19,6 +20,7 @@ Nombre...
 {{player_name}}: Vale, ahora a colocar todas las piedras que tenemos...
 
 ~ find_manual
+do Audio.play_music_by_path("res://sounds/Manual.mp3")
 {{player_name}}: Bueno, el stock ahora mismo es lo de menos. Voy a echar un vistazo al mostrador.
 {{player_name}}: ...
 {{player_name}}: ...
@@ -46,7 +48,9 @@ Nombre...
 
 ~ start_of_day_1
 ~ Venus_start
+do Audio.play_music_by_path("res://sounds/Yaya.mp3")
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
+do leave_character()
 do show_chartacter("Venus")
 do new_colosus("Venus")
 {{player_name}}: ¡Buenos días! Le doy la bienvenida a nuestra tienda. ¿En qué puedo ayudar?
@@ -82,6 +86,7 @@ Venus: No tendrás algo para ello, ¿verdad?
 ~ Venus_correct
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Venus")
+do Audio.play_music_by_path("res://sounds/Yaya.mp3")
 Venus: ¡Oye! Menos mal que he llegado antes de que cerrases la tienda. 
 {{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
 Venus: Nada, nada. Solo quería decirte que tengo la rodilla mucho mejor. \n ¡Esa piedra con runas que me diste funcionó a las mil maravillas!
@@ -96,6 +101,7 @@ do leave_chartacter()
 ~ Venus_incorrect
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Venus")
+do Audio.play_music_by_path("res://sounds/Yaya.mp3")
 Venus: ¡Oye! Menos mal que he llegado antes de que cerrases la tienda. 
 {{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
 Venus: ¿Que en qué puedes ayudarme? Pues en darme la hoja de reclamaciones, eso para empezar. La piedra con runas que me diste no ha servido para nada.
@@ -109,6 +115,7 @@ do leave_chartacter()
 => END 
 
 ~ Venus_end
+do show_chartacter("Venus")
 {{player_name}}: Bueno, aquí tiene. Creo que le será útil.
 Venus: ¡Ay, espero que sí! Estoy cansada de utilizar el bastón. En unos días te comento. 
 Venus: ¡Gracias!
@@ -119,6 +126,7 @@ do leave_chartacter()
 {{player_name}}: Me pregunto por qué se me habrá quedado mirando. *te giras hacia el espejo* Tengo la arcilla en su sitio y la ropa bien colocada. ¿Será porque soy más joven?
 
 ~ MC_friend
+do Audio.play_music_by_path("res://sounds/Billie Djinn.mp3")
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Djinn")
 {{player_name}}: ¡Buenos días! ¿En qué puedo ayudar?
@@ -147,6 +155,7 @@ do leave_chartacter()
 {{player_name}}: *suspiras * ¿Qué le pasa hoy a la gente?
 
 ~ Columbo_start
+do Audio.play_music_by_path("res://sounds/Cabeza dedo.mp3")
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Columbo")
 do new_colosus("Columbo")
@@ -176,6 +185,7 @@ Columbo: Aquí tenéis runas y piedras mágicas. ¡Alguna tendrá que servir!ç
 ~ Columbo_correct
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Columbo")
+do Audio.play_music_by_path("res://sounds/Yaya.mp3")
 Columbo: ¡Ahí estás!
 {{player_name}}: ...
 Columbo: Oh, no. (Seguro que viene a echarme un rapapolvo.)
@@ -210,6 +220,7 @@ do leave_chartacter()
 => END
 
 ~ Columbo_end
+do show_chartacter("Columbo")
 {{player_name}}: Aquí la tiene. Espero que le sea útil.
 Columbo: ¡Más te vale! O vendré aquí en forma de tormenta de arena iracunda.
 {{player_name}}: Esperemos que no sea necesario. (Por favor, no. Que luego me tocará limpiar la arena
@@ -222,8 +233,10 @@ do leave_chartacter()
 ~ Tome_start
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Tome")
+do Audio.stop_music()
 {{player_name}}: *respiras hondo* ¡Buenas tardes! ¿En qué...?
 Tomé: ¡Buenas tardes tendrás tú!
+do Audio.play_music_by_path("res://sounds/Enano.mp3")
 {{player_name}}: ¿Disculpe?
 {{player_name}}: (¿Es que este pueblo está lleno de bordes o qué?)
 Tomé: Pues claro que acepto las disculpas, pero ¡las aceptaré de mejor grado si cerrases esta tienducha tuya!
@@ -260,12 +273,12 @@ Tomé: *levanta el dedo índice para señalarte* ¡Tu palabrería no conseguirá
 Tomé: *trepa al mostrador con los ojos brillantes* ¿Muestra gratis?
 {{player_name}}: Eso he dicho y ¡bájese de ahí!
 {{player_name}}: (¿Y ahora qué le doy yo a esta pulga rabiosa?)
-- Entregarle una runa de Molestia.
+- ENTREGARLE UNA RUNA MOLESTIA.
 	do Global.change_affection_tome_by(-1)
 	{{player_name}}: Mire, aquí tiene una runa. ¿Está contento?
 	Tomé: *la examina* ¿Esto es una indirecta?
 	{{player_name}}: (¡Pues claro que sí!) No. Pero la mayor parte de la gente que necesita piedras con runas es por tema de molestias o dolor, así que seguro que la utiliza.
-- Entregarle una runa de Cuarzo Azul.
+- ENTREGARLE UNA PIEDRA DE CUARZO AZUL.
 	do Global.change_affection_tome_by(1)
 	{{player_name}}: Tenga, un cuarzo azul.
 	Tomé: *examina la piedra* ¿Intentas decirme algo?
@@ -280,6 +293,7 @@ do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do leave_chartacter()
 
 ~ end_of_day_1
+do Audio.stop_music()
 {{player_name}}: *suspiras* Menudo día, pero no ha estado tan mal para ser el primero.
 {{player_name}}: Espero que mañana vaya mejor.
 {{player_name}}: Por mi salud mental.

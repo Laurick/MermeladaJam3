@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bobmkqocj4js4"]
+[gd_scene load_steps=5 format=3 uid="uid://bobmkqocj4js4"]
 
 [ext_resource type="Script" path="res://components/TrophyItem.gd" id="1_dqgb5"]
 [ext_resource type="Texture2D" uid="uid://b5y1224xn0xmj" path="res://icon.svg" id="2_wor1h"]
+[ext_resource type="LabelSettings" uid="uid://byw15xcajoqqu" path="res://theme/subtitle_label_settings.tres" id="3_ha3j1"]
+[ext_resource type="LabelSettings" uid="uid://ceoaqidwo70xd" path="res://theme/text_label_settings.tres" id="4_ofhm4"]
 
 [node name="TrophyItem" type="Control"]
 custom_minimum_size = Vector2(0, 128)
@@ -33,6 +35,7 @@ offset_top = -31.0
 offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
+label_settings = ExtResource("3_ha3j1")
 
 [node name="DescriptionTrophyLabel" type="Label" parent="."]
 layout_mode = 1
@@ -45,3 +48,4 @@ offset_top = 9.0
 offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
+label_settings = ExtResource("4_ofhm4")

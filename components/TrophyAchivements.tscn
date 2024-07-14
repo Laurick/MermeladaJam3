@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://de3skmw3txim3"]
+[gd_scene load_steps=4 format=3 uid="uid://de3skmw3txim3"]
 
 [ext_resource type="Script" path="res://components/TrophyAchivements.gd" id="1_ys8hm"]
-[ext_resource type="Texture2D" uid="uid://b5y1224xn0xmj" path="res://icon.svg" id="2_hgc4b"]
+[ext_resource type="Texture2D" uid="uid://beddhs43sdka1" path="res://images/Logro_Base_1.png" id="2_8snm6"]
+[ext_resource type="LabelSettings" uid="uid://ceoaqidwo70xd" path="res://theme/text_label_settings.tres" id="3_qbnis"]
 
 [node name="TrophyAchivements" type="Control"]
 custom_minimum_size = Vector2(0, 128)
@@ -21,7 +22,7 @@ script = ExtResource("1_ys8hm")
 layout_mode = 2
 offset_right = 128.0
 offset_bottom = 128.0
-texture = ExtResource("2_hgc4b")
+texture = ExtResource("2_8snm6")
 expand_mode = 1
 
 [node name="TitleTrophyLabel" type="Label" parent="."]
@@ -47,3 +48,4 @@ offset_top = 9.0
 offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
+label_settings = ExtResource("3_qbnis")

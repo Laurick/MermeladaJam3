@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_1s48m")
 name = "Turquesa"
-description = "CuAl6(PO4)4(OH)8·4H2O. Como buen tetrahidrato, absorbe la humedad de maravilla.  "
+description = "CuAl6(PO4)4(OH)8·4H2O. Como buen tetrahidrato\\nabsorbe la humedad de maravilla."
 image = ExtResource("1_kpme3")

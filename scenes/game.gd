@@ -2,17 +2,18 @@ extends Control
 
 var edit_scene:PackedScene = preload("res://components/edit.tscn")
 @onready var fader:Fader = $Fader
-@onready var book_button = $VBoxContainer/TrophiesButton
 @onready var book = $Book
 @onready var manual = $ControlManual/Manual
 @onready var control_trophies = $ControlTrophies
 @onready var trophy_achivements = $TrophyAchivements
+@onready var give_button = $MarginContainer/GiveButton
 
-@onready var give_button = $GiveButton
+@onready var center = $Center
 
 @onready var runes = $Runes
 @onready var stones = $Stones
 
+var ballon_node = null
 var colosus:Colosus = null
  
 var state = "none"
@@ -26,7 +27,7 @@ func _ready():
 	DialogueManager.mutated.connect(mutation_found)
 	Global.achivement_unlocked.connect(show_achivement)
 	await get_tree().create_timer(1).timeout
-	DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), "intro")
+	ballon_node = DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), "intro")
 	book.book_closed.connect(on_book_closed)
 
 
@@ -77,7 +78,7 @@ func show_name_edit():
 func on_name_summited(new_text):
 	Audio.play_click_sound()
 	Global.player_name = new_text
-	DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), "gender")
+	ballon_node = DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), "gender")
 
 
 func _on_exit_button_pressed():
@@ -91,7 +92,7 @@ func _on_book_button_pressed():
 
 func on_book_closed():
 	if state == "vademecum":
-		DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), "close_vademecum")
+		ballon_node = DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), "close_vademecum")
 		state = ""
 
 func show_manual():
@@ -140,7 +141,7 @@ func stone_selected(stone:StoneButton, is_selected):
 func _on_manual_gui_input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and state == "manual":
 		hide_manual()
-		DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), "find_vademecum")
+		ballon_node = DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), "find_vademecum")
 		state = ""
 
 func mutation_found(dict: Dictionary):
@@ -156,13 +157,41 @@ func mutation_found(dict: Dictionary):
 func _on_give_button_pressed():
 	give_button.visible = false
 	if len(runes_selected) < 2 or len(stones_selected) < 1:
-		DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), "error_spell")
+		ballon_node = DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), "error_spell")
 	else:
 		var spell = Spell.new()
 		for rune_selected in runes_selected:
 			spell.runes.push_front(rune_selected.rune)
 		for stone_selected in stones_selected:
 			spell.stones.push_front(stone_selected.stone)
+		
+		var t0 = TextureRect.new()
+		t0.position = runes_selected[0].position
+		t0.texture = runes_selected[0].rune.image
+		add_child(t0)
+		create_tween().tween_property(t0,"position",center.position,0.3).set_ease(Tween.EASE_OUT)
+		
+		var t1 = TextureRect.new()
+		t1.position = runes_selected[1].position
+		t1.texture = runes_selected[1].rune.image
+		add_child(t1)
+		create_tween().tween_property(t1,"position",center.position,0.3).set_ease(Tween.EASE_OUT)
+		
+		var t2 = TextureRect.new()
+		t2.position = stones_selected[0].position
+		t2.texture = stones_selected[0].stone.image
+		add_child(t2)
+		
+		runes_selected[1].button_pressed = false
+		runes_selected[0].button_pressed = false
+		stones_selected[0].button_pressed = false
+		
+		await create_tween().tween_property(t2,"position",center.position,0.3).set_ease(Tween.EASE_OUT).finished
+		
+		# clear
+		t0.queue_free()
+		t1.queue_free()
+		t2.queue_free()
 		
 		if colosus.needs.is_equals(spell):
 			Global.unlock_achivement(colosus.name)
@@ -171,7 +200,7 @@ func _on_give_button_pressed():
 		else:
 			Global.change_score_by(-1)
 			Global.add_customer_mood(colosus.name, false)
-		DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), colosus.name+"_end")
+		ballon_node = DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), colosus.name+"_end")
 
 
 func _on_trophies_button_pressed():
@@ -188,3 +217,11 @@ func show_achivement(achivement):
 	await get_tree().create_tween().tween_property(trophy_achivements, "position", Vector2(trophy_achivements.position.x,trophy_achivements.position.y+150), 0.5).finished
 	await get_tree().create_timer(2).timeout
 	get_tree().create_tween().tween_property(trophy_achivements, "position", Vector2(trophy_achivements.position.x,trophy_achivements.position.y-150), 0.2).finished
+
+func show_chartacter(name:String):
+	print("show in game")
+	ballon_node.show_chartacter(name)
+
+func leave_chartacter():
+	print("leave in game")
+	ballon_node.leave_chartacter()

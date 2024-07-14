@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_a8g1y")
 name = "Citrino"
-description = "Tiene un enorme poder para afectar a la humedad de aquello que toca."
+description = "Tiene un enorme poder para afectar a la humedad de aquello\\nque toca."
 image = ExtResource("1_su1nf")

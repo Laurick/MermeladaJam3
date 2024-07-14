@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_h058n")
 name = "Arcilla."
-description = "Runa que alberga el poder de transformar del barro."
+description = "Runa que alberga el poder de\\ntransformar del barro."
 image = ExtResource("1_ydonb")

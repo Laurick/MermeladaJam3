@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5fakjmonxxx8"]
+
+[ext_resource type="Script" path="res://components/RuneBookItem.gd" id="1_dvt17"]
+[ext_resource type="Texture2D" uid="uid://b5y1224xn0xmj" path="res://icon.svg" id="2_cmmqy"]
+[ext_resource type="LabelSettings" uid="uid://ceoaqidwo70xd" path="res://theme/text_label_settings.tres" id="3_y5q32"]
+[ext_resource type="LabelSettings" uid="uid://o8vc8pq0t1no" path="res://theme/description_label_settings.tres" id="4_d7mt7"]
+
+[node name="RuneBookItem" type="Control"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 3
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.698
+offset_right = -864.0
+offset_bottom = -64.304
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_dvt17")
+
+[node name="IconRune" type="TextureRect" parent="."]
+layout_mode = 2
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("2_cmmqy")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 71.0
+offset_top = -9.0
+offset_right = 291.0
+offset_bottom = 48.0
+theme_override_constants/separation = 1
+
+[node name="TitleRuneLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+label_settings = ExtResource("3_y5q32")
+
+[node name="DescriptionRuneLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+label_settings = ExtResource("4_d7mt7")

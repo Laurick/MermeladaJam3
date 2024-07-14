@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("2_hh12p")
 name = "Agua"
-description = "La runa que mejor evoca la naturaleza acuática"
+description = "La runa que mejor evoca la\\nnaturaleza acuática"
 image = ExtResource("1_lxoc5")

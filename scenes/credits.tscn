@@ -148,7 +148,8 @@ bbcode_enabled = true
 text = "Claratmente -> [url]https://linktr.ee/clarartmente[/url]
 PSuzume -> [url]https://psuzume.itch.io/[/url]
 SailorFu -> [url]https://sailorfu.itch.io/[/url]
-Noa Cuadrado -> [url]https://noahuxui.itch.io[/url]"
+Noa Cuadrado -> [url]https://noahuxui.itch.io[/url]
+Nora Kaals -> [url]https://teconkaals.itch.io[/url]"
 fit_content = true
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]

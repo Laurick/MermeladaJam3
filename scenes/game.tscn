@@ -1,8 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://c7k424rithh80"]
+[gd_scene load_steps=25 format=3 uid="uid://c7k424rithh80"]
 
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_p64r6"]
 [ext_resource type="Script" path="res://components/StoneButton.gd" id="2_4heph"]
 [ext_resource type="PackedScene" uid="uid://bv2vgbx5806ky" path="res://components/Book.tscn" id="2_cewk2"]
+[ext_resource type="Theme" uid="uid://dc6dlmiffd7ot" path="res://theme/buton_theme.tres" id="2_ny2mf"]
 [ext_resource type="Script" path="res://components/Fader.gd" id="2_roeqh"]
 [ext_resource type="Script" path="res://components/RuneButton.gd" id="3_delqg"]
 [ext_resource type="Resource" uid="uid://j8yde08310qx" path="res://models/stones/turquoise.tres" id="3_v03xb"]
@@ -20,6 +21,8 @@
 [ext_resource type="Resource" uid="uid://dee5d8uemmfrf" path="res://models/runes/union_rune.tres" id="16_yfnrx"]
 [ext_resource type="Resource" uid="uid://c8amg2qwsubuc" path="res://models/runes/water_rune.tres" id="17_qj2yk"]
 [ext_resource type="PackedScene" uid="uid://c4yx11bhnumfk" path="res://components/trophies.tscn" id="20_ky87n"]
+[ext_resource type="Theme" uid="uid://dd0p4mnkcs75l" path="res://theme/game_theme.tres" id="21_26ffc"]
+[ext_resource type="FontFile" uid="uid://c762n5plv5aww" path="res://images/UI/fonts/Skranji-Regular.ttf" id="21_twj17"]
 [ext_resource type="PackedScene" uid="uid://de3skmw3txim3" path="res://components/TrophyAchivements.tscn" id="21_vskoi"]
 
 [node name="Game" type="Control"]
@@ -31,28 +34,47 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_p64r6")
 
-[node name="ExitButton" type="Button" parent="."]
-layout_mode = 0
-offset_right = 42.0
-offset_bottom = 31.0
-text = "Salir"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
+anchors_preset = 15
 anchor_right = 1.0
-offset_left = -111.0
-offset_bottom = 66.0
-grow_horizontal = 0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
 
-[node name="BookButton" type="Button" parent="VBoxContainer"]
+[node name="ExitButton" type="Button" parent="MarginContainer"]
 layout_mode = 2
-text = "mostrar libro"
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource("2_ny2mf")
+text = "SALIR"
 
-[node name="TrophiesButton" type="Button" parent="VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-text = "Trofeos"
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="BookButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_ny2mf")
+text = "VADEMECUM"
+
+[node name="TrophiesButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_ny2mf")
+text = "TROFEOS"
+
+[node name="GiveButton" type="Button" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("2_ny2mf")
+text = "ENTREGAR"
 
 [node name="Stones" type="Control" parent="."]
 anchors_preset = 0
@@ -204,21 +226,6 @@ offset_bottom = 168.0
 script = ExtResource("3_delqg")
 rune = ExtResource("17_qj2yk")
 
-[node name="GiveButton" type="Button" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -37.5
-offset_top = -31.0
-offset_right = 37.5
-grow_horizontal = 2
-grow_vertical = 0
-text = "Entregar"
-
 [node name="Book" parent="." instance=ExtResource("2_cewk2")]
 layout_mode = 1
 offset_top = 1296.0
@@ -257,6 +264,9 @@ offset_right = 200.0
 offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("21_26ffc")
+theme_override_fonts/normal_font = ExtResource("21_twj17")
+theme_override_font_sizes/normal_font_size = 16
 
 [node name="ControlTrophies" type="Control" parent="."]
 visible = false
@@ -283,6 +293,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
+theme = ExtResource("2_ny2mf")
 text = "VOLVER"
 
 [node name="TrophyAchivements" parent="." instance=ExtResource("21_vskoi")]
@@ -292,10 +303,24 @@ offset_top = -466.0
 offset_right = -323.0
 offset_bottom = -466.304
 
-[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/BookButton" to="." method="_on_book_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/TrophiesButton" to="." method="_on_trophies_button_pressed"]
-[connection signal="pressed" from="GiveButton" to="." method="_on_give_button_pressed"]
+[node name="Center" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="MarginContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BookButton" to="." method="_on_book_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/TrophiesButton" to="." method="_on_trophies_button_pressed"]
+[connection signal="pressed" from="MarginContainer/GiveButton" to="." method="_on_give_button_pressed"]
 [connection signal="gui_input" from="ControlManual" to="." method="_on_manual_gui_input"]
 [connection signal="gui_input" from="ControlManual/Manual" to="." method="_on_manual_gui_input"]
 [connection signal="pressed" from="ControlTrophies/VBoxContainer/BackTrophiesButton" to="." method="_on_back_trophies_button_pressed"]
