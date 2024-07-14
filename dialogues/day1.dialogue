@@ -58,7 +58,7 @@ Venus: ...
 {{player_name}}: ...
 Venus: ...
 {{player_name}}: Oiga...¿puede dejar de mirarme?
-Venus: ¡Oh! Lo siento. Es que... [if Global.gender == 0] eres un coloso un poco raro.[/if][if Global.gender == 1]eres una colosa un poco rara.[/if][if Global.gender == 2] eres une colose un poco rare.
+Venus: ¡Oh! Lo siento. Es que... [if Global.gender == 0] eres un coloso un poco raro.[/if][if Global.gender == 1]eres una colosa un poco rara.[/if][if Global.gender == 2] eres une colose un poco rare.[/if]
 {{player_name}}: ¿Perdón? (¿Me está insultando?)
 Venus: Ah, no me hagas caso. *sonríe* Cuando llega gente nueva siempre llama la atención. Es como la novedad, ¿sabes?
 {{player_name}}: *sonríes* Creo que le entiendo.
@@ -122,6 +122,7 @@ Venus: ¡Gracias!
 {{player_name}}: A usted.
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do leave_chartacter()
+do Audio.stop_music()
 {{player_name}}: Bueno... no ha ido del todo mal.
 {{player_name}}: Me pregunto por qué se me habrá quedado mirando. *te giras hacia el espejo* Tengo la arcilla en su sitio y la ropa bien colocada. ¿Será porque soy más joven?
 
@@ -151,6 +152,7 @@ hacer por usted?
 {{player_name}}: ¡Claro! Que tenga un...
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do leave_chartacter()
+do Audio.stop_music()
 {{player_name}}: ...buen día.
 {{player_name}}: *suspiras * ¿Qué le pasa hoy a la gente?
 
@@ -227,13 +229,13 @@ Columbo: ¡Más te vale! O vendré aquí en forma de tormenta de arena iracunda.
 a mí.)
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do leave_chartacter()
+do Audio.stop_music()
 {{player_name}}: Realmente acaba de venir un coloso pidiendo un crecepelos.
 {{player_name}}: Es que creo que hoy no podría pasar nada más raro.
 
 ~ Tome_start
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Tome")
-do Audio.stop_music()
 {{player_name}}: *respiras hondo* ¡Buenas tardes! ¿En qué...?
 Tomé: ¡Buenas tardes tendrás tú!
 do Audio.play_music_by_path("res://sounds/Enano.mp3")
@@ -305,3 +307,5 @@ if Global.check_customer_mood("Columbo")
 	=> Columbo_correct
 else
 	=> Columbo_incorrect
+~ close_shop
+=> END

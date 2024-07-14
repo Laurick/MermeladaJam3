@@ -21,13 +21,15 @@ var state = "none"
 var stones_selected:Array[StoneButton] = []
 var runes_selected:Array[RuneButton] = []
 
+var day = "res://dialogues/day1.dialogue";
+
 func _ready():
 	Global.reset_game()
 	DialogueManager.passed_title.connect(title_pased)
 	DialogueManager.mutated.connect(mutation_found)
 	Global.achivement_unlocked.connect(show_achivement)
 	await get_tree().create_timer(1).timeout
-	ballon_node = DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), "intro")
+	ballon_node = DialogueManager.show_dialogue_balloon(load(day), "intro")
 	book.book_closed.connect(on_book_closed)
 
 
@@ -64,6 +66,16 @@ func title_pased(title:String):
 		fader.force_fade_out()
 	elif title.begins_with("end_of_day"):
 		fader.fade_to_color(Color.from_string("#FAD6A566", Color.CHOCOLATE))
+	elif title.begins_with("close_shop"):
+		fader.fade_in()
+		Audio.play_music(load("res://sounds/427570__maria_mannone__flute-a-short-sequence.wav"))
+		await get_tree().create_timer(2).timeout
+		if day == "res://dialogues/day1.dialogue":
+			day = "res://dialogues/day_2.dialogue"
+		if day == "res://dialogues/day_2.dialogue":
+			day = "res://dialogues/day_3.dialogue"
+		if day == "res://dialogues/day_3.dialogue":
+			day = "res://dialogues/epilogue.dialogue"
 
 func game_over():
 	fader.fade_in()
@@ -78,7 +90,7 @@ func show_name_edit():
 func on_name_summited(new_text):
 	Audio.play_click_sound()
 	Global.player_name = new_text
-	ballon_node = DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), "gender")
+	ballon_node = DialogueManager.show_dialogue_balloon(load(day), "gender")
 
 
 func _on_exit_button_pressed():
@@ -193,14 +205,22 @@ func _on_give_button_pressed():
 		t1.queue_free()
 		t2.queue_free()
 		
-		if colosus.needs.is_equals(spell):
-			Global.unlock_achivement(colosus.name)
-			Global.change_score_by(1)
-			Global.add_customer_mood(colosus.name, true)
+		var was_good = colosus.needs.is_equals(spell)
+	
+		if colosus.name == "TlatoaniI":
+			if was_good:
+				ballon_node = DialogueManager.show_dialogue_balloon(load("res://dialogues/day2.dialogue"), "TlatoaniI_good")
+			else:
+				ballon_node = DialogueManager.show_dialogue_balloon(load("res://dialogues/day2.dialogue"), "TlatoaniI_bad")
 		else:
-			Global.change_score_by(-1)
-			Global.add_customer_mood(colosus.name, false)
-		ballon_node = DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), colosus.name+"_end")
+			if was_good:
+				Global.unlock_achivement(colosus.name)
+				Global.change_score_by(1)
+				Global.add_customer_mood(colosus.name, true)
+			else:
+				Global.change_score_by(-1)
+				Global.add_customer_mood(colosus.name, false)
+				ballon_node = DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), colosus.name+"_end")
 
 
 func _on_trophies_button_pressed():
@@ -219,9 +239,7 @@ func show_achivement(achivement):
 	get_tree().create_tween().tween_property(trophy_achivements, "position", Vector2(trophy_achivements.position.x,trophy_achivements.position.y-150), 0.2).finished
 
 func show_chartacter(name:String):
-	print("show in game")
 	ballon_node.show_chartacter(name)
 
 func leave_chartacter():
-	print("leave in game")
 	ballon_node.leave_chartacter()

@@ -6,6 +6,6 @@
 
 [resource]
 script = ExtResource("3_xil68")
-name = "Colose III"
+name = "Tiki"
 needs = ExtResource("2_xgmvm")
 image = ExtResource("1_m5vl4")

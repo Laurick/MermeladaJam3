@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://bv2vgbx5806ky"]
 
 [ext_resource type="Script" path="res://components/Book.gd" id="1_b5pw5"]
-[ext_resource type="LabelSettings" uid="uid://cvw0vam46hxrt" path="res://theme/title_label_settings.tres" id="2_iatsf"]
+[ext_resource type="Texture2D" uid="uid://2xf2yjonjbr6" path="res://images/Libro.png" id="2_2ftfh"]
 [ext_resource type="Theme" uid="uid://dc6dlmiffd7ot" path="res://theme/buton_theme.tres" id="3_7yly4"]
 [ext_resource type="PackedScene" uid="uid://c5fakjmonxxx8" path="res://components/RuneBookItem.tscn" id="3_umihu"]
 [ext_resource type="Resource" uid="uid://6g3q4rgtauj4" path="res://models/runes/clay_rune.tres" id="4_47pef"]
@@ -42,121 +42,103 @@ color = Color(0.105882, 0.105882, 0.105882, 0.839216)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("2_2ftfh")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="Runes" type="GridContainer" parent="."]
 layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 64
-text = "Manual del empeado"
-label_settings = ExtResource("2_iatsf")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/separation = 20
-
-[node name="Runes" type="GridContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
+offset_left = 73.0
+offset_top = 114.0
+offset_right = 619.0
+offset_bottom = 722.0
+scale = Vector2(0.8, 0.8)
 size_flags_horizontal = 3
 theme_override_constants/h_separation = 12
 theme_override_constants/v_separation = 24
 columns = 2
 
-[node name="RuneBookItem" parent="MarginContainer/VBoxContainer/HBoxContainer/Runes" instance=ExtResource("3_umihu")]
+[node name="RuneBookItem" parent="Runes" instance=ExtResource("3_umihu")]
 layout_mode = 2
 rune = ExtResource("4_47pef")
 
-[node name="RuneBookItem2" parent="MarginContainer/VBoxContainer/HBoxContainer/Runes" instance=ExtResource("3_umihu")]
+[node name="RuneBookItem2" parent="Runes" instance=ExtResource("3_umihu")]
 layout_mode = 2
 rune = ExtResource("5_mux6t")
 
-[node name="RuneBookItem3" parent="MarginContainer/VBoxContainer/HBoxContainer/Runes" instance=ExtResource("3_umihu")]
+[node name="RuneBookItem3" parent="Runes" instance=ExtResource("3_umihu")]
 layout_mode = 2
 rune = ExtResource("6_sy8mk")
 
-[node name="RuneBookItem4" parent="MarginContainer/VBoxContainer/HBoxContainer/Runes" instance=ExtResource("3_umihu")]
+[node name="RuneBookItem4" parent="Runes" instance=ExtResource("3_umihu")]
 layout_mode = 2
 rune = ExtResource("7_swcba")
 
-[node name="RuneBookItem5" parent="MarginContainer/VBoxContainer/HBoxContainer/Runes" instance=ExtResource("3_umihu")]
+[node name="RuneBookItem5" parent="Runes" instance=ExtResource("3_umihu")]
 layout_mode = 2
 rune = ExtResource("8_l4bll")
 
-[node name="RuneBookItem6" parent="MarginContainer/VBoxContainer/HBoxContainer/Runes" instance=ExtResource("3_umihu")]
+[node name="RuneBookItem6" parent="Runes" instance=ExtResource("3_umihu")]
 layout_mode = 2
 rune = ExtResource("9_yac57")
 
-[node name="RuneBookItem7" parent="MarginContainer/VBoxContainer/HBoxContainer/Runes" instance=ExtResource("3_umihu")]
+[node name="RuneBookItem7" parent="Runes" instance=ExtResource("3_umihu")]
 layout_mode = 2
 rune = ExtResource("10_ryrs4")
 
-[node name="RuneBookItem8" parent="MarginContainer/VBoxContainer/HBoxContainer/Runes" instance=ExtResource("3_umihu")]
+[node name="RuneBookItem8" parent="Runes" instance=ExtResource("3_umihu")]
 layout_mode = 2
 rune = ExtResource("11_d4fp7")
 
-[node name="RuneBookItem9" parent="MarginContainer/VBoxContainer/HBoxContainer/Runes" instance=ExtResource("3_umihu")]
+[node name="RuneBookItem9" parent="Runes" instance=ExtResource("3_umihu")]
 layout_mode = 2
 rune = ExtResource("12_udvex")
 
-[node name="RuneBookItem10" parent="MarginContainer/VBoxContainer/HBoxContainer/Runes" instance=ExtResource("3_umihu")]
+[node name="RuneBookItem10" parent="Runes" instance=ExtResource("3_umihu")]
 layout_mode = 2
 rune = ExtResource("12_udvex")
 
-[node name="RuneBookItem11" parent="MarginContainer/VBoxContainer/HBoxContainer/Runes" instance=ExtResource("3_umihu")]
+[node name="RuneBookItem11" parent="Runes" instance=ExtResource("3_umihu")]
 layout_mode = 2
 rune = ExtResource("12_udvex")
 
-[node name="RuneBookItem12" parent="MarginContainer/VBoxContainer/HBoxContainer/Runes" instance=ExtResource("3_umihu")]
+[node name="RuneBookItem12" parent="Runes" instance=ExtResource("3_umihu")]
 layout_mode = 2
 rune = ExtResource("12_udvex")
 
-[node name="Stone" type="GridContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Stone" type="GridContainer" parent="."]
 layout_mode = 2
+offset_left = 737.0
+offset_top = 71.0
+offset_right = 1849.0
+offset_bottom = 679.0
 size_flags_horizontal = 3
 theme_override_constants/h_separation = 24
-theme_override_constants/v_separation = 12
+theme_override_constants/v_separation = 8
 
-[node name="StoneBookItem" parent="MarginContainer/VBoxContainer/HBoxContainer/Stone" instance=ExtResource("13_vwv3b")]
+[node name="StoneBookItem" parent="Stone" instance=ExtResource("13_vwv3b")]
 layout_mode = 2
 stone = ExtResource("14_8s5xp")
 
-[node name="StoneBookItem2" parent="MarginContainer/VBoxContainer/HBoxContainer/Stone" instance=ExtResource("13_vwv3b")]
+[node name="StoneBookItem2" parent="Stone" instance=ExtResource("13_vwv3b")]
 layout_mode = 2
 stone = ExtResource("15_fmnxt")
 
-[node name="StoneBookItem3" parent="MarginContainer/VBoxContainer/HBoxContainer/Stone" instance=ExtResource("13_vwv3b")]
+[node name="StoneBookItem3" parent="Stone" instance=ExtResource("13_vwv3b")]
 layout_mode = 2
 stone = ExtResource("16_psan2")
 
-[node name="StoneBookItem4" parent="MarginContainer/VBoxContainer/HBoxContainer/Stone" instance=ExtResource("13_vwv3b")]
+[node name="StoneBookItem4" parent="Stone" instance=ExtResource("13_vwv3b")]
 layout_mode = 2
 stone = ExtResource("17_aq4ul")
 
-[node name="StoneBookItem5" parent="MarginContainer/VBoxContainer/HBoxContainer/Stone" instance=ExtResource("13_vwv3b")]
+[node name="StoneBookItem5" parent="Stone" instance=ExtResource("13_vwv3b")]
 layout_mode = 2
 stone = ExtResource("18_lswgp")
 
-[node name="StoneBookItem6" parent="MarginContainer/VBoxContainer/HBoxContainer/Stone" instance=ExtResource("13_vwv3b")]
+[node name="StoneBookItem6" parent="Stone" instance=ExtResource("13_vwv3b")]
 layout_mode = 2
 stone = ExtResource("18_lswgp")
 
-[node name="StoneBookItem7" parent="MarginContainer/VBoxContainer/HBoxContainer/Stone" instance=ExtResource("13_vwv3b")]
+[node name="StoneBookItem7" parent="Stone" instance=ExtResource("13_vwv3b")]
 layout_mode = 2
 stone = ExtResource("18_lswgp")
 

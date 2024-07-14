@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://8np7gdqvn251"
+path="res://.godot/imported/Tiki media cara.mp3-9a8e8436f069e4701f4b304667fc212a.mp3str"
+
+[deps]
+
+source_file="res://sounds/Tiki media cara.mp3"
+dest_files=["res://.godot/imported/Tiki media cara.mp3-9a8e8436f069e4701f4b304667fc212a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=5 format=3 uid="uid://b055uvs5tby68"]
+
+[ext_resource type="Resource" uid="uid://bligk6n217x4f" path="res://models/runes/pain_rune.tres" id="1_nn3ex"]
+[ext_resource type="Resource" uid="uid://cuytodx57fqui" path="res://models/runes/exclude_rune.tres" id="2_ir0xg"]
+[ext_resource type="Script" path="res://models/spells/spell.gd" id="3_1in0e"]
+[ext_resource type="Resource" uid="uid://j8yde08310qx" path="res://models/stones/turquoise.tres" id="4_h37v1"]
+
+[resource]
+script = ExtResource("3_1in0e")
+runes = Array[Resource("res://models/runes/rune.gd")]([ExtResource("1_nn3ex"), ExtResource("2_ir0xg")])
+stones = Array[Resource("res://models/stones/stone.gd")]([ExtResource("4_h37v1")])
