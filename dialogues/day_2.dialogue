@@ -52,7 +52,7 @@ Tiki: Mi autoestima está mejor que nunca gracias a ti. ¡Pienso poner la reseñ
 {{player_name}}: Muchas gracias.
 do Audio.play_sfx("352657__foolboymedia__bong-chime-1.mp3")
 do leave_chartacter()
-=> check_Tlatoani 
+=> END 
 
 ~ Tiki_incorrect
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
@@ -68,7 +68,7 @@ Tiki: Ya me lo parecía. En fin. Para que te fíes de las tiendas nuevas.
 {{player_name}}: Vaya metedura de pata. 
 do Audio.play_sfx("351565__bertrof__game-sound-incorrect-organic-violin.wav")
 do leave_chartacter()
-=> check_Tlatoani 
+=> END 
 
 ~ Tiki_end
 do show_chartacter("Tiki")
@@ -122,10 +122,10 @@ Tlatoani: ¡ME HE ROTO EL BRAAAAZOOOO!
 {{player_name}}: *Le ofreces un pañuelo*
 {{player_name}}: ¿Cuándo ha sido?
 Tlatoani: ¡HACE UNOS MINUTOS!
-Tlatoani: VENÍA DE CAMINO A POR UNA PIEDRA PARA TENE A ARENA DEL CUERPO MÁS DURA Y ME HE TOPEZADO.
+Tlatoani: VENÍA DE CAMINO A POR UNA PIEDRA PARA TENER LA ARENA DEL CUERPO MÁS DURA Y ME HE TOPEZADO.
 {{player_name}}: Te...¿te has caído por las escaleras?
 Tlatoani: ¿QUÉ ESCALERAS?
-Tlatoani: ME HE TOPEZADO CON MIS PROPIOS PIES Y ME HE CAÍDO.
+Tlatoani: UN CRÍO CON ESPADA Y MONTADO EN UN CABALLO HA CHOCADO CONMIGO Y ME HE CAÍDO.
 Tlatoani: Y AHORA ME DUELE MUCHO EEEEEL BRAZOOOO.
 {{player_name}}: (Madre mía, qué panorama.) Vale, lo primero de todo, respira hondo. Voy a ver si tengo algo para quitarte el dolor y luego miramos la reconstrucción.
 Tlatoani: POR FAVOOOOORRR. ME DUEEELE MUUUCHOOOO.
@@ -185,7 +185,7 @@ Tlatoani: *asiente y sonrie*
 {{player_name}}: "Dejaré una reseña positiva en la página web".
 do Audio.play_sfx("352657__foolboymedia__bong-chime-1.mp3")
 do leave_chartacter()
-=> close_shop 
+=> END 
 
 ~ Tlatoani_incorrect
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
@@ -202,7 +202,7 @@ Tlatoani: *hace una mueca de disgusto*
 {{player_name}}: Supongo que me lo merezco.
 do Audio.play_sfx("351565__bertrof__game-sound-incorrect-organic-violin.wav")
 do leave_chartacter()
-=> close_shop
+=> END
 
 ~ Tlatoani_end
 do show_chartacter("Tlatoani")
@@ -219,7 +219,7 @@ do Audio.stop_music()
 {{player_name}}: ¡Buenas tardes! ¿En qué...?
 {{player_name}}: *suspiras* Qué quiere.
 do show_chartacter("Tome")
-do Audio.play_music_by_path("res://sounds/Enanodia2.mp3")
+do Audio.play_music_by_path("res://sounds/Enano.mp3")
 Tomé: ¡Vaya modales!
 Tomé: ¿Así pretendes que vaya bien el negocio?
 {{player_name}}: Señor.
@@ -293,7 +293,6 @@ if Global.check_customer_mood("Tiki")
 	=> Tiki_correct
 else
 	=> Tiki_incorrect
-~ check_Tlatoani
 if Global.check_customer_mood("Tlatoani")
 	=> Tlatoani_correct
 else
