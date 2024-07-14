@@ -53,8 +53,6 @@ var dialogue_line: DialogueLine:
 			#mood = "_"+dialogue_line.get_tag_value("mood")
 
 		dialogue_label.hide()
-		if dialogue_line.character == "":
-			dialogue_line.text = "[i]"+dialogue_line.text+"[/i]"
 		dialogue_label.dialogue_line = dialogue_line
 
 		responses_menu.hide()
@@ -169,9 +167,11 @@ func new_colosus(name:String):
 	
 func show_chartacter(name:String):
 	var path = "res://images/"+name+".tres"
+	avatar.modulate = Color(255, 255, 255, 1)
+	await create_tween().tween_property(avatar, "modulate:a", 1, 0.7).finished
 	avatar.texture = load(path)
 
-func leave_chartacter(name:String):
+func leave_chartacter():
 	await create_tween().tween_property(avatar, "modulate:a", 0, 0.7).finished
 	avatar.texture = null
 	avatar.modulate = Color.WHITE

@@ -46,7 +46,7 @@ Nombre...
 
 ~ start_of_day_1
 ~ Venus_start
-do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Venus")
 do new_colosus("Venus")
 {{player_name}}: ¡Buenos días! Le doy la bienvenida a nuestra tienda. ¿En qué puedo ayudar?
@@ -80,7 +80,7 @@ Venus: No tendrás algo para ello, ¿verdad?
 => END
 
 ~ Venus_correct
-do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Venus")
 Venus: ¡Oye! Menos mal que he llegado antes de que cerrases la tienda. 
 {{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
@@ -94,7 +94,7 @@ do leave_chartacter()
 => END 
 
 ~ Venus_incorrect
-do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Venus")
 Venus: ¡Oye! Menos mal que he llegado antes de que cerrases la tienda. 
 {{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
@@ -113,13 +113,13 @@ do leave_chartacter()
 Venus: ¡Ay, espero que sí! Estoy cansada de utilizar el bastón. En unos días te comento. 
 Venus: ¡Gracias!
 {{player_name}}: A usted.
-do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do leave_chartacter()
 {{player_name}}: Bueno... no ha ido del todo mal.
 {{player_name}}: Me pregunto por qué se me habrá quedado mirando. *te giras hacia el espejo* Tengo la arcilla en su sitio y la ropa bien colocada. ¿Será porque soy más joven?
 
 ~ MC_friend
-do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Djinn")
 {{player_name}}: ¡Buenos días! ¿En qué puedo ayudar?
 ¿?: ...
@@ -141,13 +141,13 @@ hacer por usted?
 ¿?: *enarca una ceja* Ya... veo.
 ¿?: Me pasaré más adelante. A ver si esos comerrocas se han empachado y dejan llegar la mercancía.
 {{player_name}}: ¡Claro! Que tenga un...
-do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do leave_chartacter()
 {{player_name}}: ...buen día.
 {{player_name}}: *suspiras * ¿Qué le pasa hoy a la gente?
 
 ~ Columbo_start
-do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Columbo")
 do new_colosus("Columbo")
 {{player_name}}: ¡Buenas tardes! ¿En qué puedo ayudar?
@@ -174,7 +174,7 @@ Columbo: Aquí tenéis runas y piedras mágicas. ¡Alguna tendrá que servir!ç
 => wait_for_riddle
  
 ~ Columbo_correct
-do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Columbo")
 Columbo: ¡Ahí estás!
 {{player_name}}: ...
@@ -193,7 +193,7 @@ do leave_chartacter()
 => END 
 
 ~ Columbo_incorrect
-do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Columbo")
 Columbo: ¡Ahí estás!
 {{player_name}}: ...
@@ -214,13 +214,13 @@ do leave_chartacter()
 Columbo: ¡Más te vale! O vendré aquí en forma de tormenta de arena iracunda.
 {{player_name}}: Esperemos que no sea necesario. (Por favor, no. Que luego me tocará limpiar la arena
 a mí.)
-do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do leave_chartacter()
 {{player_name}}: Realmente acaba de venir un coloso pidiendo un crecepelos.
 {{player_name}}: Es que creo que hoy no podría pasar nada más raro.
 
 ~ Tome_start
-do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Tome")
 {{player_name}}: *respiras hondo* ¡Buenas tardes! ¿En qué...?
 Tomé: ¡Buenas tardes tendrás tú!
@@ -276,7 +276,7 @@ Tomé: ¡Me voy porque así lo quiero!
 {{player_name}}: (Desde luego.)
 Tomé: Pero volveré. Ya nos veremos.
 {{player_name}}: *suspiras* Pienso pedir un aumento de sueldo.
-do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do leave_chartacter()
 
 ~ end_of_day_1
