@@ -55,8 +55,7 @@ La decisión es tuya.
 	Lan'tek: ¡Hasta otra!
 	do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
 	##FUNDIDO A NEGRO
-	do game_over() 
-	
+		
 	=> END
 	
  #(##si amistad == 3 activar siguiente dialogo)
@@ -86,6 +85,72 @@ Tomé: NO ES ESPIAR SI LA TIENDA ESTÁ ABIERTA.
 {{player_name}}: Vale. ¿Qué quieres?
 Tomé: Yo...bueno...
 {{player_name}}: ¡Suéltalo!
+Tomé: *se sonroja* ¿Querríascenarconmigo?
+{{player_name}}: ...
+No he entendido ni una palabra. Repítelo sin atropellarte.
+Tomé: QUE SI QUIERES CENAR CONMIGO.
+{{player_name}}: ...
+¿POR QUÉ QUERRÍA HACER ESO?
+Tomé: PORQUE HAS ESTADO LIGANDO CONMIGO.
+{{player_name}}:  TE HE DADO CON UNA ESCOBA, ESO NO ES...
+...
+No me fastidies que eso te gusta.
+Tomé: ...
+No afirmaré ni negaré nada sin un abogado.
+{{player_name}}: *te frotas los ojos* Mira, la respuesta es no. Y, ahora, largo de aquí, tengo mucho que hacer.
+Tomé: Pero... ¡hay una esta y quiero que vengas conmigo!
+{{player_name}}: PUES YO NO QUIERO, PASO DE FIESTAS.
+Tomé: ...
+VOLVERÉ.
+VOLVERÉ HASTA QUE TE CONQUISTE.
+NO VOY A RENDIRME.
+{{player_name}}: *saca la escoba* QUE TE LARGUES.
+Tomé: ...
+¿Vas a darme con la escoba?
+{{player_name}}: ...
+...
+*saca el difusor de agua* No.
+Tomé: AAHHH, EL DIFUSOR NOOO
+## PUERTA CERRANDO
+do leave_character() 
+{{player_name}}: Al fin tranquilidad.
+##FUNDIDO A NEGRO
+do game_over()
+ 
+=> END
+
+ #(##si amistad != 3 activar siguiente dialogo)
+~ not_romance_start
+
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+{{player_name}}: ¡Bue...! ¡NO! ¡FUERA!
+do show_chartacter("Tomé")
+Tomé: ¡Pero si no he dicho nada!
+{{player_name}}: ¡Tu simple presencia es suficiente!
+¡No pienso darte más muestras gratuitas!
+Tomé: ¡No he venido por eso!
+HE VENIDO CON LA POLICÍA COLOSAL.
+{{player_name}}: La ¿qué?
+Tomé: ¡LA POLICÍA COLOSAL, QUE NO ME ESCUCHAS!
+
+##IF TAKE_STONE = TRUE
+
+{{player_name}}: ¿PARA QUÉ TE HAS TRAÍDO A LA POLICÍA?
+Tomé: ¡Para que te detengan por violencia hacia mi persona!
+{{player_name}}: ¿PERO QUÉ DICES? 
+Ha sido por no darte las muestras gratis, es que lo sabía. ¿Pues sabes qué?
+Tomé: QUE ME VOY. *tira la mesa encima del enano* ESTOY HASTA EL MOÑO.
+No me pagan lo su ciente como para aguantar estas tonterías.
+Tomé: ¡Pero no puedes huir! LA POLICÍA HA VENIDO A DETENERTE.
+{{player_name}}: Ah, ¿sí? PUES QUE SEPAS QUE NO ME COGERÁN CON VIDA.
+Tomé: ¡POLICÍA! INTENTA ESC...
+{{player_name}}: *le rocía con el difusor de agua* ¡Que te calles ya, pulga chillona!
+Tomé: ¡AAAHHH! AGUA NOOOO.
+{{player_name}}: *se sube al alféizar de la ventana* QUÉDATE CON LO QUE QUIERAS, YO ME PIRO.
+
+##FUNDIDO A NEGRO
+do game_over()
+
 
 
 
