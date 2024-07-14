@@ -96,7 +96,7 @@ Venus: ¡Pondré una buena reseña en la página web!
 Venus: Gracias a ti, [if Global.gender == 0]majo[/if][if Global.gender == 1]maja[/if][if Global.gender == 2]maje[/if].
 do Audio.play_sfx("352657__foolboymedia__bong-chime-1.mp3")
 do leave_chartacter()
-=> END 
+=> check_columbo
 
 ~ Venus_incorrect
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
@@ -113,7 +113,7 @@ Venus: No pienso volver a este sitio. ¡Y dejaré una mala reseña en la página
 {{player_name}}: Genial.
 do Audio.play_sfx("351565__bertrof__game-sound-incorrect-organic-violin.wav")
 do leave_chartacter()
-=> END 
+=> check_columbo
 
 ~ Venus_end
 do show_chartacter("Venus")
@@ -137,8 +137,7 @@ do show_chartacter("Djinn")
 ¿?: ...
 {{player_name}}: *gesticulas con las manos al tiempo que hablas* Sé lengua de signos, si por alguna razón ha perdido la audición.
 ¿?: No. Escucho perfectamente.
-{{player_name}}: Ah, genial. (¿Y por qué no has dicho ni una palabra?) Entonces, ¿hay algo que pueda
-hacer por usted?
+{{player_name}}: Ah, genial. (¿Y por qué no has dicho ni una palabra?) Entonces, ¿hay algo que pueda hacer por usted?
 ¿?: ...
 ¿?: Me resultas familiar
 {{player_name}}: Bueno, soy [if Global.gender == 0]un coloso[/if][if Global.gender == 1]una colosa[/if][if Global.gender == 2]une colose[/if], nos parecemos bastante.
@@ -202,7 +201,7 @@ Columbo: No debí dudar de ti, rapaz. Has hecho un buen trabajo, ¡voy a dejar u
 {{player_name}}: Ah gracias.
 do Audio.play_sfx("352657__foolboymedia__bong-chime-1.mp3")
 do leave_chartacter()
-=> END 
+=> close_shop 
 
 ~ Columbo_incorrect
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
@@ -219,14 +218,13 @@ Columbo: ¡Pienso poner una reseña negativa en la web!
 {{player_name}}: Ups.
 do Audio.play_sfx("351565__bertrof__game-sound-incorrect-organic-violin.wav")
 do leave_chartacter()
-=> END
+=> close_shop
 
 ~ Columbo_end
 do show_chartacter("Columbo")
 {{player_name}}: Aquí la tiene. Espero que le sea útil.
 Columbo: ¡Más te vale! O vendré aquí en forma de tormenta de arena iracunda.
-{{player_name}}: Esperemos que no sea necesario. (Por favor, no. Que luego me tocará limpiar la arena
-a mí.)
+{{player_name}}: Esperemos que no sea necesario. (Por favor, no. Que luego me tocará limpiar la arena a mí.)
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do leave_chartacter()
 do Audio.stop_music()
@@ -241,7 +239,7 @@ Tomé: ¡Buenas tardes tendrás tú!
 do Audio.play_music_by_path("res://sounds/Enano.mp3")
 {{player_name}}: ¿Disculpe?
 {{player_name}}: (¿Es que este pueblo está lleno de bordes o qué?)
-Tomé: Pues claro que acepto las disculpas, pero ¡las aceptaré de mejor grado si cerrases esta tienducha tuya!
+Tomé: Pues claro que acepto las disculpas, pero... ¡las aceptaré de mejor grado si cerrases esta tienducha tuya!
 {{player_name}}: Me temo que eso no va a ser posible. No soy [if Global.gender == 0]el dueño[/if][if Global.gender == 1]la dueña[/if][if Global.gender == 2]le dueñe[/if] el local.
 Tomé: ¿No? *gruñe una maldición* ¡Entonces, ponme en contacto con la persona al cargo!
 {{player_name}}: (Pero, ¿este mequetrefe de dónde ha salido?)
@@ -303,9 +301,12 @@ if Global.check_customer_mood("Venus")
 	=> Venus_correct
 else
 	=> Venus_incorrect
+	
+~ check_columbo
 if Global.check_customer_mood("Columbo")
 	=> Columbo_correct
 else
 	=> Columbo_incorrect
+	
 ~ close_shop
 => END

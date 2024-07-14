@@ -10,7 +10,7 @@
 [ext_resource type="Resource" uid="uid://cqk07mdes8r0i" path="res://models/runes/dry_rune.tres" id="4_3llky"]
 [ext_resource type="Resource" uid="uid://ca70mw4l360k2" path="res://models/runes/hair_rune.tres" id="5_5okme"]
 [ext_resource type="Resource" uid="uid://001wpo6evy5v" path="res://models/stones/obsidian.tres" id="5_sctr1"]
-[ext_resource type="Resource" uid="uid://dfs0c5knxh6hy" path="res://models/stones/diamond.tres" id="6_wes5p"]
+[ext_resource type="Resource" path="res://models/stones/diamond.tres" id="6_wes5p"]
 [ext_resource type="Resource" uid="uid://coqxwe86fjbch" path="res://models/stones/citrine.tres" id="7_si8p0"]
 [ext_resource type="Resource" uid="uid://cq5cgfqagww0e" path="res://models/stones/blue_quartz.tres" id="8_cb1xa"]
 [ext_resource type="Resource" uid="uid://6g3q4rgtauj4" path="res://models/runes/clay_rune.tres" id="12_amsbb"]
@@ -65,6 +65,7 @@ theme = ExtResource("2_ny2mf")
 text = "VADEMECUM"
 
 [node name="TrophiesButton" type="Button" parent="MarginContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme = ExtResource("2_ny2mf")
 text = "TROFEOS"
@@ -276,12 +277,14 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -200.0
-offset_top = -250.0
-offset_right = 200.0
-offset_bottom = 250.0
+offset_top = -243.0
+offset_right = 258.0
+offset_bottom = 266.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("21_26ffc")
+theme_override_colors/default_color = Color(0.184314, 0.105882, 0.0509804, 1)
+theme_override_constants/line_separation = 2
 theme_override_fonts/normal_font = ExtResource("21_twj17")
 theme_override_font_sizes/normal_font_size = 16
 

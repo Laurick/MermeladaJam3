@@ -62,7 +62,7 @@ do Audio.play_sfx("567251__iwanplays__stones-falling.wav")
 {{player_name}}: ...
 {{player_name}}: Espero que llegue sane y salve a casa...
 do Audio.play_sfx("352657__foolboymedia__bong-chime-1.mp3")
-=> END
+=> check_chancay
 
 ~ Dogu_incorrect
 do show_chartacter("Dogu")
@@ -86,7 +86,7 @@ do Audio.play_sfx("567251__iwanplays__stones-falling.wav")
 {{player_name}}: Eso si llega a casa de una pieza.
 do Audio.play_sfx("351565__bertrof__game-sound-incorrect-organic-violin.wav")
 do leave_chartacter()
-=> END 
+=> check_chancay 
 
 ~ Dogu_end
 {{player_name}}: Creo que esto solucionará el problema de su aspecto.
@@ -198,7 +198,7 @@ do Audio.play_sfx("352657__foolboymedia__bong-chime-1.mp3")
 do leave_chartacter()
 do Audio.stop_music()
 {{player_name}}: Vaya, ¡gracias!
-=> END 
+=> close_shop 
 
 ~ Chancay_incorrect
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
@@ -221,7 +221,7 @@ do leave_chartacter()
 do Audio.stop_music()
 {{player_name}}: ...
 {{player_name}}: Madre mía, qué energía para ser tan pequeña.
-=> END 
+=> close_shop 
 
 ~ Chancay_end
 {{player_name}}: Aquí tiene. Seguro que está a la...
@@ -240,7 +240,7 @@ Está siendo el día más largo de esta semana. De verdad, solo quiero irme a mi
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
 {{player_name}}: ¡Buenas t..!
 do show_chartacter("Tome")
-do Audio.play_music_by_path("res://sounds/Enano.mp3")
+do Audio.play_music_by_path("res://sounds/Enanodia3.mp3")
 {{player_name}}: ¡No, largo!
 Tomé: ¡MENUDOS MODALES!
 {{player_name}}: ¡Son los que merece!
@@ -310,6 +310,8 @@ if Global.check_customer_mood("Dogu")
 	=> Dogu_correct
 else
 	=> Dogu_incorrect
+
+~ check_chancay
 if Global.check_customer_mood("Chancay")
 	=> Chancay_correct
 else

@@ -74,18 +74,18 @@ func title_pased(title:String):
 	elif title.begins_with("end_of_day"):
 		fader.fade_to_color(Color.from_string("#FAD6A566", Color.CHOCOLATE))
 	elif title.begins_with("close_shop"):
+		Audio.play_music(load("res://sounds/Diaynoche.mp3"))
 		fader.fade_in()
-		Audio.play_music(load("res://sounds/427570__maria_mannone__flute-a-short-sequence.wav"))
 		await get_tree().create_timer(2).timeout
 		if day == "res://dialogues/day1.dialogue":
 			day = "res://dialogues/day_2.dialogue"
-		if day == "res://dialogues/day_2.dialogue":
+		elif day == "res://dialogues/day_2.dialogue":
 			day = "res://dialogues/day_3.dialogue"
-		if day == "res://dialogues/day_3.dialogue":
+		elif day == "res://dialogues/day_3.dialogue":
 			if Global.score == 6:
 				Global.unlock_achivement("Empleado")
 			day = "res://dialogues/epilogue.dialogue"
-			
+		DialogueManager.show_dialogue_balloon(load(day))
 
 func game_over():
 	fader.fade_in()
@@ -180,7 +180,7 @@ func mutation_found(dict: Dictionary):
 func _on_give_button_pressed():
 	give_button.visible = false
 	if len(runes_selected) < 2 or len(stones_selected) < 1:
-		ballon_node = DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), "error_spell")
+		ballon_node = DialogueManager.show_dialogue_balloon(load(day), "error_spell")
 	else:
 		var spell = Spell.new()
 		for rune_selected in runes_selected:
@@ -231,7 +231,7 @@ func _on_give_button_pressed():
 			else:
 				Global.change_score_by(-1)
 				Global.add_customer_mood(colosus.name, false)
-				ballon_node = DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), colosus.name+"_end")
+			ballon_node = DialogueManager.show_dialogue_balloon(load(day), colosus.name+"_end")
 
 
 func _on_trophies_button_pressed():
