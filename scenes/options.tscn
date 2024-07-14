@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4meyla2in6jl"]
+[gd_scene load_steps=7 format=3 uid="uid://c4meyla2in6jl"]
 
 [ext_resource type="Script" path="res://scenes/options.gd" id="1_b0k6s"]
 [ext_resource type="Theme" uid="uid://dd0p4mnkcs75l" path="res://theme/game_theme.tres" id="2_775ph"]
 [ext_resource type="Texture2D" uid="uid://4j5cl7hp1fex" path="res://images/fondo.jpg" id="2_q62b5"]
+[ext_resource type="LabelSettings" uid="uid://cvw0vam46hxrt" path="res://theme/title_label_settings.tres" id="4_hvjf5"]
+[ext_resource type="LabelSettings" uid="uid://ceoaqidwo70xd" path="res://theme/text_label_settings.tres" id="5_m6pjx"]
+[ext_resource type="Theme" uid="uid://dc6dlmiffd7ot" path="res://theme/buton_theme.tres" id="6_w3afv"]
 
 [node name="Options" type="CenterContainer"]
 anchors_preset = 8
@@ -34,6 +37,7 @@ layout_mode = 2
 theme = ExtResource("2_775ph")
 theme_override_font_sizes/font_size = 64
 text = "OPTIONS"
+label_settings = ExtResource("4_hvjf5")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -48,11 +52,13 @@ layout_mode = 2
 theme = ExtResource("2_775ph")
 theme_override_font_sizes/font_size = 48
 text = "Music"
+label_settings = ExtResource("5_m6pjx")
 
 [node name="Music2" type="HSlider" parent="MarginContainer/CenterContainer/VBoxContainer/GridContainer"]
 custom_minimum_size = Vector2(245, 0)
 layout_mode = 2
 size_flags_vertical = 4
+theme = ExtResource("2_775ph")
 max_value = 1.0
 step = 0.01
 value = 0.5
@@ -63,16 +69,19 @@ theme = ExtResource("2_775ph")
 theme_override_font_sizes/font_size = 48
 text = "SFX
 "
+label_settings = ExtResource("5_m6pjx")
 
 [node name="Sfx" type="HSlider" parent="MarginContainer/CenterContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+theme = ExtResource("2_775ph")
 max_value = 1.0
 step = 0.01
 value = 0.5
 
 [node name="Idiomas" type="OptionButton" parent="MarginContainer/CenterContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme = ExtResource("2_775ph")
 item_count = 3
@@ -86,6 +95,7 @@ popup/item_2/id = 2
 
 [node name="Back" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("6_w3afv")
 text = "BACK"
 
 [connection signal="value_changed" from="MarginContainer/CenterContainer/VBoxContainer/GridContainer/Music2" to="." method="_on_music_value_changed"]

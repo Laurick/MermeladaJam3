@@ -1,3 +1,79 @@
-[gd_resource type="Theme" format=3 uid="uid://dd0p4mnkcs75l"]
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://dd0p4mnkcs75l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_484te"]
+bg_color = Color(0.733333, 0.627451, 0.521569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q77oe"]
+bg_color = Color(0.317647, 0.254902, 0.188235, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v0vbp"]
+bg_color = Color(0.733333, 0.627451, 0.521569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_543dj"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nhdun"]
+bg_color = Color(0.733333, 0.627451, 0.521569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cvemo"]
+bg_color = Color(0.529412, 0.435294, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b53o6"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q8mip"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.733333, 0.627451, 0.521569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wstwh"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.364706, 0.294118, 0.219608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m8477"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.364706, 0.294118, 0.219608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sm74v"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y0kt3"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
 
 [resource]
+HScrollBar/styles/grabber = SubResource("StyleBoxFlat_484te")
+HScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_q77oe")
+HScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_v0vbp")
+HScrollBar/styles/scroll = SubResource("StyleBoxFlat_543dj")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_nhdun")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_cvemo")
+HSlider/styles/slider = SubResource("StyleBoxFlat_b53o6")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_q8mip")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_wstwh")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_m8477")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_sm74v")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_y0kt3")
