@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://c7k424rithh80"]
+[gd_scene load_steps=26 format=3 uid="uid://c7k424rithh80"]
 
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_p64r6"]
 [ext_resource type="Script" path="res://components/StoneButton.gd" id="2_4heph"]
@@ -22,6 +22,7 @@
 [ext_resource type="Resource" uid="uid://c8amg2qwsubuc" path="res://models/runes/water_rune.tres" id="17_qj2yk"]
 [ext_resource type="PackedScene" uid="uid://c4yx11bhnumfk" path="res://components/trophies.tscn" id="20_ky87n"]
 [ext_resource type="Theme" uid="uid://dd0p4mnkcs75l" path="res://theme/game_theme.tres" id="21_26ffc"]
+[ext_resource type="Texture2D" uid="uid://k3gryx3okcx2" path="res://images/Papiro.png" id="21_oqdjt"]
 [ext_resource type="FontFile" uid="uid://c762n5plv5aww" path="res://images/UI/fonts/Skranji-Regular.ttf" id="21_twj17"]
 [ext_resource type="PackedScene" uid="uid://de3skmw3txim3" path="res://components/TrophyAchivements.tscn" id="21_vskoi"]
 
@@ -249,6 +250,22 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="ControlManual"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -419.0
+offset_top = -365.0
+offset_right = 3521.0
+offset_bottom = 3435.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("21_oqdjt")
 
 [node name="Manual" type="RichTextLabel" parent="ControlManual"]
 modulate = Color(1, 1, 1, 0)

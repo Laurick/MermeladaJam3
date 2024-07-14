@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_4am6a")
 name = "Al fin"
-description = "Por terminar esta historia recuperando la memoria."
+description = null
 image = ExtResource("1_ue111")

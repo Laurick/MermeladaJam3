@@ -57,7 +57,7 @@ label_settings = ExtResource("4_qcsbs")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_vertical = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -89,26 +89,9 @@ layout_mode = 2
 theme_override_constants/line_separation = 2
 theme_override_fonts/normal_font = ExtResource("7_gt27w")
 bbcode_enabled = true
-text = "Ildesir -> [url]https://ildesir.itch.io[/url]
+text = "[center]Ildesir -> [url]https://ildesir.itch.io[/url]
 SailorFu -> [url]https://sailorfu.itch.io[/url]
-Locrio -> [url]https://locrio.itch.io[/url]"
-fit_content = true
-
-[node name="MusicTitle" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "Música
-"
-label_settings = ExtResource("5_jgimo")
-horizontal_alignment = 1
-
-[node name="MusicPeopleLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/line_separation = 2
-theme_override_fonts/normal_font = ExtResource("7_gt27w")
-bbcode_enabled = true
-text = "Monkos -> [url]https://locrio.itch.io[/url]
-LocrioPerdido -> [url]https://soundcloud.com/11monkos[/url]"
+Locrio -> [url]https://locrioperdio.itch.io/[/url][/center]"
 fit_content = true
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
@@ -129,7 +112,7 @@ layout_mode = 2
 theme_override_constants/line_separation = 2
 theme_override_fonts/normal_font = ExtResource("7_gt27w")
 bbcode_enabled = true
-text = "Nora Kaals -> [url]https://teconkaals.itch.io[/url]"
+text = "[center]Nora Kaals -> [url]https://teconkaals.itch.io[/url][/center]"
 fit_content = true
 
 [node name="ArtTitle" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
@@ -145,38 +128,52 @@ layout_mode = 2
 theme_override_constants/line_separation = 2
 theme_override_fonts/normal_font = ExtResource("7_gt27w")
 bbcode_enabled = true
-text = "Claratmente -> [url]https://linktr.ee/clarartmente[/url]
+text = "[center]Claratmente -> [url]https://linktr.ee/clarartmente[/url]
 PSuzume -> [url]https://psuzume.itch.io/[/url]
 SailorFu -> [url]https://sailorfu.itch.io/[/url]
 Noa Cuadrado -> [url]https://noahuxui.itch.io[/url]
-Nora Kaals -> [url]https://teconkaals.itch.io[/url]"
+Nora Kaals -> [url]https://teconkaals.itch.io[/url][/center]"
 fit_content = true
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 20
 
-[node name="AssetsTitle" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+[node name="AssetsTitle" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/VBoxContainer3"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Assets usados"
 label_settings = ExtResource("5_jgimo")
 horizontal_alignment = 1
 
-[node name="AssetsLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+[node name="AssetsLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/VBoxContainer3"]
 layout_mode = 2
 theme_override_constants/line_separation = 2
 theme_override_fonts/normal_font = ExtResource("7_gt27w")
 bbcode_enabled = true
-text = "Dialoge Manager by Nathan hoad -> [url]https://github.com/nathanhoad/godot_dialogue_manager[/url] 
-Pressure_Plate_Stone by IPaddeh -> [url] https://freesound.org/s/422870[/url]
-Stone rubs grinds on stone sound effect by Garuda1982 -> [url]https://freesound.org/s/560310/[/url]
-Videogame Menu Button Clicking Sound 13  by Christopherderp -> [url]https://freesound.org/s/333038/[/url]
-Bong Chime 1 by FoolBoyMedia -> [url]https://freesound.org/s/352657/[/url]
-Game Sound InCorrect Organic Violin by Bertrof -> [url]https://freesound.org/s/351565/[/url]
-Flute -- a short sequence by Maria_Mannone -> [url]https://freesound.org/s/427570/[/url]
-Tibetan-Silver-Bells by the_very_Real_Horst -> [url]https://freesound.org/s/195309/[/url]"
+text = "Links en la descrip"
+fit_content = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MusicTitle" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Música
+"
+label_settings = ExtResource("5_jgimo")
+horizontal_alignment = 1
+
+[node name="MusicPeopleLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/line_separation = 2
+theme_override_fonts/normal_font = ExtResource("7_gt27w")
+bbcode_enabled = true
+text = "[center]LocrioPerdido -> [url]https://locrioperdio.itch.io/[/url]
+Monkos -> [url]https://soundcloud.com/11monkos[/url][/center]"
 fit_content = true
 
 [node name="BackButton" type="Button" parent="MarginContainer"]

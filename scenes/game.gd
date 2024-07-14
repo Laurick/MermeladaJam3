@@ -62,6 +62,13 @@ func title_pased(title:String):
 		runes_selected = []
 	elif title == "continue_for_riddle":
 		give_button.visible = true
+	elif title == "black_fade":
+		fader.fade_in()
+		await get_tree().create_timer(2).timeout
+		fader.fade_out()
+	elif title == "end_game":
+		Global.unlock_achivement("Al fin")
+		game_over()
 	elif title.begins_with("start_of_day"):
 		fader.force_fade_out()
 	elif title.begins_with("end_of_day"):
@@ -75,11 +82,16 @@ func title_pased(title:String):
 		if day == "res://dialogues/day_2.dialogue":
 			day = "res://dialogues/day_3.dialogue"
 		if day == "res://dialogues/day_3.dialogue":
+			if Global.score == 6:
+				Global.unlock_achivement("Empleado")
 			day = "res://dialogues/epilogue.dialogue"
+			
 
 func game_over():
 	fader.fade_in()
 	await get_tree().create_timer(2).timeout
+	Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
+	await get_tree().create_timer(1).timeout
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
 
 func show_name_edit():

@@ -167,8 +167,8 @@ func new_colosus(name:String):
 	
 func show_chartacter(name:String):
 	print("show_chartacter in balloon")
-	var path = "res://images/"+name+".tres"
-	avatar.modulate = Color(255, 255, 255, 1)
+	var path = "res://images/"+name+".png"
+	avatar.modulate = Color.TRANSPARENT
 	await create_tween().tween_property(avatar, "modulate:a", 1, 0.7).finished
 	avatar.texture = load(path)
 

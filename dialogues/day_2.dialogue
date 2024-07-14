@@ -66,7 +66,7 @@ Tiki: Sentirlo no es suficiente, ¿quién me va a pagar el escultor para que me 
 {{player_name}}: Eh...
 Tiki: Ya me lo parecía. En fin. Para que te fíes de las tiendas nuevas.
 {{player_name}}: Vaya metedura de pata. 
-do Audio.play_sfx("352657__foolboymedia__bong-chime-1.mp3")
+do Audio.play_sfx("351565__bertrof__game-sound-incorrect-organic-violin.wav")
 do leave_chartacter()
 => END 
 
@@ -82,10 +82,10 @@ do Audio.stop_music()
 
 ~ Lantak
 {{player_name}}: ¡Buenos días!
+{{player_name}}: Oh, es usted. 
 do Audio.play_music_by_path("res://sounds/Billie Djinn.mp3")
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Djinn")
-{{player_name}}: Oh, es usted. 
 ¿?: Veo que tienes más mercancía que ayer.
 {{player_name}}: Sí. Nos ha llegado parte del envío esta mañana.
 {{player_name}}: ¿Ve lo que necesitaba ayer?
@@ -94,16 +94,16 @@ do show_chartacter("Djinn")
 ¿?: ...
 ¿?: No te acuerdas, ¿verdad? 
 {{player_name}}: ¿Perdón?
-¿?: Me llamo Lan'tak.
+¿?: Me llamo Lan'tek.
 {{player_name}}: ...
-Lan'tak: *resopla* Era de esperar.
+Lan'tek: *resopla* Era de esperar.
 {{player_name}}: Usted...¿Usted me conoce?
-Lan'tak: ...
-Lan'tak: ...
-Lan'tak: Sí.
+Lan'tek: ...
+Lan'tek: ...
+Lan'tek: Sí.
 {{player_name}}: ...
 {{player_name}}: ¿Y ya? ¿No va a decirme nada?
-Lan'tak: Quizá mañana tengas lo que necesito.
+Lan'tek: Quizá mañana tengas lo que necesito.
 do leave_chartacter()
 do Audio.stop_music()
 {{player_name}}: ...
@@ -135,6 +135,7 @@ Tlatoani: POR FAVOOOOORRR. ME DUEEELE MUUUCHOOOO.
 ~ TlatoaniI_bad
 do show_chartacter("Tlatoani")
 {{player_name}}: Creo que ya lo tengo. A ver si te ayuda.
+do Audio.play_sfx("351565__bertrof__game-sound-incorrect-organic-violin.wav")
 Tlatoani: ESO NO AYUDA NADA.
 Tlatoani: ME DUELE AÚN MÁAAAASSS.
 {{player_name}}: ¡Lo siento! (Debería intentarlo de nuevo.)
@@ -182,7 +183,7 @@ Tlatoani: *te entrega una tablilla*
 Tlatoani: *asiente y sonrie*
 {{player_name}}: Oh, otra nota. Veamos...
 {{player_name}}: "Dejaré una reseña positiva en la página web".
-do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
+do Audio.play_sfx("352657__foolboymedia__bong-chime-1.mp3")
 do leave_chartacter()
 => END 
 
@@ -199,7 +200,7 @@ Tlatoani: *hace una mueca de disgusto*
 {{player_name}}: Oh, otra nota. A ver...
 {{player_name}}: "Pienso dejar una reseña negativa en la web. Ojalá te caiga un yunque en la cabeza".
 {{player_name}}: Supongo que me lo merezco.
-do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
+do Audio.play_sfx("351565__bertrof__game-sound-incorrect-organic-violin.wav")
 do leave_chartacter()
 => END
 
@@ -287,7 +288,7 @@ do Audio.stop_music()
 ~ end_of_day_2
 
 {{player_name}}: *te estiras* Bueno, para ser el segundo día, no ha estado tan mal.
-{{player_name}}: Aunque sigo [if Global.gender == 0]intrigado[/if][if Global.gender == 1]intrigada[/if][if Global.gender == 2]intrigade[/if] con Lan'tak. ¿De qué me conocerá? Espero que mañana responda a todas mis preguntas.
+{{player_name}}: Aunque sigo [if Global.gender == 0]intrigado[/if][if Global.gender == 1]intrigada[/if][if Global.gender == 2]intrigade[/if] con Lan'tek. ¿De qué me conocerá? Espero que mañana responda a todas mis preguntas.
 if Global.check_customer_mood("Tiki")
 	=> Tiki_correct
 else

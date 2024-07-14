@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Colosus" load_steps=4 format=3 uid="uid://ctcbm2cgqwugd"]
 
-[ext_resource type="Texture2D" uid="uid://bt8cy8otu8fqm" path="res://images/Columbo.tres" id="1_p4mb7"]
+[ext_resource type="Texture2D" uid="uid://eut8m5vxdwfs" path="res://images/Columbo.png" id="1_7frfk"]
 [ext_resource type="Resource" uid="uid://bkpq58ffgohbq" path="res://models/spells/ColosusIINeed.tres" id="2_exx4v"]
 [ext_resource type="Script" path="res://models/colosus/colosus.gd" id="3_bvlc1"]
 
@@ -8,4 +8,4 @@
 script = ExtResource("3_bvlc1")
 name = "Columbo"
 needs = ExtResource("2_exx4v")
-image = ExtResource("1_p4mb7")
+image = ExtResource("1_7frfk")

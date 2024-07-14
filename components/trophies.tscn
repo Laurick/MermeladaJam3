@@ -9,7 +9,7 @@
 [ext_resource type="Resource" uid="uid://b4lxfqndcruye" path="res://models/trophies/Tlatoani.tres" id="6_tk0fu"]
 [ext_resource type="Resource" uid="uid://bl80xjxnte1tk" path="res://models/trophies/Dogu.tres" id="7_6hna4"]
 [ext_resource type="Resource" uid="uid://qyilfmlpk3cg" path="res://models/trophies/Chancay.tres" id="8_p3x3v"]
-[ext_resource type="Resource" uid="uid://bteb4m8s52ea4" path="res://models/trophies/Enano.tres" id="9_284y4"]
+[ext_resource type="Resource" uid="uid://bteb4m8s52ea4" path="res://models/trophies/Empleado.tres" id="9_284y4"]
 [ext_resource type="Resource" uid="uid://chli2hn5yaddh" path="res://models/trophies/Amor.tres" id="10_wtsy2"]
 [ext_resource type="Resource" uid="uid://bnv7flgpp4ijg" path="res://models/trophies/Al fin.tres" id="11_lwljf"]
 

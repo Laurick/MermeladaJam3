@@ -11,6 +11,7 @@ var affection_tomeu: int = 0
 var player_name = ""
 var colosus_happy = {}
 var achivements_unlocked = {}
+var take_stone = false
 
 func _ready():
 	load_score()
@@ -21,6 +22,7 @@ func reset_game():
 	affection_tomeu = 0
 	player_name = ""
 	colosus_happy = {}
+	take_stone = false
 
 func change_affection_tome_by(amount:int):
 	affection_tomeu += amount

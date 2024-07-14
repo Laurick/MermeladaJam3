@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="Colosus" load_steps=4 format=3 uid="uid://b72hj5insg4bt"]
 
 [ext_resource type="Script" path="res://models/colosus/colosus.gd" id="1_ix6xh"]
-[ext_resource type="Texture2D" uid="uid://crjkv5yim8h55" path="res://images/Venus.tres" id="1_s04cq"]
+[ext_resource type="Texture2D" uid="uid://dr3iw4kqyhv0i" path="res://images/Venus.png" id="1_xsnoh"]
 [ext_resource type="Resource" uid="uid://d4i2y22umannr" path="res://models/spells/ColosusINeed.tres" id="2_d0dfa"]
 
 [resource]
 script = ExtResource("1_ix6xh")
 name = "Venus"
 needs = ExtResource("2_d0dfa")
-image = ExtResource("1_s04cq")
+image = ExtResource("1_xsnoh")

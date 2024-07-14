@@ -106,7 +106,8 @@ Venus: ¡Oye! Menos mal que he llegado antes de que cerrases la tienda.
 {{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
 Venus: ¿Que en qué puedes ayudarme? Pues en darme la hoja de reclamaciones, eso para empezar. La piedra con runas que me diste no ha servido para nada.
 {{player_name}}: Oh...lo...lo siento. 
-Venus: Disculparte no servirá de nada. Tengo que ir al escultor para que me vuelva a tallar la rodilla porque, con la humedad, la tierra se ha convertido en un bloque y no puedo doblar la pierna.
+Venus: Disculparte no servirá de nada. 
+Venus: Tengo que ir al escultor para que me vuelva a tallar la rodilla porque, con la humedad, la tierra se ha convertido en un bloque y no puedo doblar la pierna.
 {{player_name}}: Lo lamento.
 Venus: No pienso volver a este sitio. ¡Y dejaré una mala reseña en la página web!
 {{player_name}}: Genial.
@@ -144,7 +145,7 @@ hacer por usted?
 ¿?:  No es cierto. Vuestro foco mágico es único y el tuyo no parece... acorde.
 {{player_name}}: ¿Cómo dice? (No me pagan lo suciente como para aguantar que me insulten dos veces en un día.)
 ¿?: ...
-¿?: Parece que aún es pronto. echa un vistazo a su alrededor Y me temo que no tienes los materiales que necesito.
+¿?: Parece que aún es pronto. *echa un vistazo a su alrededor* Y me temo que no tienes los materiales que necesito.
 {{player_name}}: Oh, lo lamento. Hemos abierto hoy y el distribuidor está teniendo problemas a la hora de abastecernos.
 {{player_name}}: Al parecer, una serie de comerrocas merodean por la zona y tienen debilidad por las piedras utilizadas en rocaterapia.
 ¿?: *enarca una ceja* Ya... veo.
@@ -179,7 +180,6 @@ Columbo: ¡Eso ya lo sé! No soy un ignorante.
 {{player_name}}: Pero quiere pelo.
 Columbo: ¡Pues claro que quiero pelo!
 {{player_name}}: Aquí tenéis runas y piedras mágicas. ¡Alguna tendrá que servir!
-Columbo: Aquí tenéis runas y piedras mágicas. ¡Alguna tendrá que servir!ç
 {{player_name}}: ...
 {{player_name}}: Veré qué puedo hacer. (Dioses, dadme paciencia porque la voy a necesitar.)
 => wait_for_riddle
@@ -255,7 +255,7 @@ Tomé: ¡Pues si no me vas a poner en contacto con tus superiores, dame la hoja 
 {{player_name}}: (Este tipo es tonto.)
 {{player_name}}: Según la ley 89/750, apartado 7, epígrafe 12, sección 9: Las hojas de reclamación solo se podrán ofrecer al cliente siempre y cuando haga una compra en el destablecimiento.
 Tomé: *se acerca para tocarte*
-Tomé: ¡Oiga! ¡No toque!
+{{player_name}}: ¡Oiga! ¡No toque!
 Tomé: Pareces un coloso de verdad pero hablas como si fueses uno de esos colosos de metal.
 {{player_name}}: ¿Me está llamando robot?
 Tomé: *entrecierra* los ojos ¿Lo eres?

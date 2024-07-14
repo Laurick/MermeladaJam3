@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Colosus" load_steps=4 format=3 uid="uid://d32fanlh2nmvj"]
 
-[ext_resource type="Texture2D" uid="uid://dtlo2cefidku" path="res://images/colosusIII.tres" id="1_26sd0"]
+[ext_resource type="Texture2D" uid="uid://ddkyqxb2jy6ka" path="res://images/Tlatoani.png" id="1_d3w0u"]
 [ext_resource type="Resource" uid="uid://b055uvs5tby68" path="res://models/spells/ColosusI-IVNeed.tres" id="2_1sxai"]
 [ext_resource type="Script" path="res://models/colosus/colosus.gd" id="3_qsq30"]
 
@@ -8,4 +8,4 @@
 script = ExtResource("3_qsq30")
 name = "TlatoaniI"
 needs = ExtResource("2_1sxai")
-image = ExtResource("1_26sd0")
+image = ExtResource("1_d3w0u")
