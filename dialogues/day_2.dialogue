@@ -262,7 +262,7 @@ Tomé: Bueno, ¡eso ya lo veremos!
 	##TRANSITAR A TONO ANARANJADO PARA INDICAR EL FINAL DEL DIA
 	
 	{{player_name}}: *te estiras* Bueno, para ser el segundo día, no ha estado tan mal.
-	Aunque sigo [if Global.gender == 0]intrigado[/if][if Global.gender == 1]intrigada[/if][if Global.gender == 2]intrigade[/if] con Lan'tak. ¿De qué me conocerá? Espero que mañana responda a todas mis preguntas.
+	Aunque sigo [if Global.gender == 0]intrigado[/if][if Global.gender == 1]intrigada[/if][if Global.gender == 2]intrigade[/if] con Lan'tek. ¿De qué me conocerá? Espero que mañana responda a todas mis preguntas.
 	
 	=> END 
 	

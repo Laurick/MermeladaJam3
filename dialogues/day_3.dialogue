@@ -95,37 +95,37 @@ do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
 do leave_chartacter()
 {{player_name}}: Dioses, casi me destroza la tienda por completo.
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
-do show_chartacter("Lan'tak")
+do show_chartacter("Lan'tek")
 {{player_name}}: Buenas...
 Tú otra vez.
-Lan'tak: Ahora me tuteas. ¿Acaso me recuerdas?
+Lan'tek: Ahora me tuteas. ¿Acaso me recuerdas?
 {{player_name}}: Ni de lejos, pero no te irás sin contestar a las preguntas que tengo para hacerte.ç
-Lan'tak: ¿Eso crees? Lo cierto es que me gustaría ver cómo lo intentas. Sobre todo con ese... cuerpo tan poco práctico que tienes.
+Lan'tek: ¿Eso crees? Lo cierto es que me gustaría ver cómo lo intentas. Sobre todo con ese... cuerpo tan poco práctico que tienes.
 {{player_name}}: ¿Qué estás insinuando?
-Lan'tak: Que el cuerpo que tenías antes era mucho más... ágil.
+Lan'tek: Que el cuerpo que tenías antes era mucho más... ágil.
 {{player_name}}: *entrecierras los ojos* Basta ya. ¿De qué me conoces?
-Lan'tak: ...
+Lan'tek: ...
 Eras mi mejor [if Global.gender == 0]amigo[/if][if Global.gender == 1]amiga[/if][if Global.gender == 2]amigue[/if].
 {{player_name}}: ¿En serio? Permíteme que lo dude. No creo que me hiciera [if Global.gender == 0]amigo[/if][if Global.gender == 1]amiga[/if][if Global.gender == 2]amigue[/if] de alguien como tú.
-Lan'tak: *se ríe*
+Lan'tek: *se ríe*
 {{player_name}}: ...
 Es una broma.
-Lan'tak: No, no lo es. Llevamos viajando muchos años, somos un buen equipo.
+Lan'tek: No, no lo es. Llevamos viajando muchos años, somos un buen equipo.
 {{player_name}}: ...
 Mientes.
-Lan'tak: *se encoge de hombros* Como quieras.
+Lan'tek: *se encoge de hombros* Como quieras.
 *echa un vistazo a su alrededor* Veo que te ha llegado más mercancía.
 {{player_name}}: Eso parece, sí.
-Lan'tak: Hmm.
+Lan'tek: Hmm.
 Me llevo esta.
 {{player_name}}: ¿Eso es lo que necesitas?
-Lan'tak:  Por eso precisamente la he cogido, ¿no crees?
+Lan'tek:  Por eso precisamente la he cogido, ¿no crees?
 {{player_name}}: ...
 ¿Necesitas runas? 
-Lan'tak: Ah, no. Puedo tallarlas yo mismo.
+Lan'tek: Ah, no. Puedo tallarlas yo mismo.
 Además, no tienes sufciente poder como para tallar las runas que necesito.
 {{player_name}}: ...
-Lan'tak: Volver'e ma;ana con la piedra tallada.
+Lan'tek: Volver'e ma;ana con la piedra tallada.
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
 do leave_chartacter()
 {{player_name}}: ...
@@ -223,6 +223,75 @@ do leave_chartacter()
 
 => END
 
+~ tome_final 
 
+{{player_name}}: *suspiras*
+Está siendo el día más largo de esta semana. De verdad, solo quiero irme a mi casa.
+do Audio.play_sfx("352657__foolboymedia__bong-chime-1.mp3")
+{{player_name}}: ¡Buenas t..!
+do show_chartacter("Tome")
+¡No, largo!
+Tomé: ¡MENUDOS MODALES!
+{{player_name}}: ¡Son los que merece!
+Tomé: ¡Y LA HOJA DE RECLAMACIONES!
+{{player_name}}: ¡En la web! Apartado siete B párrafo dos.
+Tomé: ¡No pienso ir a la web!
+¡ES UN TIMO!
+NADIE RESPONDE.
+HACE DOS DÍAS QUE ENVIÉ UN CORREO ELECTRÓNICO Y NO ME HAN CONTESTADO.
+PANDA DE VAGOS.
+NO ENTIENDO CÓMO ES POSIBLE QUE ESTE NEGOCIO SIGA TENIENDO CLIENTES.
+{{player_name}}: ¿Por qué no se vuelve a su tienda y atiende a sus propios clientes en lugar de venir a molestarme?
+Tomé: ¡NO TENGO TIENDA!
+{{player_name}}: ...
+¿Cómo que no tienes tienda?
+Tomé: QUE NO TENGO.
+{{player_name}}: ...
+Tomé: NO EXISTE NINGUNA TIENDA.
+{{player_name}}: ¿Me estás diciendo...que has entrado aquí golem iracundo solo porque te aburrías?
+Tomé: ¡Evidentemente!
+{{player_name}}: ...
+Voy a por la escoba.
+Tomé: ¿Qué?
+ESPERA.
+GUARDA ESA ESCOBA.
+NO PUEDES... ¡AY!
+¡ME HAS DADO UN ESCOBAZO!
+{{player_name}}: ¡Y más que te voy a dar!
+Tomé: ESPERA.
+VAMOS A HABLARLO.
+{{player_name}}: ...
+¿Qué quieres?
+Tomé: ...
+¿Me das una muestra gratis?
+{{player_name}}: ...
+¿Es una broma?
+Tomé: ¡No, no!
+Si me das una última muestra gratis, ¡prometo no volver!
+{{player_name}}: ...
+...
+¿Quieres darle una piedra de manera gratuita?
+- Sí (Darle la muestra gratis).
+	###aumentar enemistad
+	{{player_name}}: *apartas la escoba* Está bien. Pero como vuelvas por aquí, te echo a escobazos.
+	Tomé: ¡Mil gracias!
+	Prometo no vol...
+	{{player_name}}: QUE TE VAYAS YA, PESAO.
+		
+- No (Darle un escobazo). 
+###aumentar amistad
+	{{player_name}}: UN ESCOBAZO GRATIS TE VOY A DAR.
+	Tomé: ¡AY!
+	¡Esto no acabará así!
+	ESTO ES UN ULTRAJE.
+	¡MANDARÉ A MIS ABOGADOS!
+	{{player_name}}: Los que tengo aquí colgados, ¡FUERA DE LA TIENDA!
+	
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do leave_chartacter()
+ 
+{{player_name}}: Será posible el enano mierda este.
+Dando por saco día sí y día también.
+Como venga mañana le parto las piernas.
 
-
+=> END

@@ -1,0 +1,94 @@
+~ epilogue_start
+
+{{player_name}}: *das un largo suspiro* Como hoy sea un día de mierda, dimito y me tiro al río.
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+{{player_name}}: ¡Buenos días!
+...
+Eres tú.
+do show_chartacter("Lan'tak")
+Lan'tek: Hola a ti también.
+{{player_name}}: ¿Has venido a contarme sobre mí o vuelves a ponerte en modo esquivo?
+Lan'tek: *se ríe* Veo que estás recuperando parte de tu carácter.
+Lan'tek: No tientes a la suerte.
+Venga. Suéltalo. ¿Quién soy?
+Lan'tek: Por suerte para ti, tengo lo que necesitas.
+{{player_name}}: *miras la piedra con runas talladas que te ofrece* ¿Por qué debería fiarme de ti?
+Lan'tek: *se encoge de hombros* ¿Por qué no? Si estoy equivocado, no pasará nada. Pero si tengo razón...*sonríe* Recordarás todo.
+La decisión es tuya. 
+
+- ¿Quieres coger la piedra que te ofrece Lan'tek?
+	### teke_stone = true
+	{{player_name}}: Vale. Me fiaré de lo que dices. Si me muero vendré a atormentarte durante el resto de tu miserable vida.
+	Lan'tek: Correré el riesgo.
+	## FUNDIDO A NEGRO UNOS SEGUNDOS
+	{{player_name}}: ...
+	Lan'tek: ¿Y bien? ¿Cómo te sientes?
+	{{player_name}}: ...
+	Maldito cabrón de mierda. ¡Me dejaste [if Global.gender == 0]tirado[/if][if Global.gender == 1]tirada[/if][if Global.gender == 2]tirade[/if] en el laboratorio de la bruja!
+	Lan'tek: *se ríe* ¡Ah, has vuelto!
+	{{player_name}}: ¡Claro que he vuelto, boñiga con patas!
+	¡Devuélveme mi cuerpo!
+	Lan'tek: Mis habilidades no son tan poderosas...
+	{{player_name}}: Ni se te ocurra terminar esa frase, Lan'tek.  
+	Lan'tek: *se ríe* Sabía que dirías eso, así que aquí tengo otra piedra para ello.
+	{{player_name}}: *la coges* Trae.
+	## FUNDIDO A NEGRO UNOS SEGUNDOS
+	{{player_name}}: *te miras las manos y el resto del cuerpo en el espejo* Por fin.
+	No he olvidado que, gracias a tu cobardía, esa bruja me dio amnesia y otro cuerpo.
+	Lan'tek: *sonríe* Claro que sí, {{player_name}}.
+	Me alegro de volver a verte.
+	{{player_name}}: *resoplas* Nos vamos de este sitio. Ve a por provisiones y espérame a la salida del pueblo. Esa bruja se va a enterar.
+	Lan'tek: *sonríe* Ah, cuánto te echaba de menos.
+	Te veré en una hora. 
+	
+	do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+	##FUNDIDO A NEGRO
+	do game_over() 
+		
+- ¿Quieres seguir como hasta ahora? 
+###take_stone = false
+	{{player_name}}: ¿Sabes? Esto tampoco está tan mal. Así que no, no voy a coger esa piedra.
+	Lan'tek: ...
+	*se encoge de hombros*  Una pena. Realmente te echaba de menos, pero tampoco voy a obligarte a nada.
+	*deja la piedra sobre el mostrador* Te la dejo aquí para que la uses cuando consideres. Si decides hacerlo, búscame.
+	{{player_name}}: No creo que lo haga, pero gracias por las molestias. 
+	Lan'tek: ¡Hasta otra!
+	do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+	##FUNDIDO A NEGRO
+	do game_over() 
+	
+	=> END
+	
+ #(##si amistad == 3 activar siguiente dialogo)
+~ romance_start
+
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+{{player_name}}: ¡Bue...! ¡NO! ¡FUERA!
+do show_chartacter("Tomé")
+Tomé: ¡Pero si no he dicho nada!
+{{player_name}}: ¡Tu simple presencia es suficiente!
+¡No pienso darte más muestras gratuitas!
+Tomé: ¡No he venido por eso!
+{{player_name}}: ¡Ya, claro!
+Tomé: ¡De verdad!
+
+##si take_stone = true
+
+Tomé: Además, ¡podría decirle a todo el mundo que los has estado engañando!
+{{player_name}}: ¡Pero, ¿de qué estás hablando?!
+Tomé: TE HE VISTO CON EL TIPO ESE.
+TE HA DADO UNA PIEDRA Y TU CUERPO HA CAMBIADO.
+{{player_name}}: ¿ESTABAS ESPIANDO, CAGARRUTA DE GNOMO?
+Tomé: NO ES ESPIAR SI LA TIENDA ESTÁ ABIERTA.
+
+##elif take_stone = false
+
+{{player_name}}: Vale. ¿Qué quieres?
+Tomé: Yo...bueno...
+{{player_name}}: ¡Suéltalo!
+
+
+
+
+
+	
