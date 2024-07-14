@@ -6,7 +6,7 @@ Nombre...
 => END
 
 ~ gender
-{{player_name}}: Ah? Tambien me pregunta el género. Vamos a rellenarlo
+{{player_name}}: Ah? También me pregunta el género. Vamos a rellenarlo
 - SOY ÉL
 	do Global.gender = 0
 - SOY ELLA

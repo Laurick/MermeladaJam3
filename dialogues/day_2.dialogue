@@ -25,7 +25,7 @@ Tiki: *refunfuña* Pues salta a la vista que tengo un problema.
 Tiki: Me he quemado la cara.
 {{player_name}}: Entiendo.
 Tiki: Cociendo macarrones.
-{{player_name}}: Le puede pasar a cualquiera. (¿QUIEN LE PRENDE FUEGO A LOS MACARONES?)
+{{player_name}}: Le puede pasar a cualquiera. (¿QUIEN LE PRENDE FUEGO A LOS MACARRONES?)
 Tiki: ¿Te estás burlando de mí?
 {{player_name}}: Por supuesto que no. Soy [if Global.gender == 0]un auténtico profesional[/if][if Global.gender == 1]una auténtica profesional[/if][if Global.gender == 2]une auténtique profesional[/if].
 Tiki: *resopla* Bueno. Lo cierto es que  he intentado recuperar la cara con agua, pero ha dado lo mismo. Está demasiado quemado y no es permeable.
