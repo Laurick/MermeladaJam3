@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://dfsgn4i0tfipk"]
+[gd_scene load_steps=6 format=3 uid="uid://dfsgn4i0tfipk"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_6ykpe"]
 [ext_resource type="Script" path="res://components/version_label.gd" id="1_vblcm"]
+[ext_resource type="VideoStream" path="res://video/vídeo_inicio.ogv" id="2_6dfn7"]
+[ext_resource type="LabelSettings" uid="uid://ceoaqidwo70xd" path="res://theme/text_label_settings.tres" id="3_lrrov"]
+[ext_resource type="Theme" uid="uid://dc6dlmiffd7ot" path="res://theme/buton_theme.tres" id="4_shx6y"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -13,7 +16,15 @@ grow_vertical = 2
 size_flags_vertical = 4
 script = ExtResource("1_6ykpe")
 
-[node name="VersionLabel" type="Label" parent="."]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("2_6dfn7")
+autoplay = true
+loop = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -21,40 +32,53 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -40.0
-offset_top = -23.0
+offset_top = -40.0
 grow_horizontal = 0
 grow_vertical = 0
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VersionLabel" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+label_settings = ExtResource("3_lrrov")
 script = ExtResource("1_vblcm")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="GridContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -20.0
-offset_right = 100.0
-offset_bottom = 20.0
+offset_left = 46.0
+offset_top = 168.0
+offset_right = 399.0
+offset_bottom = 208.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 14
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 2
 
 [node name="PlayButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme = ExtResource("4_shx6y")
 text = "JUGAR"
 
 [node name="OptionsButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme = ExtResource("4_shx6y")
 text = "OPCIONES"
 
 [node name="TrophiesButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme = ExtResource("4_shx6y")
 text = "TROFEOS"
 
 [node name="CreditsButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme = ExtResource("4_shx6y")
 text = "CREDITOS"
 
 [connection signal="pressed" from="HBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]

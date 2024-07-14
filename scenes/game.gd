@@ -14,7 +14,7 @@ var edit_scene:PackedScene = preload("res://components/edit.tscn")
 @onready var stones = $Stones
 
 var colosus:Colosus = null
-
+ 
 var state = "none"
 
 var stones_selected:Array[StoneButton] = []
@@ -50,8 +50,8 @@ func title_pased(title:String):
 		await get_tree().create_timer(0.7).timeout
 		state = "manual"
 	elif title == "open_vademecum":
-		_on_book_button_pressed()
 		state = "vademecum"
+		_on_book_button_pressed()
 	elif title == "wait_for_riddle":
 		state = "wait_for_riddle"
 		give_button.visible = true
@@ -59,6 +59,10 @@ func title_pased(title:String):
 		runes_selected = []
 	elif title == "continue_for_riddle":
 		give_button.visible = true
+	elif title.begins_with("start_of_day"):
+		fader.force_fade_out()
+	elif title.begins_with("end_of_day"):
+		fader.fade_to_color(Color.from_string("#FAD6A566", Color.CHOCOLATE))
 
 func game_over():
 	fader.fade_in()
@@ -71,6 +75,7 @@ func show_name_edit():
 	add_child(edit_instance)
 
 func on_name_summited(new_text):
+	Audio.play_click_sound()
 	Global.player_name = new_text
 	DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), "gender")
 
@@ -81,12 +86,13 @@ func _on_exit_button_pressed():
 
 
 func _on_book_button_pressed():
-	Audio.play_sfx("res://sounds/422870__ipaddeh__pressure_plate_stone.wav")
+	Audio.play_sfx("422870__ipaddeh__pressure_plate_stone.wav")
 	book._show()
 
 func on_book_closed():
 	if state == "vademecum":
 		DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), "close_vademecum")
+		state = ""
 
 func show_manual():
 	Audio.play_sfx("Cut_560310__garuda1982__stone-rubs-grinds-on-stone-sound-effect.mp3")
@@ -135,6 +141,7 @@ func _on_manual_gui_input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and state == "manual":
 		hide_manual()
 		DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), "find_vademecum")
+		state = ""
 
 func mutation_found(dict: Dictionary):
 	if dict.has("expression"):
@@ -164,7 +171,6 @@ func _on_give_button_pressed():
 		else:
 			Global.change_score_by(-1)
 			Global.add_customer_mood(colosus.name, false)
-
 		DialogueManager.show_dialogue_balloon(load("res://dialogues/day1.dialogue"), colosus.name+"_end")
 
 
@@ -175,10 +181,7 @@ func _on_trophies_button_pressed():
 func _on_back_trophies_button_pressed():
 	control_trophies.hide()
 
-func _input(event):
-	if event is InputEventKey and event.keycode == KEY_B:
-		show_achivement(load("res://models/trophies/Venus.tres"))
-		
+
 func show_achivement(achivement):
 	Audio.play_sfx("427570__maria_mannone__flute-a-short-sequence.wav")
 	trophy_achivements.setup(achivement)

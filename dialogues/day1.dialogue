@@ -1,6 +1,5 @@
 ~ intro
-Bueno, ya lo tengo todo listo. Solo me queda rellenar la tarjeta de empleado y lo
-tengo todo.
+Bueno, ya lo tengo todo listo. Solo me queda rellenar la tarjeta de empleado y lo tengo todo.
 Nombre...
 ~ name
 => END
@@ -21,11 +20,10 @@ Nombre...
 
 ~ find_manual
 {{player_name}}: Bueno, el stock ahora mismo es lo de menos. Voy a echar un vistazo al mostrador.
-{{player_name}}: En fin, el stock ahora mismo es lo de menos. Voy a echar un vistazo al mostrador.
 {{player_name}}: ...
 {{player_name}}: ...
 {{player_name}}: ¡Oh! Aquí hay un manual.
-{{player_name}}: a sé lo que tengo que hacer, pero no creo que me haga daño leerlo de nuevo, por si hay alguna cosa que se les haya olvidado decirme en la formación.
+{{player_name}}: Ya sé lo que tengo que hacer, pero no creo que me haga daño leerlo de nuevo, por si hay alguna cosa que se les haya olvidado decirme en la formación.
 ~ read_manual
 => END
 
@@ -46,6 +44,7 @@ Nombre...
 ~ continue_for_riddle
 => END
 
+~ start_of_day_1
 ~ Venus_start
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
 do show_chartacter("Venus")
