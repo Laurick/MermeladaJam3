@@ -1,0 +1,282 @@
+~ day_2_start
+
+{{player_name}}:  ¡Otro día más en el capitalismo! ¡Yay!
+...
+Espero que no me haya oído nadie.
+ En fin. Debería colocar las cosas que han llegado, aunque aún faltan un puñado más. \n De verdad, Suer es la peor compañía de reparto que he visto nunca.
+
+##APARECEN PIEDRAS Y RUNAS"
+
+{{player_name}}: Bueno, menos da una piedra.
+...
+Dioses, soy [if Global.gender == 0]divertidísimo[/if][if Global.gender == 1]divertidísima[/if][if Global.gender == 2]divertidísime[/if].
+
+=> END
+
+~ tiki 
+do show_chartacter("Tiki")
+do new_colosus("Tiki")
+##SSONIDO DE PUERTA ABRIENDOSE
+
+{{player_name}}: Buenos días, ¿en qué puedo ayudarle?
+Tiki: ¿A ti te parece que sean buenos días?
+{{player_name}}: *sonríes con amabilidad* Disculpe, no le había visto.
+Tiki: *refunfuña* Pues salta a la vista que tengo un problema.
+{{player_name}}: En efecto, eso parece.
+Tiki: Me he quemado la cara.
+{{player_name}}: Entiendo.
+Tiki: Cociendo macarrones.
+{{player_name}}: Le puede pasar a cualquiera. (¿QUIEN LE PRENDE FUEGO A LOS MACARONES?)
+Tiki: ¿Te estás burlando de mí?
+{{player_name}}: Por supuesto que no. Soy [if Global.gender == 0]un auténtico profesional[/if][if Global.gender == 1]una auténtica profesional[/if][if Global.gender == 2]une auténtique profesional[/if].
+Tiki: *resopla* Bueno. Lo cierto es que  he intentado recuperar la cara con agua, pero ha dado lo mismo. Está demasiado quemado y no es permeable.
+¿Tienes por ahí algo que me haga el apaño? Llevo unos días así y estoy empezando a perder la seguridad en mí misme.
+{{player_name}}: Voy a echar un vistazo. (Espero que no necesite algo de lo que falta por llegar). 
+
+##PUZLE
+
+=> END 
+
+~ tiki_correct
+
+Tiki: ¡Eh! Oye!
+{{player_name}}: (Verás tú, otro rapapolvo). ¿sí?
+Tiki:  Quería darte las gracias porque la piedra que me diste me ha funcionado a la perfección. ¡Mira mi cara! ¡¡Tiene expresión!!
+{{player_name}}: Oh. *se ríe* Me alegro de verlo.
+Tiki: Mi autoestima está mejor que nunca gracias a ti. ¡Pienso poner la reseña más positiva de la historia!
+{{player_name}}: Muchas gracias.
+
+=> END 
+
+~ tiki_incorrect
+
+Tiki: ¡Eh! Oye!
+{{player_name}}: (Verás tú, otro rapapolvo). ¿sí?
+Tiki:  Quiero la hoja de reclamaciones. ¡La piedra que me diste no solo no ha solucionado mi problema si no que, además, me ha borrado la mitad de la cara! 
+{{player_name}}: Lo...lo siento.
+Tiki: Sentirlo no es suficiente, ¿quién me va a pagar el escultor para que me recomponga la cara?
+{{player_name}}: Eh...
+Tiki: Ya me lo parecía. En fin. Para que te fíes de las tiendas nuevas.
+{{player_name}}: Vaya metedura de pata. 
+
+~ lantak
+
+{{player_name}}: Bueno, aquí tienes la piedra.
+Tiki: Hmmm. Gracias. La probaré en cuanto llegue a casa, a ver si es verdad que funciona.
+{{player_name}}: Seguro que sí. Verá como muy pronto podrá volver a mover la cara. 
+Tiki: Esperemos.
+
+## METER SONIDO DE PUERTA CERRANDOSE.
+## PUERTA ABRIENDOSE
+
+do show_chartacter("Lan'tak")
+do new_colosus("Lan'tak")
+
+{{player_name}}: ¡Buenos días!
+Oh, es usted. 
+¿?: Veo que tienes más mercancía que ayer.
+{{player_name}}: Sí. Nos ha llegado parte del envío esta mañana.
+¿Ve lo que necesitaba ayer?
+¿?: Aún no.
+{{player_name}}: Si me dice qué es lo que busca, igual podemos hacer un apaño. 
+¿?: ...
+No te acuerdas, ¿verdad? 
+{{player_name}}: ¿Perdón?
+¿?: Me llamo Lan'tak.
+{{player_name}}: ...
+Lan'tak: *resopla* Era de esperar.
+{{player_name}}: Usted...¿Usted me conoce?
+Lan'tak: ...
+...
+Sí.
+{{player_name}}: ...
+¿Y ya? ¿No va a decirme nada?
+Lan'tak: Quizá mañana tengas lo que necesito.
+
+do hide_chartacter()
+
+{{player_name}}: ...
+Y se ha pirado. Pero, ¿de qué va? Me suelta una bomba así y se larga. Menudo sinvergüenza.
+*suspiras* En fin. Espero que mañana llegue lo que está esperando y me cuente de qué me conoce.
+
+=> END 
+
+~ tlatoani 
+
+## ABRIR PUERTA 
+do show_chartacter("Tlatoani")
+do new_colosus("Tlatoani")
+
+{{player_name}}: ¡Buenas tardes! ¿En qué puedo ayudarle?
+Tlatoani: ¡ME HE ROTO EL BRAAAAZOOOO!
+{{player_name}}: ...
+*Le ofreces un pañuelo*
+¿Cuándo ha sido?
+Tlatoani: ¡HACE UNOS MINUTOS!
+ VENÍA DE CAMINO A POR UNA PIEDRA PARA TENE A ARENA DEL CUERPO MÁS DURA Y ME HE TOPEZADO.
+{{player_name}}: Te...¿te has caído por las escaleras?
+Tlatoani: ¿QUÉ ESCALERAS?
+ME HE TOPEZADO CON MIS PROPIOS PIES Y ME HE CAÍDO.
+ Y AHORA ME DUELE MUCHO EEEEEL BRAZOOOO.
+{{player_name}}: (Madre mía, qué panorama.) Vale, lo primero de todo, respira hondo. Voy a ver si tengo algo para quitarte el dolor y luego miramos la reconstrucción.
+Tlatoani: POR FAVOOOOORRR. ME DUEEELE MUUUCHOOOO.
+{{player_name}}: (Vamos a ver qué tengo por aquí).
+
+##Puzle CALMAR BRAZO
+
+~ reconstruct_arm 
+
+{{player_name}}: Bueno, ¿un poco  mejor?
+Tlatoani: ...
+{{player_name}}: ...
+¿Hola?
+Tlatoani: *sonido inteligible* 
+{{player_name}}: Perdona, no la he oído. 
+¿Quizá podría hablar más alto?
+Tlatoani: #PONER LA LETRA MAS PEQUEÑA# Estoy hablando alto.
+{{player_name}}:  (Pero si ha entrado gritando como una banshee).
+¿Quizá pueda volver a gritar?
+Tlatoani: ##PONER LETRA NORMAL## ¿Así mejor?
+{{player_name}}: Ahora la escucho perfectamente. 
+Dígame, ¿cómo está el brazo?
+Tlatoani: Roto.
+{{player_name}}: ...
+Ya. Me refería al dolor.
+Tlatoani: Ah.
+No me duele.
+{{player_name}}: Bien. Vamos a ver si encontramos una solución para reconstruirlo. 
+
+##PUZZLE RECONSTRUCCION BRAZO
+
+=> END 
+
+~ Tlatoani_correct 
+
+{{player_name}}: ¿Hm? ¿Quién me tira de la túnica?
+Tlatoani: *te entrega una tablilla*
+{{player_name}}: ¿Una nota? A ver...
+"Hola, {{player_name}}, gracias por darme la piedra que me arregló el brazo y reforzó el material de mi cuerpo. Ya puedo caerme sin romperme nada". 
+Ah, pues me alegro mucho. Pero, por favor, intente no caerse. 
+Tlatoani: *asiente y sonrie*
+{{player_name}}: Oh, otra nota. Veamos...
+ "Dejaré una reseña positiva en la página web".
+
+=> END 
+
+~ Tlatoani_incorrect
+
+{{player_name}}: ¿Hm? ¿Quién me tira de la túnica?
+Tlatoani: *te entrega una tablilla*
+{{player_name}}: ¿Una nota? A ver...
+Tlatoani: "Hola {{player_name}}, gracias por darme una piedra que no me ha servido para nada. Tendré que ir a un escultor para que me haga uno nuevo mientras intento no tropezarme y evitar romperme más cosas".
+...Vaya. Lo siento. 
+Tlatoani: *hace una mueca de disgusto*
+{{player_name}}: Oh, otra nota. A ver...
+"Pienso dejar una reseña negativa en la web. Ojalá te caiga un yunque en la cabeza".
+Supongo que me lo merezco.
+
+=> END
+
+~ tome
+
+{{player_name}}: Pues aquí tiene. A ver si le ayuda.
+Tlatoani: ##LETRA MAS PEQUEÑA## Muchas gracias.
+
+do hide_chartacter()
+
+	##CERRAR PUERTA##
+	
+{{player_name}}: Bueno, casi ha terminado el día.
+Menos mal, porque Dioses, qué turno. 
+ 
+## ABRIR PUERTA
+
+{{player_name}}: ¡Buenas tardes! ¿En qué...?
+*suspiras* Qué quiere.
+
+do show_chartacter("Tomé")
+
+Tomé: ¡Vaya modales!
+¿Así pretendes que vaya bien el negocio?
+{{player_name}}: Señor.
+Por favor. ¿Qué quiere de mí?
+Tomé: Te lo dije el primer día. ¡Que cierres este chiringuito tan cutre!
+{{player_name}}: Y yo le dije que no está en mi mano hacer eso.
+Si tiene cualquier queja, póngase en contacto con la empresa por los canales adecuados.
+Tomé: ¡Eso es un timo!
+{{player_name}}: ¿Disculpe?
+Tomé: ¡Les llamé por teléfono y me atendió uno de esos cacharros sin alma!
+{{player_name}}: Ah, la centralita.
+Tomé: ¡NO ME DIJO EL NOMBRE PERO ME DA IGUAL! ¡NO TIENE ALMA, ES UNA MÁQUINA!
+{{player_name}}: Un poco de respeto, por favor. Están hechos de metal, pero tienen sentimientos.
+Tomé: PERO QUÉ SENTIMIENTOS NI QUÉ ROCA MUERTA.
+{{player_name}}: Señor, si va a seguir lanzando improperios va a tener que abandonar el local.
+Tomé: ¿Me estás echando?
+¿TE ATREVES A PROHIBIRME UN DERECHO FUNDAMENTAL?
+{{player_name}}: Se lo prohíbo en este local. Si quiere gritar contra las máquinas, por favor, hágalo en la calle.
+Tomé: JAMÁS.
+SEGURO QUE TÚ ERES UNA DE ESAS.
+{{player_name}}: Señor, soy [if Global.gender == 0]un coloso[/if][if Global.gender == 1]una colosa[/if][if Global.gender == 2]une colose[/if].
+Tomé: ESO DICES TÚ.
+¡Podrías ser una máquina con un disfraz!
+{{player_name}}: Creo que, de ser el caso, tendría mejores cosas que hacer que estar detrás de un mostrador.
+Tomé: ...
+Quiero una muestra gratuita.
+{{player_name}}: ...
+¿Perdón?
+Tomé: ¡Ya me has oído! ¡Quiero una muestra gratuita!
+{{player_name}}: Ya le di una ayer, ¿cuántas quiere?
+Tomé: ¡Una por día!
+{{player_name}}: ...
+Y yo quiero que me paguen por no trabajar y aquí estamos. 
+Tomé: ¡Pues cierra la tienda! Así no tendrás que trabajar.
+{{player_name}}: ¡Pero que necesito el dinero!
+*suspiras* Por favor, si no va a comprar nada, salga de la tienda.
+Tomé: ¡Dame mi muestra gratuita!
+{{player_name}}: ...
+...
+(Dioses, es como un grano en el culo.) Está bien. ¡Pero no vuelva mañana a por más!
+Tomé: Bueno, ¡eso ya lo veremos!
+{{player_name}}: (A ver qué le doy yo a este pesado).
+
+- ¿Quieres entregarle la runa que signifca "Irritación"?
+	#SUMAR UN PUNTO A ENEMISTAD 
+	#SEGUIR TEXTO
+- ¿Quieres entregarle una amazonita que se usa para "calmar el estrés y aumentar la seguridad de une misme"?
+	#SUMAR UN PUNTO A AMISTAD 
+	#SEGUIR TEXTO
+	
+	Tomé: *entrecierra los ojos* No está mal.
+	{{player_name}}: Sé hacer bien mi trabajo.
+	Por favor, ¿puede irse ya?
+	Tomé: ...
+	¡Volveré mañana!
+	{{player_name}}: No se moleste, por favor.
+	Tomé: ¡No es molestia!
+	
+	##CERRAR PUERTA	
+	
+	do hide_chartacter()
+	
+	{{player_name}}: *suspiras* Como vuelva mañana le doy con la escoba.
+	
+	##TRANSITAR A TONO ANARANJADO PARA INDICAR EL FINAL DEL DIA
+	
+	{{player_name}}: *te estiras* Bueno, para ser el segundo día, no ha estado tan mal.
+	Aunque sigo [if Global.gender == 0]intrigado[/if][if Global.gender == 1]intrigada[/if][if Global.gender == 2]intrigade[/if] con Lan'tak. ¿De qué me conocerá? Espero que mañana responda a todas mis preguntas.
+	
+	=> END 
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+

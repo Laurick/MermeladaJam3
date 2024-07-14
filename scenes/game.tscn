@@ -9,7 +9,7 @@
 [ext_resource type="Resource" uid="uid://cqk07mdes8r0i" path="res://models/runes/dry_rune.tres" id="4_3llky"]
 [ext_resource type="Resource" uid="uid://ca70mw4l360k2" path="res://models/runes/hair_rune.tres" id="5_5okme"]
 [ext_resource type="Resource" uid="uid://001wpo6evy5v" path="res://models/stones/obsidian.tres" id="5_sctr1"]
-[ext_resource type="Resource" path="res://models/stones/diamond.tres" id="6_wes5p"]
+[ext_resource type="Resource" uid="uid://dfs0c5knxh6hy" path="res://models/stones/diamond.tres" id="6_wes5p"]
 [ext_resource type="Resource" uid="uid://coqxwe86fjbch" path="res://models/stones/citrine.tres" id="7_si8p0"]
 [ext_resource type="Resource" uid="uid://cq5cgfqagww0e" path="res://models/stones/blue_quartz.tres" id="8_cb1xa"]
 [ext_resource type="Resource" uid="uid://6g3q4rgtauj4" path="res://models/runes/clay_rune.tres" id="12_amsbb"]
