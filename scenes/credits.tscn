@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://jtjsja3atsjg"]
+[gd_scene load_steps=8 format=3 uid="uid://jtjsja3atsjg"]
 
 [ext_resource type="Script" path="res://scenes/credits.gd" id="1_hw64p"]
 [ext_resource type="Texture2D" uid="uid://4j5cl7hp1fex" path="res://images/fondo.jpg" id="2_fdxhd"]
+[ext_resource type="Theme" uid="uid://dc6dlmiffd7ot" path="res://theme/buton_theme.tres" id="3_v8ywq"]
+[ext_resource type="LabelSettings" uid="uid://cvw0vam46hxrt" path="res://theme/title_label_settings.tres" id="4_qcsbs"]
+[ext_resource type="LabelSettings" uid="uid://byw15xcajoqqu" path="res://theme/subtitle_label_settings.tres" id="5_jgimo"]
+[ext_resource type="LabelSettings" uid="uid://ceoaqidwo70xd" path="res://theme/text_label_settings.tres" id="6_fgji0"]
+[ext_resource type="FontFile" uid="uid://c762n5plv5aww" path="res://images/UI/fonts/Skranji-Regular.ttf" id="7_gt27w"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -18,6 +23,15 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_fdxhd")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.223529, 0.14902, 0.027451, 0.454902)
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -25,10 +39,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -38,7 +52,8 @@ theme_override_constants/separation = 10
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 64
-text = "Despedrado"
+text = "CRÉDITOS"
+label_settings = ExtResource("4_qcsbs")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -53,20 +68,26 @@ theme_override_constants/separation = 20
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Un juego por"
+label_settings = ExtResource("5_jgimo")
 horizontal_alignment = 1
 
 [node name="JamTeDigoLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Jam te Digo"
+label_settings = ExtResource("6_fgji0")
+horizontal_alignment = 1
 
 [node name="ProgrammingLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Programación"
+label_settings = ExtResource("5_jgimo")
 horizontal_alignment = 1
 
 [node name="ProgrammingPeopleLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_constants/line_separation = 2
+theme_override_fonts/normal_font = ExtResource("7_gt27w")
 bbcode_enabled = true
 text = "Ildesir -> [url]https://ildesir.itch.io[/url]
 SailorFu -> [url]https://sailorfu.itch.io[/url]
@@ -78,10 +99,13 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Música
 "
+label_settings = ExtResource("5_jgimo")
 horizontal_alignment = 1
 
 [node name="MusicPeopleLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_constants/line_separation = 2
+theme_override_fonts/normal_font = ExtResource("7_gt27w")
 bbcode_enabled = true
 text = "Monkos -> [url]https://locrio.itch.io[/url]
 LocrioPerdido -> [url]https://soundcloud.com/11monkos[/url]"
@@ -92,15 +116,34 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 20
 
+[node name="WriterTitle" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Guión e historia
+"
+label_settings = ExtResource("5_jgimo")
+horizontal_alignment = 1
+
+[node name="WriterPeopleLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/line_separation = 2
+theme_override_fonts/normal_font = ExtResource("7_gt27w")
+bbcode_enabled = true
+text = "Nora Kaals -> [url]https://teconkaals.itch.io[/url]"
+fit_content = true
+
 [node name="ArtTitle" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Arte
 "
+label_settings = ExtResource("5_jgimo")
 horizontal_alignment = 1
 
 [node name="ArtPeopleLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
+theme_override_constants/line_separation = 2
+theme_override_fonts/normal_font = ExtResource("7_gt27w")
 bbcode_enabled = true
 text = "Claratmente -> [url]https://linktr.ee/clarartmente[/url]
 PSuzume -> [url]https://psuzume.itch.io/[/url]
@@ -108,27 +151,22 @@ SailorFu -> [url]https://sailorfu.itch.io/[/url]
 Noa Cuadrado -> [url]https://noahuxui.itch.io[/url]"
 fit_content = true
 
-[node name="WriterTitle" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "Guión e historia
-"
-horizontal_alignment = 1
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
 
-[node name="WriterPeopleLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
-layout_mode = 2
-bbcode_enabled = true
-text = "Nora Kaals -> [url]https://teconkaals.itch.io[/url]"
-fit_content = true
-
-[node name="AssetsTitle" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+[node name="AssetsTitle" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Assets usados"
+label_settings = ExtResource("5_jgimo")
 horizontal_alignment = 1
 
-[node name="AssetsLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+[node name="AssetsLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
+theme_override_constants/line_separation = 2
+theme_override_fonts/normal_font = ExtResource("7_gt27w")
 bbcode_enabled = true
 text = "Dialoge Manager by Nathan hoad -> [url]https://github.com/nathanhoad/godot_dialogue_manager[/url] 
 Pressure_Plate_Stone by IPaddeh -> [url] https://freesound.org/s/422870[/url]
@@ -140,10 +178,11 @@ Flute -- a short sequence by Maria_Mannone -> [url]https://freesound.org/s/42757
 Tibetan-Silver-Bells by the_very_Real_Horst -> [url]https://freesound.org/s/195309/[/url]"
 fit_content = true
 
-[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="BackButton" type="Button" parent="MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
+theme = ExtResource("3_v8ywq")
 text = "VOLVER"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="MarginContainer/BackButton" to="." method="_on_back_button_pressed"]

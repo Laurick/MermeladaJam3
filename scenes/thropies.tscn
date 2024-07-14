@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://8dhipr7qabaw"]
+[gd_scene load_steps=5 format=3 uid="uid://8dhipr7qabaw"]
 
 [ext_resource type="Script" path="res://scenes/thropies.gd" id="1_y1v1y"]
 [ext_resource type="PackedScene" uid="uid://c4yx11bhnumfk" path="res://components/trophies.tscn" id="2_qd4kp"]
 [ext_resource type="Texture2D" uid="uid://4j5cl7hp1fex" path="res://images/fondo.jpg" id="2_txpyq"]
+[ext_resource type="Theme" uid="uid://dc6dlmiffd7ot" path="res://theme/buton_theme.tres" id="4_vpl2b"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -15,27 +16,44 @@ script = ExtResource("1_y1v1y")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1152.0
+offset_bottom = 648.0
 texture = ExtResource("2_txpyq")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.223529, 0.14902, 0.027451, 0.454902)
 
-[node name="Trophies" parent="VBoxContainer" instance=ExtResource("2_qd4kp")]
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Trophies" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_qd4kp")]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="BackButton" type="Button" parent="VBoxContainer"]
+[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
-text = "Volver
+theme = ExtResource("4_vpl2b")
+text = "VOLVER
 "
 
-[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

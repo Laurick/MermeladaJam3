@@ -7,22 +7,36 @@
 [ext_resource type="LabelSettings" uid="uid://ceoaqidwo70xd" path="res://theme/text_label_settings.tres" id="5_m6pjx"]
 [ext_resource type="Theme" uid="uid://dc6dlmiffd7ot" path="res://theme/buton_theme.tres" id="6_w3afv"]
 
-[node name="Options" type="CenterContainer"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_b0k6s")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 648.0
 texture = ExtResource("2_q62b5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.507433, 0.35733, 0.110475, 0.454902)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
+offset_left = 353.0
+offset_top = 149.0
+offset_right = 798.0
+offset_bottom = 499.0
 
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -36,7 +50,7 @@ theme_override_constants/separation = 48
 layout_mode = 2
 theme = ExtResource("2_775ph")
 theme_override_font_sizes/font_size = 64
-text = "OPTIONS"
+text = "OPCIONES"
 label_settings = ExtResource("4_hvjf5")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -51,7 +65,7 @@ columns = 2
 layout_mode = 2
 theme = ExtResource("2_775ph")
 theme_override_font_sizes/font_size = 48
-text = "Music"
+text = "Música"
 label_settings = ExtResource("5_m6pjx")
 
 [node name="Music2" type="HSlider" parent="MarginContainer/CenterContainer/VBoxContainer/GridContainer"]
@@ -96,10 +110,9 @@ popup/item_2/id = 2
 [node name="Back" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("6_w3afv")
-text = "BACK"
+text = "VOLVER"
 
 [connection signal="value_changed" from="MarginContainer/CenterContainer/VBoxContainer/GridContainer/Music2" to="." method="_on_music_value_changed"]
-[connection signal="changed" from="MarginContainer/CenterContainer/VBoxContainer/GridContainer/Sfx" to="." method="_on_sfx_changed"]
 [connection signal="drag_ended" from="MarginContainer/CenterContainer/VBoxContainer/GridContainer/Sfx" to="." method="_on_sfx_drag_ended"]
 [connection signal="item_selected" from="MarginContainer/CenterContainer/VBoxContainer/Idiomas" to="." method="_on_idiomas_item_selected"]
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]

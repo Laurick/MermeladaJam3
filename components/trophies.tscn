@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://c4yx11bhnumfk"]
+[gd_scene load_steps=13 format=3 uid="uid://c4yx11bhnumfk"]
 
 [ext_resource type="PackedScene" uid="uid://bobmkqocj4js4" path="res://components/TrophyItem.tscn" id="1_7c7pa"]
+[ext_resource type="Theme" uid="uid://dd0p4mnkcs75l" path="res://theme/game_theme.tres" id="1_8dyeb"]
 [ext_resource type="Resource" uid="uid://dachlcgav03jd" path="res://models/trophies/Colosal.tres" id="2_d01hj"]
 [ext_resource type="Resource" uid="uid://b5hdi6yyifvv2" path="res://models/trophies/Venus.tres" id="3_cbj7b"]
 [ext_resource type="Resource" uid="uid://dx32osbnchp3s" path="res://models/trophies/Columbo.tres" id="4_3t2pe"]
@@ -33,11 +34,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_8dyeb")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_constants/separation = 12
 
 [node name="TrophyItem" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_7c7pa")]
 layout_mode = 2
