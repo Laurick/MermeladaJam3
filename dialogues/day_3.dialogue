@@ -1,0 +1,228 @@
+~ dogu_intro
+
+{{player_name}}: *suspiras* Tercer día de trabajo y ya quiero tirarme por un puente.
+La atención al público es una cosa que no recomiendo a nadie.
+Pero bueno, hay que comer y pagar las facturas, ¿verdad?
+...
+A quién pretendo engañar, esto es una miseria.
+¡Pero bueno! Voy a colocar la mercancía de hoy y a abrir la tienda.
+
+##MOSTRAR PIEDRAS Y RUNAS
+
+{{player_name}}: *levantas el puñito* ¡Allé voy!
+
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+
+{{player_name}}: ¡Buenos...!
+
+##SONIDO DE ALGO CHOCANDO Y ROMPIENDO COSAS
+do show_chartacter("Dogū")
+do new_colosus("Dogū")
+
+{{player_name}}: ...días.
+¿Está usted bien?
+Dogū: Sí, sí. Esto es el pan de cada día.
+Soy un poco patose.
+Lamento el jarrón. Se lo pagaré.
+{{player_name}}:  No se preocupe. Creo que nadie se dará cuenta de que falta.
+Dogū:  Eres muy amable.
+{{player_name}}: *sonríes* Bueno, ¿en qué puedo ayudarle?
+Dogū: Verás, quiero cambiar mi cuerpo.
+{{player_name}}: ...
+Esto es una tienda de rocaterapia, ¿quizá necesite ir al escultor?
+Dogū: No, no. Estoy donde debo estar.
+Quiero una piedra con runas mágicas para que me cambie el material de mi cuerpo.
+{{player_name}}: Oh. Ya veo.
+¿Estás segure?
+Dogū: Claro que sí. Me he cansado del material que tengo ahora y quiero renovarlo.
+{{player_name}}: Claro. ¿Había pensado en alguna cosa?
+Dogū: Me da lo mismo mientras sea color tierra.
+{{player_name}}: Muy bien. Voy a ver qué tengo por aquí. 
+
+##PUZZLE
+
+=> END
+
+~ dogu_correct
+
+Dogū: Ah, aquí estás.
+{{player_name}}: Oh, es usted.
+¿Puedo ayudarle en algo? 
+Dogū: En realidad, solo quería darte las gracias por darme la piedra. Era justo lo que necesitaba y me encanta el cambio.
+{{player_name}}: Vaya, me alegro mucho de haber acertado.
+Dogū: Ahora tengo un color tierra en-vi-di-a-ble.
+Todo el mundo querrá ser como yo.
+{{player_name}}: *se ríe* Marcar tendencia es bueno. (Supongo).
+Dogū: ¡Ya lo creo que sí!
+Voy a ir a casa para poner una buena reseña en la web. ¡Hasta luego!
+{{player_name}}: Muchas gracias.
+
+##METER SONIDO DE ALGO ROMPIENDOSE
+{{player_name}}: ...
+Espero que llegue sane y salve a casa...
+
+do Audio.play_sfx("352657__foolboymedia__bong-chime-1.mp3")
+do leave_chartacter()
+=> END 
+
+~ dogu_incorrect
+
+Dogū: Ah, aquí estás.
+{{player_name}}: Oh, es usted.
+¿Puedo ayudarle en..? 
+...
+¿Qué lleva puesto?
+Dogū: ¡Una sábana!
+{{player_name}}: ¿Por...qué?
+Dogū: ¡PORQUE LA MIERDA DE PIEDRA QUE ME DISTE ME HA DEJADO UN COLOR HORROROSO!
+NO QUIERO QUE LA GENTE ME VEA.
+¡ESTOY HORRIBLE!
+{{player_name}}: Vaya...lo lamento.
+Dogū: ¡Más vas a lamentarlo cuando ponga una reseña negativa en la web! ##SONIDO DE ALGO ROMPIENDOSE## EN CUANTO LLEGUE A CASA.
+{{player_name}}: ...
+Eso si llega a casa de una pieza.
+do Audio.play_sfx("351565__bertrof__game-sound-incorrect-organic-violin.wav")
+do leave_chartacter()
+=> END 
+
+~ dogu_end
+
+{{player_name}}: Creo que esto solucionará el problema de su aspecto.
+Dogū: ¡Oh! Tiene buena pinta. Ahora mismo voy a ponerla en práctica.
+{{player_name}}: Vaya con cuidado y no...##SONIDO DE ALGO ROMPIENDO## 
+...se tropiece con nada.
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do leave_chartacter()
+{{player_name}}: Dioses, casi me destroza la tienda por completo.
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do show_chartacter("Lan'tak")
+{{player_name}}: Buenas...
+Tú otra vez.
+Lan'tak: Ahora me tuteas. ¿Acaso me recuerdas?
+{{player_name}}: Ni de lejos, pero no te irás sin contestar a las preguntas que tengo para hacerte.ç
+Lan'tak: ¿Eso crees? Lo cierto es que me gustaría ver cómo lo intentas. Sobre todo con ese... cuerpo tan poco práctico que tienes.
+{{player_name}}: ¿Qué estás insinuando?
+Lan'tak: Que el cuerpo que tenías antes era mucho más... ágil.
+{{player_name}}: *entrecierras los ojos* Basta ya. ¿De qué me conoces?
+Lan'tak: ...
+Eras mi mejor [if Global.gender == 0]amigo[/if][if Global.gender == 1]amiga[/if][if Global.gender == 2]amigue[/if].
+{{player_name}}: ¿En serio? Permíteme que lo dude. No creo que me hiciera [if Global.gender == 0]amigo[/if][if Global.gender == 1]amiga[/if][if Global.gender == 2]amigue[/if] de alguien como tú.
+Lan'tak: *se ríe*
+{{player_name}}: ...
+Es una broma.
+Lan'tak: No, no lo es. Llevamos viajando muchos años, somos un buen equipo.
+{{player_name}}: ...
+Mientes.
+Lan'tak: *se encoge de hombros* Como quieras.
+*echa un vistazo a su alrededor* Veo que te ha llegado más mercancía.
+{{player_name}}: Eso parece, sí.
+Lan'tak: Hmm.
+Me llevo esta.
+{{player_name}}: ¿Eso es lo que necesitas?
+Lan'tak:  Por eso precisamente la he cogido, ¿no crees?
+{{player_name}}: ...
+¿Necesitas runas? 
+Lan'tak: Ah, no. Puedo tallarlas yo mismo.
+Además, no tienes sufciente poder como para tallar las runas que necesito.
+{{player_name}}: ...
+Lan'tak: Volver'e ma;ana con la piedra tallada.
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do leave_chartacter()
+{{player_name}}: ...
+Yo de veradd que no puedo con este tipo. 
+
+=> END
+
+~ chancay_intro
+
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do show_chartacter("Chancay")
+do new_colosus("Chancay")
+{{player_name}}: ¡Buenas tardes! ¿En qué puedo ayudarla?
+Chancay: ...
+{{player_name}}: ...
+(¿Me está ignorando?)
+¡Eh! ¡Hola!
+Chancay: ...
+Hola.
+{{player_name}}: ...
+¿Puedo ayudarla en algo?
+Chancay: ...
+No lo sé. No parece que tengas mucha idea de cómo llevar este sitio.
+{{player_name}}: ...
+*sonríes* Bueno, por suerte quien lo decide son mis jefes. (Lo que me faltaba para terminar el día, la soberbia personifcada).
+Chancay: O igual no tenían a nadie más.
+*suspira* En fin. Estoy buscando algo para un problema que tengo.
+{{player_name}}: Y, ¿de qué se trata ese problema?
+Chancay: ##PONER LA FRASE EN TAMAÑO DECRECIENTE## Quería la piedra y las runas adecuadas para poder ser mucho más alta.
+{{player_name}}: ...
+Perdone, no he oído bien lo que ha dicho.
+Chancay: *masculla una maldición* ¡Que quiero ser más alta!
+{{player_name}}: Oh.
+(¿Querrá la Luna?) Bueno, *te aclaras la garganta* yo te veo muy bien de altura. 
+Chancay: *resopla y te mira con condescendencia* Nadie ha pedido tu opinión.
+Tan solo búscame algo que me haga más alta.
+{{player_name}}: (Menos humos, señora). ¿Cuánto más de altura?
+Chancay: No sé, ¿te parecen bien cuarenta y siete metros?
+{{player_name}}: ... 
+(¡Me parecen demasiados!) Claro. Por supuesto.
+ Cuarenta y siete metros está bien.
+Chancay: Pues haz tu trabajo. Necesito estar divina para el sábado.
+{{player_name}}: (Señora, por favor, que saco el difusor de agua). 
+Enseguida me pongo a ello. 
+
+##PUZZLE
+
+~ chancay_correct
+
+Chancay: ¡Oye tú!
+{{player_name}}: ¿Hm? (Oh no).
+¿Sí?
+Chancay: ¡Que muchas gracias!
+{{player_name}}: Ah...(Espera, ¿qué?)
+¿Me estás dando las gracias?
+Chancay: ¡No te acostumbres!
+¡Me has dado justo lo que pedía!
+{{player_name}}: ...  
+Pero mides más de cuarenta y siete metros. 
+Chancay: ¡Ya lo sé! ¡Y es genial!
+{{player_name}}: Bueno, si estás contenta, yo estoy [if Global.gender == 0]contento[/if][if Global.gender == 1]contenta[/if][if Global.gender == 2]contente[/if].
+Chancay: ¡Claro que sí!
+Voy a dejar una reseña en la web. ¡Una positiva!
+{{player_name}}: Vaya, ¡gracias!
+do Audio.play_sfx("352657__foolboymedia__bong-chime-1.mp3")
+do leave_chartacter()
+=> END 
+
+~ chancay_incorrect
+
+Chancay: ¡Oye tú!
+{{player_name}}: ¿Hm? (Oh no).
+¿Sí?
+Chancay: ¡Mira lo que has hecho!
+¡Mido 47 centímetros!
+¡CUARENTA Y SIETE!¡CENTÍMETROS!
+{{player_name}}: ...Lo siento.
+Chancay: ¡Ya lo creo que lo vas a sentir!
+¡Porque soy chiquitita y no puedo pisotearte que si no...!
+PIENSO PONER UNA RECLAMACIÓN.
+¡Y UNA MALA RESEÑA!
+ESTO NO QUEDARÁ ASÍ.
+{{player_name}}: ...
+Madre mía, qué energía para ser tan pequeña.
+{{player_name}}: Aquí tiene. Seguro que está a la...
+Chancay: *te quita la piedra de las manos* Déjame ver.
+...
+Bueno, parece que está bien.
+¡Más te vale que funcione!
+
+do Audio.play_sfx("352657__foolboymedia__bong-chime-1.mp3")
+do leave_chartacter()
+
+{{player_name}}: Buenas tardes a ti también, eh. 
+
+=> END
+
+
+
+

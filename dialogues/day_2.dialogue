@@ -11,7 +11,6 @@ Espero que no me haya oído nadie.
 ...
 Dioses, soy [if Global.gender == 0]divertidísimo[/if][if Global.gender == 1]divertidísima[/if][if Global.gender == 2]divertidísime[/if].
 
-=> END
 
 ~ tiki 
 do show_chartacter("Tiki")
