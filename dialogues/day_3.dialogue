@@ -227,6 +227,7 @@ do Audio.stop_music()
 => close_shop 
 
 ~ Chancay_end
+do show_chartacter("Chancay")
 {{player_name}}: Aquí tiene. Seguro que está a la...
 Chancay: *te quita la piedra de las manos* Déjame ver.
 Chancay: ...

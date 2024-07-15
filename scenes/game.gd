@@ -89,7 +89,7 @@ func title_pased(title:String):
 			if Global.score == 6:
 				Global.unlock_achivement("Empleado")
 			day = "res://dialogues/epilogue.dialogue"
-		DialogueManager.show_dialogue_balloon(load(day))
+		ballon_node = DialogueManager.show_dialogue_balloon(load(day))
 
 func game_over():
 	fader.fade_in()

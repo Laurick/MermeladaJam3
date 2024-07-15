@@ -59,7 +59,7 @@ Venus: ...
 {{player_name}}: Oiga... ¿puede dejar de mirarme?
 Venus: ¡Oh! Lo siento. Es que... [if Global.gender == 0] eres un coloso un poco raro.[/if][if Global.gender == 1]eres una colosa un poco rara.[/if][if Global.gender == 2] eres une colose un poco rare.[/if]
 {{player_name}}: ¿Perdón? (¿Me está insultando?)
-Venus: Ah, no me hagas caso. *S onríe* Cuando llega gente nueva siempre llama la atención. Es como la novedad, ¿sabes?
+Venus: Ah, no me hagas caso. *Sonríe* Cuando llega gente nueva siempre llama la atención. Es como la novedad, ¿sabes?
 {{player_name}}: *Sonríes* Creo que le entiendo.
 Venus: *Asiente* Claro que sí. Tienes pinta de ser muy [if Global.gender == 0]listo[/if][if Global.gender == 1]lista[/if][if Global.gender == 2]liste[/if], lo que hace que me pregunte... ¿qué se te ha perdido en un sitio tan lejos de todo como lo es Rocaburgo?
 {{player_name}}: La necesidad de trabajar, supongo.
@@ -184,7 +184,7 @@ Columbo: ¡Pues claro que quiero pelo!
  
 ~ Columbo_correct
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
-do show_chartacter("Columbo")
+do show_chartacter("Columbo_Pelo")
 do Audio.play_music_by_path("res://sounds/Cabeza dedo.mp3")
 Columbo: ¡Ahí estás!
 {{player_name}}: ...
