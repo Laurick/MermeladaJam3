@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("2_efjj5")
 name = "Amazonita"
-description = "Utilizada desde tiempos inmemoriales para calmar el estrés y la ansiedad."
+description = "Calma el estrés y la ansiedad"
 image = ExtResource("1_ci38j")

@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_ebik3")
 name = "Diamante"
-description = "El eterno símbolo de la pureza y la robustez."
+description = "Símbolo de dureza y pureza"
 image = ExtResource("1_ayyuk")

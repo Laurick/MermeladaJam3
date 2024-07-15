@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("2_hlvaq")
 name = "Caliza"
-description = "Piedra utilizada para mejorar la creación artística. Tiene un color bastante bonito."
+description = "Tiene un color bastante bonito"
 image = ExtResource("1_t0jry")
