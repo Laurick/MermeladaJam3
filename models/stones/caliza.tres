@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Stone" load_steps=3 format=3 uid="uid://fe4qqfcy0ji0"]
+
+[ext_resource type="Texture2D" uid="uid://10md6l3hp20c" path="res://images/Caliza.png" id="1_t0jry"]
+[ext_resource type="Script" path="res://models/stones/stone.gd" id="2_hlvaq"]
+
+[resource]
+script = ExtResource("2_hlvaq")
+name = "Caliza"
+description = "Es caliza"
+image = ExtResource("1_t0jry")

@@ -1,3 +1,4 @@
+class_name Ballon_Dialogue
 extends CanvasLayer
 
 ## The action to use for advancing the dialogue
@@ -49,8 +50,9 @@ var dialogue_line: DialogueLine:
 		var pj = dialogue_line.character
 			
 		#check tags here
-		#if dialogue_line.get_tag_value("mood") != "":
-			#mood = "_"+dialogue_line.get_tag_value("mood")
+		#if dialogue_line.get_tag_value("size") != "":
+			#var size = dialogue_line.get_tag_value("size")
+			#dialogue_label. = int(size)
 
 		dialogue_label.hide()
 		dialogue_label.dialogue_line = dialogue_line
@@ -166,17 +168,20 @@ func new_colosus(name:String):
 	pass
 	
 func show_chartacter(name:String):
-	print("show_chartacter in balloon")
 	var path = "res://images/"+name+".png"
 	avatar.modulate = Color.TRANSPARENT
-	await create_tween().tween_property(avatar, "modulate:a", 1, 0.7).finished
+	avatar.modulate.a = 0
+	create_tween().tween_property(avatar, "modulate:a", 1, 0.7).finished
 	avatar.texture = load(path)
+	if name == "Tome":
+		$Balloon/Magnifier.show()
 
 func leave_chartacter():
-	print("leave_chartacter in balloon")
+	$Balloon/Magnifier.hide()
 	await create_tween().tween_property(avatar, "modulate:a", 0, 0.7).finished
 	avatar.texture = null
 	avatar.modulate = Color.WHITE
+	
 
 func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 	next(response.next_id)

@@ -1,7 +1,7 @@
-[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://bbxjbyhwpnuhg"]
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://c0gkwlxektyvb"]
 
-[ext_resource type="Texture2D" uid="uid://b8ow42own1pq4" path="res://images/pFo5LPFAf_720x0__1.jpg" id="1_dogr1"]
+[ext_resource type="Texture2D" uid="uid://b2dos20jqibge" path="res://images/pFo5LPFAf_720x0__1.png" id="1_7lyvi"]
 
 [resource]
-atlas = ExtResource("1_dogr1")
+atlas = ExtResource("1_7lyvi")
 region = Rect2(294.626, 331.377, 76.4976, 115.429)

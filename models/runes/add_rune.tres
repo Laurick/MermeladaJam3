@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Rune" load_steps=3 format=3 uid="uid://cwxye0p2skei1"]
+
+[ext_resource type="Texture2D" uid="uid://cysqy3gm3drsr" path="res://images/rune_I.tres" id="1_2ers7"]
+[ext_resource type="Script" path="res://models/runes/rune.gd" id="2_hpvrh"]
+
+[resource]
+script = ExtResource("2_hpvrh")
+name = "Añadir"
+description = "Runa de añadir"
+image = ExtResource("1_2ers7")

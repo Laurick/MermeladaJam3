@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Dijindia1.mp3-fe477e2c0b5500fe17489a43149af69
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

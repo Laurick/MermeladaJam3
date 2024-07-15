@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Stone" load_steps=3 format=3 uid="uid://rx43t8w5ojsc"]
+
+[ext_resource type="Texture2D" uid="uid://blkdq30hmmb4m" path="res://images/Amazonita_.png" id="1_ci38j"]
+[ext_resource type="Script" path="res://models/stones/stone.gd" id="2_efjj5"]
+
+[resource]
+script = ExtResource("2_efjj5")
+name = "Amazonita"
+description = "es una amazonita"
+image = ExtResource("1_ci38j")

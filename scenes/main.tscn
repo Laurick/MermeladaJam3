@@ -60,14 +60,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 46.0
-offset_top = 168.0
-offset_right = 399.0
-offset_bottom = 208.0
+offset_left = 18.0
+offset_top = 70.0
+offset_right = 428.0
+offset_bottom = 234.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/h_separation = 10
-theme_override_constants/v_separation = 10
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 30
 columns = 2
 
 [node name="PlayButton" type="Button" parent="HBoxContainer"]

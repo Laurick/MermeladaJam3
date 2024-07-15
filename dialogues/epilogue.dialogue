@@ -1,12 +1,12 @@
-=> start_of_day_4
+~ start_of_day_4
+=> jump
 
 ~ black_fade
 => END
 
-~ start_of_day_4
-
+~ jump
 {{player_name}}: *das un largo suspiro* Como hoy sea un día de mierda, dimito y me tiro al río.
-do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 {{player_name}}: ¡Buenos días!
 {{player_name}}: ...
 {{player_name}}: Eres tú.
@@ -21,8 +21,10 @@ Lan'tek: Por suerte para ti, tengo lo que necesitas.
 {{player_name}}: *miras la piedra con runas talladas que te ofrece* ¿Por qué debería fiarme de ti?
 Lan'tek: *se encoge de hombros* ¿Por qué no? Si estoy equivocado, no pasará nada. Pero si tengo razón...*sonríe* Recordarás todo.
 Lan'tek: La decisión es tuya. 
+do show_chartacter("Djinn")
 - ¿Quieres coger la piedra que te ofrece Lan'tek?
 	do Global.take_stone = true
+	do Audio.play_music_by_path("res://sounds/Carneobarro.mp3")
 	{{player_name}}: Vale. Me fiaré de lo que dices. Si me muero vendré a atormentarte durante el resto de tu miserable vida.
 	Lan'tek: Correré el riesgo.
 	=> black_fade
@@ -45,24 +47,24 @@ Lan'tek: La decisión es tuya.
 	{{player_name}}: *resoplas* Nos vamos de este sitio. Ve a por provisiones y espérame a la salida del pueblo. Esa bruja se va a enterar.
 	Lan'tek: *sonríe* Ah, cuánto te echaba de menos.
 	Lan'tek: Te veré en una hora. 
-	do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+	do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 	=> check_tome
-		
 - ¿Quieres seguir como hasta ahora? 
 	do Global.take_stone = false
+	do Audio.play_music_by_path("res://sounds/Despedida.mp3")
 	{{player_name}}: ¿Sabes? Esto tampoco está tan mal. Así que no, no voy a coger esa piedra.
 	Lan'tek: ...
 	Lan'tek: *se encoge de hombros*  Una pena. Realmente te echaba de menos, pero tampoco voy a obligarte a nada.
 	Lan'tek: *deja la piedra sobre el mostrador* Te la dejo aquí para que la uses cuando consideres. Si decides hacerlo, búscame.
 	{{player_name}}: No creo que lo haga, pero gracias por las molestias. 
 	Lan'tek: ¡Hasta otra!
-	do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+	do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 	=> check_tome
 	
  #(##si amistad == 3 activar siguiente dialogo)
 ~ check_tome
 if Global.affection_tomeu == 3
-	do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+	do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 	{{player_name}}: ¡Bue...! ¡NO! ¡FUERA!
 	do show_chartacter("Tome")
 	do Audio.play_music_by_path("res://sounds/Enano.mp3")
@@ -84,6 +86,7 @@ if Global.affection_tomeu == 3
 		Tomé: Yo...bueno...
 		{{player_name}}: ¡Suéltalo!
 		do show_chartacter("Tome_Zezy")
+		do Audio.play_music_by_path("res://sounds/Amor.mp3")
 		Tomé: *se sonroja* ¿Querríascenarconmigo?
 		{{player_name}}: ...
 		{{player_name}}: No he entendido ni una palabra. Repítelo sin atropellarte.
@@ -112,14 +115,14 @@ if Global.affection_tomeu == 3
 		{{player_name}}: *saca el difusor de agua* No.
 		Tomé: AAHHH, EL DIFUSOR NOOO
 		do Global.unlock_achivement("Amor")
-		do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+		do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 		do leave_character() 
 		{{player_name}}: Al fin tranquilidad.
 		=> end_game
 else:
-	do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+	do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 	{{player_name}}: ¡Bue...! ¡NO! ¡FUERA!
-	do show_chartacter("Tomé")
+	do show_chartacter("Tome")
 	do Audio.play_music_by_path("res://sounds/Enano.mp3")
 	Tomé: ¡Pero si no he dicho nada!
 	{{player_name}}: ¡Tu simple presencia es suficiente!
@@ -140,8 +143,8 @@ else:
 	Tomé: ¡Para que te detengan por violencia hacia mi persona!
 	{{player_name}}: ¿PERO QUÉ DICES? 
 	{{player_name}}: Ha sido por no darte las muestras gratis, es que lo sabía. ¿Pues sabes qué?
-	Tomé: QUE ME VOY. *tira la mesa encima del enano* ESTOY HASTA EL MOÑO.
-	Tomé: No me pagan lo su ciente como para aguantar estas tonterías.
+	{{player_name}}: QUE ME VOY. *tira la mesa encima del enano* ESTOY HASTA EL MOÑO.
+	{{player_name}}: No me pagan lo su ciente como para aguantar estas tonterías.
 	Tomé: ¡Pero no puedes huir! LA POLICÍA HA VENIDO A DETENERTE.
 	{{player_name}}: Ah, ¿sí? PUES QUE SEPAS QUE NO ME COGERÁN CON VIDA.
 	Tomé: ¡POLICÍA! INTENTA ESC...

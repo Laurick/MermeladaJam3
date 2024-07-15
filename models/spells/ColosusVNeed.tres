@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="Spell" load_steps=5 format=3 uid="uid://mu8gxtwrudqv"]
 
 [ext_resource type="Resource" uid="uid://d1n4uu1um0ud3" path="res://models/runes/movement_rune.tres" id="1_514b8"]
-[ext_resource type="Resource" uid="uid://b110hmu5iaq2n" path="res://models/runes/water_rune.tres" id="2_rxdds"]
+[ext_resource type="Resource" uid="uid://c8amg2qwsubuc" path="res://models/runes/water_rune.tres" id="2_rxdds"]
 [ext_resource type="Script" path="res://models/spells/spell.gd" id="3_7hy3t"]
-[ext_resource type="Resource" uid="uid://crhi6fh1vowgk" path="res://models/stones/citrine.tres" id="4_cwncw"]
+[ext_resource type="Resource" uid="uid://fe4qqfcy0ji0" path="res://models/stones/caliza.tres" id="4_imlj3"]
 
 [resource]
 script = ExtResource("3_7hy3t")
 runes = Array[Resource("res://models/runes/rune.gd")]([ExtResource("1_514b8"), ExtResource("2_rxdds")])
-stones = Array[Resource("res://models/stones/stone.gd")]([ExtResource("4_cwncw")])
+stones = Array[Resource("res://models/stones/stone.gd")]([ExtResource("4_imlj3")])

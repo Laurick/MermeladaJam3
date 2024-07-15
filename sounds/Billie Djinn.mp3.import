@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Billie Djinn.mp3-744651056811486bc97da3c6263a
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

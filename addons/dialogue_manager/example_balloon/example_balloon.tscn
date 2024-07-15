@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=16 format=3 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_36de5"]
 [ext_resource type="Script" path="res://components/WobbleComponent.gd" id="2_1opkw"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://c762n5plv5aww" path="res://images/UI/fonts/Skranji-Regular.ttf" id="3_6egty"]
 [ext_resource type="Texture2D" uid="uid://k3gryx3okcx2" path="res://images/Papiro.png" id="3_55bww"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
+[ext_resource type="Texture2D" uid="uid://crvwpkmmg370s" path="res://images/Lupa.png" id="4_imd1l"]
 [ext_resource type="Theme" uid="uid://dc6dlmiffd7ot" path="res://theme/buton_theme.tres" id="4_jjiub"]
 [ext_resource type="FontFile" uid="uid://banwifxbjtnla" path="res://images/UI/fonts/Skranji-Bold.ttf" id="4_jvk4s"]
 [ext_resource type="AudioStream" uid="uid://ckajqc1y4xfrr" path="res://sounds/rollover5.ogg" id="4_sbgjj"]
@@ -72,6 +73,8 @@ Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
 script = ExtResource("1_36de5")
+next_action = null
+skip_action = null
 
 [node name="Balloon" type="Control" parent="."]
 unique_name_in_owner = true
@@ -95,6 +98,8 @@ anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -648.0
+offset_top = -35.0
+offset_bottom = -35.0
 grow_horizontal = 0
 grow_vertical = 2
 expand_mode = 2
@@ -107,6 +112,17 @@ small_scale = Vector2(0.99, 0.99)
 time = 5.0
 target = NodePath("..")
 auto_start = false
+
+[node name="Magnifier" type="TextureRect" parent="Balloon"]
+visible = false
+layout_mode = 0
+offset_left = 1349.0
+offset_top = 265.0
+offset_right = 3829.0
+offset_bottom = 3773.0
+rotation = -3.96364
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_imd1l")
 
 [node name="Panel" type="Panel" parent="Balloon"]
 clip_children = 2
@@ -133,6 +149,7 @@ grow_vertical = 2
 texture = ExtResource("3_55bww")
 
 [node name="Dialogue" type="MarginContainer" parent="Balloon/Panel"]
+self_modulate = Color(1, 1, 1, 0.6)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

@@ -6,7 +6,6 @@
 {{player_name}}: ...
 {{player_name}}: A quién pretendo engañar, esto es una miseria.
 {{player_name}}: ¡Pero bueno! Voy a colocar la mercancía de hoy y a abrir la tienda.
-
 {{player_name}}: *levantas el puñito* ¡Allé voy!
 
 ~ Dogu_start
@@ -16,6 +15,7 @@ do show_chartacter("Dogu")
 do new_colosus("Dogu")
 {{player_name}}: ...días.
 {{player_name}}: ¿Está usted bien?
+do Audio.play_music_by_path("res://sounds/Dogu.mp3")
 Dogū: Sí, sí. Esto es el pan de cada día.
 Dogū: Soy un poco patose.
 Dogū: Lamento el jarrón. Se lo pagaré.
@@ -41,11 +41,13 @@ Dogū: Me da lo mismo mientras sea color tierra.
 ~ error_spell
 {{player_name}}: No... debería entregar DOS runas y UNA piedra para ayudar correctamente
 ~ continue_for_riddle
+=> END
 
 
 ~ Dogu_correct
 do show_chartacter("Dogu")
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
+do Audio.play_music_by_path("res://sounds/Dogu.mp3")
 Dogū: Ah, aquí estás.
 {{player_name}}: Oh, es usted.
 {{player_name}}: ¿Puedo ayudarle en algo? 
@@ -67,6 +69,7 @@ do Audio.play_sfx("352657__foolboymedia__bong-chime-1.mp3")
 ~ Dogu_incorrect
 do show_chartacter("Dogu")
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
+do Audio.play_music_by_path("res://sounds/Dogu.mp3")
 Dogū: Ah, aquí estás.
 {{player_name}}: Oh, es usted.
 {{player_name}}: ¿Puedo ayudarle en..? 
@@ -85,7 +88,6 @@ do Audio.play_sfx("567251__iwanplays__stones-falling.wav")
 {{player_name}}: ...
 {{player_name}}: Eso si llega a casa de una pieza.
 do Audio.play_sfx("351565__bertrof__game-sound-incorrect-organic-violin.wav")
-do leave_chartacter()
 => check_chancay 
 
 ~ Dogu_end
@@ -93,6 +95,7 @@ do leave_chartacter()
 Dogū: ¡Oh! Tiene buena pinta. Ahora mismo voy a ponerla en práctica.
 {{player_name}}: Vaya con cuidado y no...
 do leave_chartacter()
+do Audio.stop_music()
 do Audio.play_sfx("567251__iwanplays__stones-falling.wav")
 {{player_name}}: ...se tropiece con nada.
 {{player_name}}: Dioses, casi me destroza la tienda por completo.
@@ -100,11 +103,11 @@ do Audio.play_sfx("567251__iwanplays__stones-falling.wav")
 ~ Lantek
 {{player_name}}: Buenas...
 {{player_name}}: Tú otra vez.
-do Audio.play_music_by_path("res://sounds/Billie Djinn.mp3")
+do Audio.play_music_by_path("res://sounds/Dijindia3.mp3")
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Djinn")
 Lan'tek: Ahora me tuteas. ¿Acaso me recuerdas?
-{{player_name}}: Ni de lejos, pero no te irás sin contestar a las preguntas que tengo para hacerte.ç
+{{player_name}}: Ni de lejos, pero no te irás sin contestar a las preguntas que tengo para hacerte.
 Lan'tek: ¿Eso crees? Lo cierto es que me gustaría ver cómo lo intentas. Sobre todo con ese... cuerpo tan poco práctico que tienes.
 {{player_name}}: ¿Qué estás insinuando?
 Lan'tek: Que el cuerpo que tenías antes era mucho más... ágil.
@@ -130,15 +133,15 @@ Lan'tek:  Por eso precisamente la he cogido, ¿no crees?
 Lan'tek: Ah, no. Puedo tallarlas yo mismo.
 Lan'tek: Además, no tienes sufciente poder como para tallar las runas que necesito.
 {{player_name}}: ...
-Lan'tek: Volver'e ma;ana con la piedra tallada.
-do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+Lan'tek: Volveré mañana con la piedra tallada.
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do Audio.stop_music()
 do leave_chartacter()
 {{player_name}}: ...
 {{player_name}}: Yo de veradd que no puedo con este tipo. 
 
 ~ Chancay_start
-do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do new_colosus("Chancay")
 {{player_name}}: ¡Buenas tardes! ¿En qué puedo ayudarla?
 do show_chartacter("Chancay")
@@ -158,7 +161,7 @@ Chancay: No lo sé. No parece que tengas mucha idea de cómo llevar este sitio.
 Chancay: O igual no tenían a nadie más.
 Chancay: *suspira* En fin. Estoy buscando algo para un problema que tengo.
 {{player_name}}: Y, ¿de qué se trata ese problema?
-Chancay: [#mood=shy] Quería la piedra y las runas adecuadas para poder ser mucho más alta.
+Chancay: [font_size={38}]Quería [font_size={36}]la [font_size={34}]piedra [font_size={32}]y [font_size={30}]las [font_size={28}]runas [font_size={26}]adecuadas [font_size={24}]para [font_size={22}]poder [font_size={20}]ser [font_size={18}]mucho [font_size={16}]más [font_size={14}]alta.[/font_size]
 {{player_name}}: ...
 {{player_name}}: Perdone, no he oído bien lo que ha dicho.
 Chancay: *masculla una maldición* ¡Que quiero ser más alta!
@@ -177,8 +180,8 @@ Chancay: Pues haz tu trabajo. Necesito estar divina para el sábado.
 => wait_for_riddle
 
 ~ Chancay_correct
-do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
-do show_chartacter("Chancay")
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
+do show_chartacter("Chancay_Gigante")
 do Audio.play_music_by_path("res://sounds/Chancay.mp3")
 Chancay: ¡Oye tú!
 {{player_name}}: ¿Hm? (Oh no).
@@ -201,7 +204,7 @@ do Audio.stop_music()
 => close_shop 
 
 ~ Chancay_incorrect
-do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Chancay")
 do Audio.play_music_by_path("res://sounds/Chancay.mp3")
 Chancay: ¡Oye tú!
@@ -232,16 +235,15 @@ Chancay: ¡Más te vale que funcione!
 do leave_chartacter()
 do Audio.stop_music()
 {{player_name}}: Buenas tardes a ti también, eh. 
-=> END
 
-~ tome
+~ Tome
 {{player_name}}: *suspiras*
-Está siendo el día más largo de esta semana. De verdad, solo quiero irme a mi casa.
-do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+{{player_name}}: Está siendo el día más largo de esta semana. De verdad, solo quiero irme a mi casa.
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 {{player_name}}: ¡Buenas t..!
+{{player_name}}: ¡No, largo!
 do show_chartacter("Tome")
 do Audio.play_music_by_path("res://sounds/Enanodia3.mp3")
-{{player_name}}: ¡No, largo!
 Tomé: ¡MENUDOS MODALES!
 {{player_name}}: ¡Son los que merece!
 Tomé: ¡Y LA HOJA DE RECLAMACIONES!
@@ -282,6 +284,7 @@ Tomé: Si me das una última muestra gratis, ¡prometo no volver!
 {{player_name}}: ...
 {{player_name}}: ...
 {{player_name}}: ((¿Doy piedra de manera gratuita?))
+do show_chartacter("Tome")
 - Sí (Darle la muestra gratis).
 	do Global.change_affection_tome_by(-1)
 	{{player_name}}: *apartas la escoba* Está bien. Pero como vuelvas por aquí, te echo a escobazos.
@@ -297,7 +300,7 @@ Tomé: Si me das una última muestra gratis, ¡prometo no volver!
 	Tomé: ¡MANDARÉ A MIS ABOGADOS!
 	{{player_name}}: Los que tengo aquí colgados, ¡FUERA DE LA TIENDA!
 	
-do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.mp3")
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do leave_chartacter()
 do Audio.stop_music()
 {{player_name}}: Será posible el enano mierda este.

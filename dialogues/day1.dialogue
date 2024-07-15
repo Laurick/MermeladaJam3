@@ -48,12 +48,11 @@ do Audio.play_music_by_path("res://sounds/Manual.mp3")
 
 ~ start_of_day_1
 ~ Venus_start
-do Audio.play_music_by_path("res://sounds/Yaya.mp3")
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
-do leave_character()
+{{player_name}}: ¡Buenos días! Le doy la bienvenida a nuestra tienda. ¿En qué puedo ayudar?
+do Audio.play_music_by_path("res://sounds/Yaya.mp3")
 do show_chartacter("Venus")
 do new_colosus("Venus")
-{{player_name}}: ¡Buenos días! Le doy la bienvenida a nuestra tienda. ¿En qué puedo ayudar?
 Venus: ...
 {{player_name}}: ...
 Venus: ...
@@ -118,7 +117,7 @@ do leave_chartacter()
 ~ Venus_end
 do show_chartacter("Venus")
 {{player_name}}: Bueno, aquí tiene. Creo que le será útil.
-Venus: ¡Ay, espero que sí! Estoy cansada de utilizar el bastón. En unos días te comento. 
+Venus: ¡Ay, espero que sí! Estoy cansada de utilizar el bastón. En unas horas te comento. 
 Venus: ¡Gracias!
 {{player_name}}: A usted.
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
@@ -128,10 +127,10 @@ do Audio.stop_music()
 {{player_name}}: Me pregunto por qué se me habrá quedado mirando. *te giras hacia el espejo* Tengo la arcilla en su sitio y la ropa bien colocada. ¿Será porque soy más joven?
 
 ~ MC_friend
-do Audio.play_music_by_path("res://sounds/Billie Djinn.mp3")
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
-do show_chartacter("Djinn")
 {{player_name}}: ¡Buenos días! ¿En qué puedo ayudar?
+do Audio.play_music_by_path("res://sounds/Dijindia1.mp3")
+do show_chartacter("Djinn")
 ¿?: ...
 {{player_name}}: ...
 ¿?: ...
@@ -157,11 +156,11 @@ do Audio.stop_music()
 {{player_name}}: *suspiras * ¿Qué le pasa hoy a la gente?
 
 ~ Columbo_start
-do Audio.play_music_by_path("res://sounds/Cabeza dedo.mp3")
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
+{{player_name}}: ¡Buenas tardes! ¿En qué puedo ayudar?
+do Audio.play_music_by_path("res://sounds/Cabeza dedo.mp3")
 do show_chartacter("Columbo")
 do new_colosus("Columbo")
-{{player_name}}: ¡Buenas tardes! ¿En qué puedo ayudar?
 Columbo: Pareces muy joven para llevar un negocio tan importante como este, ¿no te parece?
 {{player_name}}: ¿Disculpe?
 Columbo: Sí, haces bien en disculparte. Las necesidades de la gente no son un juego. ¡Es algo muy importante!
@@ -186,7 +185,7 @@ Columbo: ¡Pues claro que quiero pelo!
 ~ Columbo_correct
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Columbo")
-do Audio.play_music_by_path("res://sounds/Yaya.mp3")
+do Audio.play_music_by_path("res://sounds/Cabeza dedo.mp3")
 Columbo: ¡Ahí estás!
 {{player_name}}: ...
 Columbo: Oh, no. (Seguro que viene a echarme un rapapolvo.)
@@ -206,6 +205,7 @@ do leave_chartacter()
 ~ Columbo_incorrect
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Columbo")
+do Audio.play_music_by_path("res://sounds/Cabeza dedo.mp3")
 Columbo: ¡Ahí estás!
 {{player_name}}: ...
 {{player_name}}: Oh, no. (Seguro que viene a echarme un rapapolvo.)
@@ -233,16 +233,19 @@ do Audio.stop_music()
 
 ~ Tome_start
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
-do show_chartacter("Tome")
 {{player_name}}: *respiras hondo* ¡Buenas tardes! ¿En qué...?
-Tomé: ¡Buenas tardes tendrás tú!
+do show_chartacter("Tome")
 do Audio.play_music_by_path("res://sounds/Enano.mp3")
+Tomé: ¡Buenas tardes tendrás tú!
 {{player_name}}: ¿Disculpe?
+{{player_name}}: ¿Quien habla?
+{{player_name}}: ¡Eres diminuto!
 {{player_name}}: (¿Es que este pueblo está lleno de bordes o qué?)
 Tomé: Pues claro que acepto las disculpas, pero... ¡las aceptaré de mejor grado si cerrases esta tienducha tuya!
 {{player_name}}: Me temo que eso no va a ser posible. No soy [if Global.gender == 0]el dueño[/if][if Global.gender == 1]la dueña[/if][if Global.gender == 2]le dueñe[/if] el local.
 Tomé: ¿No? *gruñe una maldición* ¡Entonces, ponme en contacto con la persona al cargo!
-{{player_name}}: (Pero, ¿este mequetrefe de dónde ha salido?)
+{{player_name}}: (Pero, ¿este enano mequetrefe de dónde ha salido?)
+Tomé: Pequeñito pero matón
 {{player_name}}: *rebuscas en un cajón y sacas un papel* Mire, aquí tiene los números de teléfono y el correo electrónico de contacto con la empresa.
 Tomé: ...
 Tomé: ¿Es una broma?
@@ -273,6 +276,7 @@ Tomé: *levanta el dedo índice para señalarte* ¡Tu palabrería no conseguirá
 Tomé: *trepa al mostrador con los ojos brillantes* ¿Muestra gratis?
 {{player_name}}: Eso he dicho y ¡bájese de ahí!
 {{player_name}}: (¿Y ahora qué le doy yo a esta pulga rabiosa?)
+do show_chartacter("Tome")
 - ENTREGARLE UNA RUNA MOLESTIA.
 	do Global.change_affection_tome_by(-1)
 	{{player_name}}: Mire, aquí tiene una runa. ¿Está contento?

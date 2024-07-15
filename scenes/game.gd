@@ -7,13 +7,14 @@ var edit_scene:PackedScene = preload("res://components/edit.tscn")
 @onready var control_trophies = $ControlTrophies
 @onready var trophy_achivements = $TrophyAchivements
 @onready var give_button = $MarginContainer/GiveButton
+@onready var block = $Block
 
 @onready var center = $Center
 
 @onready var runes = $Runes
 @onready var stones = $Stones
 
-var ballon_node = null
+var ballon_node:Ballon_Dialogue = null
 var colosus:Colosus = null
  
 var state = "none"
@@ -56,6 +57,7 @@ func title_pased(title:String):
 		state = "vademecum"
 		_on_book_button_pressed()
 	elif title == "wait_for_riddle":
+		block.visible = false
 		state = "wait_for_riddle"
 		give_button.visible = true
 		stones_selected = []
@@ -69,6 +71,8 @@ func title_pased(title:String):
 	elif title == "end_game":
 		Global.unlock_achivement("Al fin")
 		game_over()
+	elif title.ends_with("_correct"):
+		Global.unlock_achivement(title.replace("_correct", ""))
 	elif title.begins_with("start_of_day"):
 		fader.force_fade_out()
 	elif title.begins_with("end_of_day"):
@@ -76,7 +80,7 @@ func title_pased(title:String):
 	elif title.begins_with("close_shop"):
 		Audio.play_music(load("res://sounds/Diaynoche.mp3"))
 		fader.fade_in()
-		await get_tree().create_timer(2).timeout
+		await get_tree().create_timer(4).timeout
 		if day == "res://dialogues/day1.dialogue":
 			day = "res://dialogues/day_2.dialogue"
 		elif day == "res://dialogues/day_2.dialogue":
@@ -107,7 +111,9 @@ func on_name_summited(new_text):
 
 func _on_exit_button_pressed():
 	Audio.play_click_sound()
-	game_over()
+	fader.fade_in()
+	await get_tree().create_timer(1).timeout
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
 
 
 func _on_book_button_pressed():
@@ -191,18 +197,24 @@ func _on_give_button_pressed():
 		var t0 = TextureRect.new()
 		t0.position = runes_selected[0].position
 		t0.texture = runes_selected[0].rune.image
+		t0.size = Vector2(64,64)
+		t0.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		add_child(t0)
 		create_tween().tween_property(t0,"position",center.position,0.3).set_ease(Tween.EASE_OUT)
 		
 		var t1 = TextureRect.new()
 		t1.position = runes_selected[1].position
 		t1.texture = runes_selected[1].rune.image
+		t1.size = Vector2(64,64)
+		t1.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		add_child(t1)
 		create_tween().tween_property(t1,"position",center.position,0.3).set_ease(Tween.EASE_OUT)
 		
 		var t2 = TextureRect.new()
 		t2.position = stones_selected[0].position
 		t2.texture = stones_selected[0].stone.image
+		t2.size = Vector2(64,64)
+		t2.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		add_child(t2)
 		
 		runes_selected[1].button_pressed = false
@@ -218,19 +230,20 @@ func _on_give_button_pressed():
 		
 		var was_good = colosus.needs.is_equals(spell)
 	
+		print(colosus.name)
 		if colosus.name == "TlatoaniI":
 			if was_good:
-				ballon_node = DialogueManager.show_dialogue_balloon(load("res://dialogues/day2.dialogue"), "TlatoaniI_good")
+				ballon_node = DialogueManager.show_dialogue_balloon(load("res://dialogues/day_2.dialogue"), "TlatoaniI_good")
 			else:
-				ballon_node = DialogueManager.show_dialogue_balloon(load("res://dialogues/day2.dialogue"), "TlatoaniI_bad")
+				ballon_node = DialogueManager.show_dialogue_balloon(load("res://dialogues/day_2.dialogue"), "TlatoaniI_bad")
 		else:
 			if was_good:
-				Global.unlock_achivement(colosus.name)
 				Global.change_score_by(1)
 				Global.add_customer_mood(colosus.name, true)
 			else:
 				Global.change_score_by(-1)
 				Global.add_customer_mood(colosus.name, false)
+			block.visible = true
 			ballon_node = DialogueManager.show_dialogue_balloon(load(day), colosus.name+"_end")
 
 
@@ -250,7 +263,9 @@ func show_achivement(achivement):
 	get_tree().create_tween().tween_property(trophy_achivements, "position", Vector2(trophy_achivements.position.x,trophy_achivements.position.y-150), 0.2).finished
 
 func show_chartacter(name:String):
-	ballon_node.show_chartacter(name)
+	if ballon_node and !ballon_node.is_queued_for_deletion():
+		ballon_node.show_chartacter(name)
 
 func leave_chartacter():
-	ballon_node.leave_chartacter()
+	if ballon_node and !ballon_node.is_queued_for_deletion():
+		ballon_node.leave_chartacter()

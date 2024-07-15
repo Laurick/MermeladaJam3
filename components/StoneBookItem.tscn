@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bkjn6tmtteiyh"]
 
 [ext_resource type="Script" path="res://components/StoneBookItem.gd" id="1_xhqg8"]
-[ext_resource type="Texture2D" uid="uid://b5y1224xn0xmj" path="res://icon.svg" id="2_pctds"]
+[ext_resource type="Texture2D" uid="uid://beddhs43sdka1" path="res://images/Logro_Base_1.png" id="2_ry2wk"]
 [ext_resource type="LabelSettings" uid="uid://ceoaqidwo70xd" path="res://theme/text_label_settings.tres" id="3_wikdj"]
 [ext_resource type="LabelSettings" uid="uid://o8vc8pq0t1no" path="res://theme/description_label_settings.tres" id="4_vfil2"]
 
@@ -18,19 +18,27 @@ grow_vertical = 2
 size_flags_horizontal = 3
 script = ExtResource("1_xhqg8")
 
-[node name="IconStone" type="TextureRect" parent="."]
+[node name="IconStone2" type="TextureRect" parent="."]
 layout_mode = 2
 offset_right = 64.0
 offset_bottom = 64.0
-texture = ExtResource("2_pctds")
+texture = ExtResource("2_ry2wk")
+expand_mode = 1
+
+[node name="IconStone" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 10.0
+offset_right = 57.0
+offset_bottom = 58.0
 expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 70.0
-offset_top = -10.0
+offset_top = 7.0
 offset_right = 196.0
-offset_bottom = 93.0
+offset_bottom = 67.0
 theme_override_constants/separation = 1
 
 [node name="TitleStoneLabel" type="Label" parent="VBoxContainer"]

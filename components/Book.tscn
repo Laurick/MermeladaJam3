@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bv2vgbx5806ky"]
+[gd_scene load_steps=25 format=3 uid="uid://bv2vgbx5806ky"]
 
 [ext_resource type="Script" path="res://components/Book.gd" id="1_b5pw5"]
 [ext_resource type="Texture2D" uid="uid://2xf2yjonjbr6" path="res://images/Libro.png" id="2_2ftfh"]
@@ -12,13 +12,18 @@
 [ext_resource type="Resource" uid="uid://bligk6n217x4f" path="res://models/runes/pain_rune.tres" id="9_yac57"]
 [ext_resource type="Resource" uid="uid://7idqp2bxie3c" path="res://models/runes/shine_rune.tres" id="10_ryrs4"]
 [ext_resource type="Resource" uid="uid://dee5d8uemmfrf" path="res://models/runes/union_rune.tres" id="11_d4fp7"]
+[ext_resource type="Resource" uid="uid://cwxye0p2skei1" path="res://models/runes/add_rune.tres" id="12_txkwl"]
 [ext_resource type="Resource" uid="uid://c8amg2qwsubuc" path="res://models/runes/water_rune.tres" id="12_udvex"]
+[ext_resource type="Resource" uid="uid://buud0iu6ngnql" path="res://models/runes/heigth_rune.tres" id="13_nhepi"]
 [ext_resource type="PackedScene" uid="uid://bkjn6tmtteiyh" path="res://components/StoneBookItem.tscn" id="13_vwv3b"]
 [ext_resource type="Resource" uid="uid://cq5cgfqagww0e" path="res://models/stones/blue_quartz.tres" id="14_8s5xp"]
+[ext_resource type="Resource" uid="uid://gnug68tbw1a1" path="res://models/runes/interchange_rune.tres" id="14_84dyb"]
 [ext_resource type="Resource" uid="uid://coqxwe86fjbch" path="res://models/stones/citrine.tres" id="15_fmnxt"]
-[ext_resource type="Resource" path="res://models/stones/diamond.tres" id="16_psan2"]
+[ext_resource type="Resource" uid="uid://fpn55n8os6sm" path="res://models/stones/diamond.tres" id="16_psan2"]
 [ext_resource type="Resource" uid="uid://001wpo6evy5v" path="res://models/stones/obsidian.tres" id="17_aq4ul"]
 [ext_resource type="Resource" uid="uid://j8yde08310qx" path="res://models/stones/turquoise.tres" id="18_lswgp"]
+[ext_resource type="Resource" uid="uid://fe4qqfcy0ji0" path="res://models/stones/caliza.tres" id="22_0xeue"]
+[ext_resource type="Resource" uid="uid://rx43t8w5ojsc" path="res://models/stones/amazoninte.tres" id="23_wo05s"]
 
 [node name="Book" type="Control"]
 layout_mode = 3
@@ -47,14 +52,14 @@ texture = ExtResource("2_2ftfh")
 
 [node name="Runes" type="GridContainer" parent="."]
 layout_mode = 2
-offset_left = 73.0
-offset_top = 114.0
-offset_right = 619.0
-offset_bottom = 722.0
+offset_left = 82.0
+offset_top = 85.0
+offset_right = 628.0
+offset_bottom = 693.0
 scale = Vector2(0.8, 0.8)
 size_flags_horizontal = 3
 theme_override_constants/h_separation = 12
-theme_override_constants/v_separation = 24
+theme_override_constants/v_separation = 39
 columns = 2
 
 [node name="RuneBookItem" parent="Runes" instance=ExtResource("3_umihu")]
@@ -91,15 +96,15 @@ rune = ExtResource("11_d4fp7")
 
 [node name="RuneBookItem9" parent="Runes" instance=ExtResource("3_umihu")]
 layout_mode = 2
-rune = ExtResource("12_udvex")
+rune = ExtResource("12_txkwl")
 
 [node name="RuneBookItem10" parent="Runes" instance=ExtResource("3_umihu")]
 layout_mode = 2
-rune = ExtResource("12_udvex")
+rune = ExtResource("13_nhepi")
 
 [node name="RuneBookItem11" parent="Runes" instance=ExtResource("3_umihu")]
 layout_mode = 2
-rune = ExtResource("12_udvex")
+rune = ExtResource("14_84dyb")
 
 [node name="RuneBookItem12" parent="Runes" instance=ExtResource("3_umihu")]
 layout_mode = 2
@@ -107,13 +112,13 @@ rune = ExtResource("12_udvex")
 
 [node name="Stone" type="GridContainer" parent="."]
 layout_mode = 2
-offset_left = 737.0
-offset_top = 71.0
-offset_right = 1849.0
-offset_bottom = 679.0
+offset_left = 708.0
+offset_top = 61.0
+offset_right = 1820.0
+offset_bottom = 669.0
 size_flags_horizontal = 3
 theme_override_constants/h_separation = 24
-theme_override_constants/v_separation = 8
+theme_override_constants/v_separation = 11
 
 [node name="StoneBookItem" parent="Stone" instance=ExtResource("13_vwv3b")]
 layout_mode = 2
@@ -137,21 +142,26 @@ stone = ExtResource("18_lswgp")
 
 [node name="StoneBookItem6" parent="Stone" instance=ExtResource("13_vwv3b")]
 layout_mode = 2
-stone = ExtResource("18_lswgp")
+stone = ExtResource("22_0xeue")
 
 [node name="StoneBookItem7" parent="Stone" instance=ExtResource("13_vwv3b")]
 layout_mode = 2
-stone = ExtResource("18_lswgp")
+stone = ExtResource("23_wo05s")
 
 [node name="CloseButton" type="Button" parent="."]
-layout_mode = 2
-offset_left = 978.0
-offset_top = 19.0
-offset_right = 1135.0
-offset_bottom = 86.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -99.0
+offset_top = 25.0
+offset_right = -33.0
+offset_bottom = 92.0
+grow_horizontal = 0
 size_flags_horizontal = 4
 size_flags_vertical = 8
 theme = ExtResource("3_7yly4")
-text = "CERRAR"
+theme_override_colors/font_color = Color(0.615686, 0.180392, 0.133333, 1)
+text = " X "
 
 [connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]
