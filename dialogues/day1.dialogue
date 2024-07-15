@@ -70,13 +70,13 @@ Venus: He vivido mucho y he conocido a mucha gente y tú no eres [if Global.gend
 {{player_name}}: Creo que se está equivocando conmigo.
 Venus: Es posible. *se encoge de hombros* Solo digo lo que veo, rapaz. 
 {{player_name}}: *Te ríes por compromiso* Quizá, lo mejor será que nos centremos en lo que necesita usted.
-{{player_name}}: (Además, no es como si pudiera contarle algo. No recuerdo nada antes del último año.)
+{{player_name}}: (Además, no es como si pudiera contarle algo. No recuerdo nada antes del último año).
 Venus: Ah, sí. Perdona, que una se pone a hablar y no para.
 Venus: Verás, hace días que me duele la rodilla derecha; creo que es un poco por la humedad, ¿sabes?
 Venus: Se te mete ahí en la articulación y no permite bien la movilidad y no veas qué dolor.
 Venus: No tendrás algo para ello, ¿verdad?
 {{player_name}}: Deje que eche un vistazo y le comento.
-{{player_name}}: (Voy a ver qué piedras y runas tengo.)
+{{player_name}}: (Voy a ver qué piedras y runas tengo).
 => wait_for_riddle
 
 ~ wait_for_riddle
@@ -87,7 +87,7 @@ do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Venus_Sin_Humedades")
 do Audio.play_music_by_path("res://sounds/Yaya.mp3")
 Venus: ¡Oye! Menos mal que he llegado antes de que cerrases la tienda. 
-{{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos.)
+{{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
 Venus: Nada, nada. Solo quería decirte que tengo la rodilla mucho mejor. \n ¡Esa piedra con runas que me diste funcionó a las mil maravillas!
 {{player_name}}: Ah...me alegro de oírlo. 
 Venus: ¡Pondré una buena reseña en la página web!
@@ -102,7 +102,7 @@ do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Venus")
 do Audio.play_music_by_path("res://sounds/Yaya.mp3")
 Venus: ¡Oye! Menos mal que he llegado antes de que cerrases la tienda. 
-{{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos.)
+{{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
 Venus: ¿Que en qué puedes ayudarme? Pues en darme la hoja de reclamaciones, eso para empezar. La piedra con runas que me diste no ha servido para nada.
 {{player_name}}: Oh...lo...lo siento. 
 Venus: Disculparte no servirá de nada. 
@@ -141,7 +141,7 @@ do show_chartacter("Djinn")
 ¿?: Me resultas familiar.
 {{player_name}}: Bueno, soy [if Global.gender == 0]un coloso[/if][if Global.gender == 1]una colosa[/if][if Global.gender == 2]une colose[/if], nos parecemos bastante.
 ¿?:  No es cierto. Vuestro foco mágico es único y el tuyo no parece... acorde.
-{{player_name}}: ¿Cómo dice? (No me pagan lo suficiente como para aguantar que me insulten dos veces en un día.)
+{{player_name}}: ¿Cómo dice? (No me pagan lo suficiente como para aguantar que me insulten dos veces en un día).
 ¿?: ...
 ¿?: Parece que aún es pronto. *Echa un vistazo a su alrededor* Y me temo que no tienes los materiales que necesito.
 {{player_name}}: Oh, lo lamento. Hemos abierto hoy y el distribuidor está teniendo problemas a la hora de abastecernos.
@@ -167,7 +167,7 @@ Columbo: Sí, haces bien en disculparte. Las necesidades de la gente no son un j
 {{player_name}}: Me tomo mi trabajo muy en serio.
 Columbo: *Resopla* Bueno, eso ya lo veremos.
 Columbo: Verás, tengo un problema.
-{{player_name}}: (No me digas.)
+{{player_name}}: (No me digas).
 Columbo: NECESITO PELO.
 {{player_name}}: ...
 {{player_name}}: ¿Perdón?
@@ -179,7 +179,7 @@ Columbo: ¡Eso ya lo sé! No soy un ignorante.
 Columbo: ¡Pues claro que quiero pelo!
 {{player_name}}: Aquí tenéis runas y piedras mágicas. ¡Alguna tendrá que servir!
 {{player_name}}: ...
-{{player_name}}: Veré qué puedo hacer. (Dioses, dadme paciencia porque la voy a necesitar.)
+{{player_name}}: Veré qué puedo hacer. (Dioses, dadme paciencia porque la voy a necesitar).
 => wait_for_riddle
  
 ~ Columbo_correct
@@ -188,7 +188,7 @@ do show_chartacter("Columbo")
 do Audio.play_music_by_path("res://sounds/Cabeza dedo.mp3")
 Columbo: ¡Ahí estás!
 {{player_name}}: ...
-Columbo: Oh, no. (Seguro que viene a echarme un rapapolvo.)
+Columbo: Oh, no. (Seguro que viene a echarme un rapapolvo).
 Columbo: ¡Quería darte las gracias! La piedra que me diste funcionó.
 {{player_name}}: ...
 {{player_name}}: *Lo mira de arriba abajo* Está... está usted cubierto de pelo.
@@ -208,7 +208,7 @@ do show_chartacter("Columbo")
 do Audio.play_music_by_path("res://sounds/Cabeza dedo.mp3")
 Columbo: ¡Ahí estás!
 {{player_name}}: ...
-{{player_name}}: Oh, no. (Seguro que viene a echarme un rapapolvo.)
+{{player_name}}: Oh, no. (Seguro que viene a echarme un rapapolvo).
 Columbo: ¡Te pedí una piedra para el crecimiento del pelo! ¡DEL PELO! ¿A ti esto te parece pelo?
 {{player_name}}: Eh...
 Columbo: ¡No respondas porque es evidente que no es pelo! ¿Quién querría una piedra para que le creciesen malas hierbas? 
@@ -224,7 +224,7 @@ do leave_chartacter()
 do show_chartacter("Columbo")
 {{player_name}}: Aquí la tiene. Espero que le sea útil.
 Columbo: ¡Más te vale! O vendré aquí en forma de tormenta de arena iracunda.
-{{player_name}}: Esperemos que no sea necesario. (Por favor, no. Que luego me tocará limpiar la arena a mí.)
+{{player_name}}: Esperemos que no sea necesario. (Por favor, no. Que luego me tocará limpiar la arena a mí).
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do leave_chartacter()
 do Audio.stop_music()
@@ -253,7 +253,7 @@ Tomé: ¿Es una broma?
 {{player_name}}: El procedimiento a seguir cuando una persona solicita el contacto con la empresa, es facilitarle los números de teléfono y el correo electrónico para que la persona interesada pueda establecer una comunicación adecuada.
 Tomé: ¿Te has tragado un diccionario? Hablas muy raro.
 Tomé: ¡Pues si no me vas a poner en contacto con tus superiores, dame la hoja de reclamaciones!
-{{player_name}}: (Este tipo es tonto.)
+{{player_name}}: (Este tipo es tonto).
 {{player_name}}: Según la ley 89/750, apartado 7, epígrafe 12, sección 9: Las hojas de reclamación solo se podrán ofrecer al cliente siempre y cuando haga una compra en el destablecimiento.
 Tomé: *Se acerca para tocarte*
 {{player_name}}: ¡Oiga! ¡No toque!
@@ -286,11 +286,11 @@ do show_chartacter("Tome")
 	do Global.change_affection_tome_by(1)
 	{{player_name}}: Tenga, un cuarzo azul.
 	Tomé: *Examina la piedra* ¿Intentas decirme algo?
-	{{player_name}}: (¿Para qué? Si es igual que hablarle a la pared.) Claro que no. Pero es bonita y por esta zona no suele haber muchos cuarzos azules.
+	{{player_name}}: (¿Para qué? Si es igual que hablarle a la pared). Claro que no. Pero es bonita y por esta zona no suele haber muchos cuarzos azules.
 Tomé: *Entrecierra los ojos* No está mal.
 {{player_name}}: Claro que no. Y, ahora, por favor, abandone la tienda.
 Tomé: ¡Me voy porque así lo quiero!
-{{player_name}}: (Desde luego.)
+{{player_name}}: (Desde luego).
 Tomé: Pero volveré. Ya nos veremos.
 {{player_name}}: *Suspiras* Pienso pedir un aumento de sueldo.
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
