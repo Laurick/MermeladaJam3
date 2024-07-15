@@ -5,7 +5,7 @@
 => END
 
 ~ jump
-{{player_name}}: *das un largo suspiro* Como hoy sea un día de mierda, dimito y me tiro al río.
+{{player_name}}: *Das un largo suspiro* Como hoy sea un día de mierda, dimito y me tiro al río.
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 {{player_name}}: ¡Buenos días!
 {{player_name}}: ...
@@ -14,12 +14,12 @@ do Audio.play_music_by_path("res://sounds/Billie Djinn.mp3")
 do show_chartacter("Djinn")
 Lan'tek: Hola a ti también.
 {{player_name}}: ¿Has venido a contarme sobre mí o vuelves a ponerte en modo esquivo?
-Lan'tek: *se ríe* Veo que estás recuperando parte de tu carácter.
+Lan'tek: *Se ríe* Veo que estás recuperando parte de tu carácter.
 {{player_name}}: No tientes a la suerte.
 {{player_name}}: Venga. Suéltalo. ¿Quién soy?
 Lan'tek: Por suerte para ti, tengo lo que necesitas.
-{{player_name}}: *miras la piedra con runas talladas que te ofrece* ¿Por qué debería fiarme de ti?
-Lan'tek: *se encoge de hombros* ¿Por qué no? Si estoy equivocado, no pasará nada. Pero si tengo razón...*sonríe* Recordarás todo.
+{{player_name}}: *Miras la piedra con runas talladas que te ofrece* ¿Por qué debería fiarme de ti?
+Lan'tek: *Se encoge de hombros* ¿Por qué no? Si estoy equivocado, no pasará nada. Pero si tengo razón...*Sonríe* Recordarás todo.
 Lan'tek: La decisión es tuya. 
 do show_chartacter("Djinn")
 - ¿Quieres coger la piedra que te ofrece Lan'tek?
@@ -37,15 +37,15 @@ do show_chartacter("Djinn")
 	{{player_name}}: ¡Devuélveme mi cuerpo!
 	Lan'tek: Mis habilidades no son tan poderosas...
 	{{player_name}}: Ni se te ocurra terminar esa frase, Lan'tek.  
-	Lan'tek: *se ríe* Sabía que dirías eso, así que aquí tengo otra piedra para ello.
-	{{player_name}}: *la coges* Trae.
+	Lan'tek: *Se ríe* Sabía que dirías eso, así que aquí tengo otra piedra para ello.
+	{{player_name}}: *La coges* Trae.
 	=> black_fade
-	{{player_name}}: *te miras las manos y el resto del cuerpo en el espejo* Por fin.
+	{{player_name}}: *Te miras las manos y el resto del cuerpo en el espejo* Por fin.
 	{{player_name}}: No he olvidado que, gracias a tu cobardía, esa bruja me dio amnesia y otro cuerpo.
-	Lan'tek: *sonríe* Claro que sí, {{player_name}}.
+	Lan'tek: *Sonríe* Claro que sí, {{player_name}}.
 	Lan'tek: Me alegro de volver a verte.
-	{{player_name}}: *resoplas* Nos vamos de este sitio. Ve a por provisiones y espérame a la salida del pueblo. Esa bruja se va a enterar.
-	Lan'tek: *sonríe* Ah, cuánto te echaba de menos.
+	{{player_name}}: *Resoplas* Nos vamos de este sitio. Ve a por provisiones y espérame a la salida del pueblo. Esa bruja se va a enterar.
+	Lan'tek: *Sonríe* Ah, cuánto te echaba de menos.
 	Lan'tek: Te veré en una hora. 
 	do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 	=> check_tome
@@ -54,8 +54,8 @@ do show_chartacter("Djinn")
 	do Audio.play_music_by_path("res://sounds/Despedida.mp3")
 	{{player_name}}: ¿Sabes? Esto tampoco está tan mal. Así que no, no voy a coger esa piedra.
 	Lan'tek: ...
-	Lan'tek: *se encoge de hombros*  Una pena. Realmente te echaba de menos, pero tampoco voy a obligarte a nada.
-	Lan'tek: *deja la piedra sobre el mostrador* Te la dejo aquí para que la uses cuando consideres. Si decides hacerlo, búscame.
+	Lan'tek: *Se encoge de hombros*  Una pena. Realmente te echaba de menos, pero tampoco voy a obligarte a nada.
+	Lan'tek: *Deja la piedra sobre el mostrador* Te la dejo aquí para que la uses cuando consideres. Si decides hacerlo, búscame.
 	{{player_name}}: No creo que lo haga, pero gracias por las molestias. 
 	Lan'tek: ¡Hasta otra!
 	do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
@@ -87,7 +87,7 @@ if Global.affection_tomeu == 3
 		{{player_name}}: ¡Suéltalo!
 		do show_chartacter("Tome_Zezy")
 		do Audio.play_music_by_path("res://sounds/Amor.mp3")
-		Tomé: *se sonroja* ¿Querríascenarconmigo?
+		Tomé: *Se sonroja* ¿Querríascenarconmigo?
 		{{player_name}}: ...
 		{{player_name}}: No he entendido ni una palabra. Repítelo sin atropellarte.
 		Tomé: QUE SI QUIERES CENAR CONMIGO.
@@ -100,20 +100,20 @@ if Global.affection_tomeu == 3
 		Tomé: ...
 		Tomé: No afirmaré ni negaré nada sin un abogado.
 		{{player_name}}: ...
-		{{player_name}}: *te frotas los ojos* Mira, la respuesta es no. Y, ahora, largo de aquí, tengo mucho que hacer.
-		Tomé: Pero... ¡hay una esta y quiero que vengas conmigo!
+		{{player_name}}: *Te frotas los ojos* Mira, la respuesta es no. Y, ahora, largo de aquí, tengo mucho que hacer.
+		Tomé: Pero... ¡hay una fiesta y quiero que vengas conmigo!
 		{{player_name}}: PUES YO NO QUIERO, PASO DE FIESTAS.
 		Tomé: ...
 		Tomé: VOLVERÉ.
 		Tomé: VOLVERÉ HASTA QUE TE CONQUISTE.
 		Tomé: NO VOY A RENDIRME.
-		{{player_name}}: *saca la escoba* QUE TE LARGUES.
+		{{player_name}}: *Saca la escoba* QUE TE LARGUES.
 		Tomé: ...
 		Tomé: ¿Vas a darme con la escoba?
 		{{player_name}}: ...
 		{{player_name}}: ...
-		{{player_name}}: *saca el difusor de agua* No.
-		Tomé: AAHHH, EL DIFUSOR NOOO
+		{{player_name}}: *Saca el difusor de agua* No.
+		Tomé: AAHHH, EL DIFUSOR NOOO.
 		do Global.unlock_achivement("Amor")
 		do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 		do leave_character() 
@@ -138,18 +138,18 @@ else:
 		Tomé: TE HE VISTO CON EL TIPO ESE.
 		Tomé: TE HA DADO UNA PIEDRA Y TU CUERPO HA CAMBIADO.
 		{{player_name}}: ¿ESTABAS ESPIANDO, CAGARUTA DE GNOMO?
-		Tomé: NO ES ESPIA SI LA TIENDA ESTÁ ABIETA
+		Tomé: NO ES ESPIAR SI LA TIENDA ESTÁ ABIERTA.
 	{{player_name}}: ¿PARA QUÉ TE HAS TRAÍDO A LA POLICÍA?
 	Tomé: ¡Para que te detengan por violencia hacia mi persona!
 	{{player_name}}: ¿PERO QUÉ DICES? 
 	{{player_name}}: Ha sido por no darte las muestras gratis, es que lo sabía. ¿Pues sabes qué?
-	{{player_name}}: QUE ME VOY. *tira la mesa encima del enano* ESTOY HASTA EL MOÑO.
-	{{player_name}}: No me pagan lo su ciente como para aguantar estas tonterías.
+	{{player_name}}: QUE ME VOY. *Tira la mesa encima del enano* ESTOY HASTA EL MOÑO.
+	{{player_name}}: No me pagan lo suficiente como para aguantar estas tonterías.
 	Tomé: ¡Pero no puedes huir! LA POLICÍA HA VENIDO A DETENERTE.
 	{{player_name}}: Ah, ¿sí? PUES QUE SEPAS QUE NO ME COGERÁN CON VIDA.
 	Tomé: ¡POLICÍA! INTENTA ESC...
-	{{player_name}}: *le rocía con el difusor de agua* ¡Que te calles ya, pulga chillona!
+	{{player_name}}: *Le rocía con el difusor de agua* ¡Que te calles ya, pulga chillona!
 	Tomé: ¡AAAHHH! AGUA NOOOO.
-	{{player_name}}: *se sube al alféizar de la ventana* QUÉDATE CON LO QUE QUIERAS, YO ME PIRO.
+	{{player_name}}: *Se sube al alféizar de la ventana* QUÉDATE CON LO QUE QUIERAS, YO ME PIRO.
 ~ end_game
 => END

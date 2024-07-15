@@ -17,8 +17,8 @@ do show_chartacter("Tiki")
 do new_colosus("Tiki")
 do Audio.play_music_by_path("res://sounds/Tiki media cara.mp3")
 Tiki: ¿A ti te parece que sean buenos días?
-{{player_name}}: *sonríes con amabilidad* Disculpe, no le había visto.
-Tiki: *refunfuña* Pues salta a la vista que tengo un problema.
+{{player_name}}: *Sonríes con amabilidad* Disculpe, no le había visto.
+Tiki: *Refunfuña* Pues salta a la vista que tengo un problema.
 {{player_name}}: En efecto, eso parece.
 Tiki: Me he quemado la cara.
 {{player_name}}: Entiendo.
@@ -26,7 +26,7 @@ Tiki: Cociendo macarrones.
 {{player_name}}: Le puede pasar a cualquiera. (¿QUIEN LE PRENDE FUEGO A LOS MACARRONES?)
 Tiki: ¿Te estás burlando de mí?
 {{player_name}}: Por supuesto que no. Soy [if Global.gender == 0]un auténtico profesional[/if][if Global.gender == 1]una auténtica profesional[/if][if Global.gender == 2]une auténtique profesional[/if].
-Tiki: *resopla* Bueno. Lo cierto es que  he intentado recuperar la cara con agua, pero ha dado lo mismo. Está demasiado quemado y no es permeable.
+Tiki: *Resopla* Bueno. Lo cierto es que he intentado recuperar la cara con agua, pero ha dado lo mismo. Está demasiado quemado y no es permeable.
 Tiki: ¿Tienes por ahí algo que me haga el apaño? Llevo unos días así y estoy empezando a perder la seguridad en mí misme.
 {{player_name}}: Voy a echar un vistazo. (Espero que no necesite algo de lo que falta por llegar). 
 => wait_for_riddle
@@ -35,7 +35,7 @@ Tiki: ¿Tienes por ahí algo que me haga el apaño? Llevo unos días así y esto
 => END
 
 ~ error_spell
-{{player_name}}: No... debería entregar DOS runas y UNA piedra para ayudar correctamente
+{{player_name}}: No... debería entregar DOS runas y UNA piedra para ayudar correctamente.
 ~ continue_for_riddle
 => END
 
@@ -44,9 +44,9 @@ do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Tiki_Con_Cara")
 do Audio.play_music_by_path("res://sounds/Tiki media cara.mp3")
 Tiki: ¡Eh! Oye!
-{{player_name}}: (Verás tú, otro rapapolvo). ¿sí?
+{{player_name}}: (Verás tú, otro rapapolvo). ¿Sí?
 Tiki:  Quería darte las gracias porque la piedra que me diste me ha funcionado a la perfección. ¡Mira mi cara! ¡¡Tiene expresión!!
-{{player_name}}: Oh. *se ríe* Me alegro de verlo.
+{{player_name}}: Oh. *Se ríe* Me alegro de verlo.
 Tiki: Mi autoestima está mejor que nunca gracias a ti. ¡Pienso poner la reseña más positiva de la historia!
 {{player_name}}: Muchas gracias.
 do Audio.play_sfx("352657__foolboymedia__bong-chime-1.mp3")
@@ -58,7 +58,7 @@ do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Tiki")
 do Audio.play_music_by_path("res://sounds/Tiki media cara.mp3")
 Tiki: ¡Eh! Oye!
-{{player_name}}: (Verás tú, otro rapapolvo). ¿sí?
+{{player_name}}: (Verás tú, otro rapapolvo). ¿Sí?
 Tiki:  Quiero la hoja de reclamaciones. ¡La piedra que me diste no solo no ha solucionado mi problema si no que, además, me ha borrado la mitad de la cara! 
 {{player_name}}: Lo...lo siento.
 Tiki: Sentirlo no es suficiente, ¿quién me va a pagar el escultor para que me recomponga la cara?
@@ -95,7 +95,7 @@ do show_chartacter("Djinn")
 {{player_name}}: ¿Perdón?
 ¿?: Me llamo Lan'tek.
 {{player_name}}: ...
-Lan'tek: *resopla* Era de esperar.
+Lan'tek: *Resopla* Era de esperar.
 {{player_name}}: Usted...¿Usted me conoce?
 Lan'tek: ...
 Lan'tek: ...
@@ -107,7 +107,7 @@ do leave_chartacter()
 do Audio.stop_music()
 {{player_name}}: ...
 {{player_name}}: Y se ha pirado. Pero, ¿de qué va? Me suelta una bomba así y se larga. Menudo sinvergüenza.
-{{player_name}}: *suspiras* En fin. Espero que mañana llegue lo que está esperando y me cuente de qué me conoce.
+{{player_name}}: *Suspiras* En fin. Espero que mañana llegue lo que está esperando y me cuente de qué me conoce.
 
 
 ~ TlatoaniI_start
@@ -120,12 +120,12 @@ Tlatoani: ¡ME HE ROTO EL BRAAAAZOOOO!
 {{player_name}}: *Le ofreces un pañuelo*
 {{player_name}}: ¿Cuándo ha sido?
 Tlatoani: ¡HACE UNOS MINUTOS!
-Tlatoani: VENÍA DE CAMINO A POR UNA PIEDRA PARA TENE A ARENA DEL CUERPO MÁS DURA Y ME HE TOPEZADO.
+Tlatoani: VENÍA DE CAMINO A POR UNA PIEDRA PARA TENER EL ARENA DEL CUERPO MÁS DURA Y ME HE TROPEZADO.
 {{player_name}}: Te...¿te has caído por las escaleras?
 Tlatoani: ¿QUÉ ESCALERAS?
 Tlatoani: ME HE TOPEZADO CON MIS PROPIOS PIES Y ME HE CAÍDO.
 Tlatoani: Y AHORA ME DUELE MUCHO EEEEEL BRAZOOOO.
-{{player_name}}: (Madre mía, qué panorama.) Vale, lo primero de todo, respira hondo. Voy a ver si tengo algo para quitarte el dolor y luego miramos la reconstrucción.
+{{player_name}}: (Madre mía, qué panorama). Vale, lo primero de todo, respira hondo. Voy a ver si tengo algo para quitarte el dolor y luego miramos la reconstrucción.
 Tlatoani: POR FAVOOOOORRR. ME DUEEELE MUUUCHOOOO.
 {{player_name}}: (Vamos a ver qué tengo por aquí).
 => wait_for_riddle
@@ -136,7 +136,7 @@ do show_chartacter("Tlatoani")
 do Audio.play_sfx("351565__bertrof__game-sound-incorrect-organic-violin.wav")
 Tlatoani: ESO NO AYUDA NADA.
 Tlatoani: ME DUELE AÚN MÁAAAASSS.
-{{player_name}}: ¡Lo siento! (Debería intentarlo de nuevo.)
+{{player_name}}: ¡Lo siento! (Debería intentarlo de nuevo).
 => wait_for_riddle
 
 ~ TlatoaniI_good
@@ -144,16 +144,16 @@ do show_chartacter("Tlatoani")
 {{player_name}}: Me parece que esto servirá.
 Tlatoani: ...
 Tlatoani: Sí, parece que funciona.
-{{player_name}}: Menos mal. (Adiós a los gritos.)
+{{player_name}}: Menos mal. (Adiós a los gritos). 
 
 ~ Tlatoani_start
 do new_colosus("Tlatoani")
-{{player_name}}: Bueno, ¿un poco  mejor?
+{{player_name}}: Bueno, ¿un poco mejor?
 do Audio.play_music_by_path("res://sounds/Tlatoani.mp3")
 Tlatoani: ...
 {{player_name}}: ...
 {{player_name}}: ¿Hola?
-Tlatoani: *sonido inteligible* 
+Tlatoani: *Sonido inteligible* 
 {{player_name}}: Perdona, no la he oído. 
 {{player_name}}: ¿Quizá podría hablar más alto?
 Tlatoani: [font_size=14]Estoy hablando alto.[/font_size]
@@ -175,11 +175,11 @@ do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Tlatoani")
 do Audio.play_music_by_path("res://sounds/Tlatoani.mp3")
 {{player_name}}: ¿Hm? ¿Quién me tira de la túnica?
-Tlatoani: *te entrega una tablilla*
+Tlatoani: *Te entrega una tablilla*
 {{player_name}}: ¿Una nota? A ver...
 {{player_name}}: "Hola, {{player_name}}, gracias por darme la piedra que me arregló el brazo y reforzó el material de mi cuerpo. Ya puedo caerme sin romperme nada". 
 {{player_name}}: Ah, pues me alegro mucho. Pero, por favor, intente no caerse. 
-Tlatoani: *asiente y sonrie*
+Tlatoani: *Asiente y sonrie*
 {{player_name}}: Oh, otra nota. Veamos...
 {{player_name}}: "Dejaré una reseña positiva en la página web".
 do Audio.play_sfx("352657__foolboymedia__bong-chime-1.mp3")
@@ -191,11 +191,11 @@ do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do show_chartacter("Tlatoani")
 do Audio.play_music_by_path("res://sounds/Tlatoani.mp3")
 {{player_name}}: ¿Hm? ¿Quién me tira de la túnica?
-Tlatoani: *te entrega una tablilla*
+Tlatoani: *Te entrega una tablilla*
 {{player_name}}: ¿Una nota? A ver...
 Tlatoani: "Hola {{player_name}}, gracias por darme una piedra que no me ha servido para nada. Tendré que ir a un escultor para que me haga uno nuevo mientras intento no tropezarme y evitar romperme más cosas".
 Tlatoani: ...Vaya. Lo siento. 
-Tlatoani: *hace una mueca de disgusto*
+Tlatoani: *Hace una mueca de disgusto*
 {{player_name}}: Oh, otra nota. A ver...
 {{player_name}}: "Pienso dejar una reseña negativa en la web. Ojalá te caiga un yunque en la cabeza".
 {{player_name}}: Supongo que me lo merezco.
@@ -216,7 +216,7 @@ do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 {{player_name}}: Bueno, casi ha terminado el día.
 {{player_name}}: Menos mal, porque Dioses, qué turno. 
 {{player_name}}: ¡Buenas tardes! ¿En qué...?
-{{player_name}}: *suspiras* Qué quiere.
+{{player_name}}: *Suspiras* Qué quiere.
 do show_chartacter("Tome")
 do Audio.play_music_by_path("res://sounds/Enanodia2.mp3")
 Tomé: ¡Vaya modales!
@@ -254,7 +254,7 @@ Tomé: ¡Una por día!
 {{player_name}}: Y yo quiero que me paguen por no trabajar y aquí estamos. 
 Tomé: ¡Pues cierra la tienda! Así no tendrás que trabajar.
 {{player_name}}: ¡Pero que necesito el dinero!
-{{player_name}}: *suspiras* Por favor, si no va a comprar nada, salga de la tienda.
+{{player_name}}: *Suspiras* Por favor, si no va a comprar nada, salga de la tienda.
 Tomé: ¡Dame mi muestra gratuita!
 {{player_name}}: ...
 {{player_name}}: ...
@@ -265,16 +265,16 @@ do show_chartacter("Tome")
 - ¿Quieres entregarle la runa que signifca "Irritación"?
 	do Global.change_affection_tome_by(-1)
 	{{player_name}}: Mire, aquí tiene una runa. ¿Está contento?
-	Tomé: *la examina* ¿Esto es una indirecta?
-	{{player_name}}: (¡Pues claro que sí!) No. Pero la mayor parte de la gente que necesita piedras con runas 
-	{{player_name}}: es por tema de molestias o dolor, así que seguro que la utiliza.
+	Tomé: *La examina* ¿Esto es una indirecta?
+	{{player_name}}: (¡Pues claro que sí!) No. Pero la mayor parte de la gente que necesita piedras con runas. 
+	{{player_name}}: Es por tema de molestias o dolor, así que seguro que la utiliza.
 - ¿Quieres entregarle una amazonita que se usa para "calmar el estrés"?
 	do Global.change_affection_tome_by(1)
 	{{player_name}}: Tenga, una amazonita.
 	Tomé: ¿Intentas decirme algo?
-	{{player_name}}: (¿Para qué? Si es igual que hablarle a la pared.) Claro que no.
+	{{player_name}}: (¿Para qué? Si es igual que hablarle a la pared). Claro que no.
 	{{player_name}}: Pero es bonita y por esta zona no suele haber muchas amazonitas.
-Tomé: *entrecierra los ojos* No está mal.
+Tomé: *Entrecierra los ojos* No está mal.
 {{player_name}}: Sé hacer bien mi trabajo.
 {{player_name}}: Por favor, ¿puede irse ya?
 Tomé: ...
@@ -284,10 +284,10 @@ Tomé: ¡No es molestia!
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do leave_chartacter()
 do Audio.stop_music()
-{{player_name}}: *suspiras* Como vuelva mañana le doy con la escoba.
+{{player_name}}: *Suspiras* Como vuelva mañana le doy con la escoba.
 ~ end_of_day_2
 
-{{player_name}}: *te estiras* Bueno, para ser el segundo día, no ha estado tan mal.
+{{player_name}}: *Te estiras* Bueno, para ser el segundo día, no ha estado tan mal.
 {{player_name}}: Aunque sigo [if Global.gender == 0]intrigado[/if][if Global.gender == 1]intrigada[/if][if Global.gender == 2]intrigade[/if] con Lan'tek. ¿De qué me conocerá? Espero que mañana responda a todas mis preguntas.
 if Global.check_customer_mood("Tiki")
 	=> Tiki_correct
