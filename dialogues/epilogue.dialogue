@@ -1,8 +1,11 @@
 ~ start_of_day_4
 => jump
 
-~ black_fade
-=> END
+~ black_fade_start_1
+=> black_fade_end_1
+
+~ black_fade_start_2
+=> black_fade_end_2
 
 ~ jump
 {{player_name}}: *Das un largo suspiro* Como hoy sea un día de mierda, dimito y me tiro al río.
@@ -28,27 +31,7 @@ do show_chartacter("Djinn")
 	{{player_name}}: Vale. Me fiaré de lo que dices. Si me muero vendré a atormentarte durante el resto de tu miserable vida.
 	Lan'tek: Correré el riesgo.
 	=> black_fade
-	{{player_name}}: ...
-	Lan'tek: ¿Y bien? ¿Cómo te sientes?
-	{{player_name}}: ...
-	{{player_name}}: Maldito cabrón de mierda. ¡Me dejaste [if Global.gender == 0]tirado[/if][if Global.gender == 1]tirada[/if][if Global.gender == 2]tirade[/if] en el laboratorio de la bruja!
-	Lan'tek: *se ríe* ¡Ah, has vuelto!
-	{{player_name}}: ¡Claro que he vuelto, boñiga con patas!
-	{{player_name}}: ¡Devuélveme mi cuerpo!
-	Lan'tek: Mis habilidades no son tan poderosas...
-	{{player_name}}: Ni se te ocurra terminar esa frase, Lan'tek.  
-	Lan'tek: *Se ríe* Sabía que dirías eso, así que aquí tengo otra piedra para ello.
-	{{player_name}}: *La coges* Trae.
-	=> black_fade
-	{{player_name}}: *Te miras las manos y el resto del cuerpo en el espejo* Por fin.
-	{{player_name}}: No he olvidado que, gracias a tu cobardía, esa bruja me dio amnesia y otro cuerpo.
-	Lan'tek: *Sonríe* Claro que sí, {{player_name}}.
-	Lan'tek: Me alegro de volver a verte.
-	{{player_name}}: *Resoplas* Nos vamos de este sitio. Ve a por provisiones y espérame a la salida del pueblo. Esa bruja se va a enterar.
-	Lan'tek: *Sonríe* Ah, cuánto te echaba de menos.
-	Lan'tek: Te veré en una hora. 
-	do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
-	=> check_tome
+
 - ¿Quieres seguir como hasta ahora? 
 	do Global.take_stone = false
 	do Audio.play_music_by_path("res://sounds/Despedida.mp3")
@@ -153,3 +136,28 @@ else:
 	{{player_name}}: *Se sube al alféizar de la ventana* QUÉDATE CON LO QUE QUIERAS, YO ME PIRO.
 ~ end_game
 => END
+
+~ black_fade_end_1
+{{player_name}}: ...
+Lan'tek: ¿Y bien? ¿Cómo te sientes?
+{{player_name}}: ...
+{{player_name}}: Maldito cabrón de mierda. ¡Me dejaste [if Global.gender == 0]tirado[/if][if Global.gender == 1]tirada[/if][if Global.gender == 2]tirade[/if] en el laboratorio de la bruja!
+Lan'tek: *se ríe* ¡Ah, has vuelto!
+{{player_name}}: ¡Claro que he vuelto, boñiga con patas!
+{{player_name}}: ¡Devuélveme mi cuerpo!
+Lan'tek: Mis habilidades no son tan poderosas...
+{{player_name}}: Ni se te ocurra terminar esa frase, Lan'tek.  
+Lan'tek: *Se ríe* Sabía que dirías eso, así que aquí tengo otra piedra para ello.
+{{player_name}}: *La coges* Trae.
+=> black_fade_start_2
+
+~ black_fade_end_2
+{{player_name}}: *Te miras las manos y el resto del cuerpo en el espejo* Por fin.
+{{player_name}}: No he olvidado que, gracias a tu cobardía, esa bruja me dio amnesia y otro cuerpo.
+Lan'tek: *Sonríe* Claro que sí, {{player_name}}.
+Lan'tek: Me alegro de volver a verte.
+{{player_name}}: *Resoplas* Nos vamos de este sitio. Ve a por provisiones y espérame a la salida del pueblo. Esa bruja se va a enterar.
+Lan'tek: *Sonríe* Ah, cuánto te echaba de menos.
+Lan'tek: Te veré en una hora. 
+do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
+=> check_tome
