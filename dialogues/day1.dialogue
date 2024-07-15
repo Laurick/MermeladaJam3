@@ -184,7 +184,7 @@ Columbo: ¡Pues claro que quiero pelo!
  
 ~ Columbo_correct
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
-do show_chartacter("Columbo")
+do show_chartacter("Columbo_Pelo")
 do Audio.play_music_by_path("res://sounds/Cabeza dedo.mp3")
 Columbo: ¡Ahí estás!
 {{player_name}}: ...

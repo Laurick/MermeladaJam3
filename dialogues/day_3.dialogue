@@ -1,19 +1,19 @@
 ~ start_of_day_3
 
-{{player_name}}: *Suspiras* Tercer día de trabajo y ya quiero tirarme por un puente.
+{{player_name}}: *suspiras* Tercer día de trabajo y ya quiero tirarme por un puente.
 {{player_name}}: La atención al público es una cosa que no recomiendo a nadie.
 {{player_name}}: Pero bueno, hay que comer y pagar las facturas, ¿verdad?
 {{player_name}}: ...
 {{player_name}}: A quién pretendo engañar, esto es una miseria.
 {{player_name}}: ¡Pero bueno! Voy a colocar la mercancía de hoy y a abrir la tienda.
-{{player_name}}: *Levantas el puñito* ¡Allé voy!
+{{player_name}}: *levantas el puñito* ¡Allé voy!
 
 ~ Dogu_start
 do Audio.play_sfx("567251__iwanplays__stones-falling.wav")
 {{player_name}}: ¡Buenos...!
 do show_chartacter("Dogu")
 do new_colosus("Dogu")
-{{player_name}}: ... días.
+{{player_name}}: ...días.
 {{player_name}}: ¿Está usted bien?
 do Audio.play_music_by_path("res://sounds/Dogu.mp3")
 Dogū: Sí, sí. Esto es el pan de cada día.
@@ -21,7 +21,7 @@ Dogū: Soy un poco patose.
 Dogū: Lamento el jarrón. Se lo pagaré.
 {{player_name}}:  No se preocupe. Creo que nadie se dará cuenta de que falta.
 Dogū:  Eres muy amable.
-{{player_name}}: *Sonríes* Bueno, ¿en qué puedo ayudarle?
+{{player_name}}: *sonríes* Bueno, ¿en qué puedo ayudarle?
 Dogū: Verás, quiero cambiar mi cuerpo.
 {{player_name}}: ...
 {{player_name}}: Esto es una tienda de rocaterapia, ¿quizá necesite ir al escultor?
@@ -39,13 +39,13 @@ Dogū: Me da lo mismo mientras sea color tierra.
 => END
 
 ~ error_spell
-{{player_name}}: No... debería entregar DOS runas y UNA piedra para ayudar correctamente.
+{{player_name}}: No... debería entregar DOS runas y UNA piedra para ayudar correctamente
 ~ continue_for_riddle
 => END
 
 
 ~ Dogu_correct
-do show_chartacter("Dogu")
+do show_chartacter("Dogu_Diff_Material")
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do Audio.play_music_by_path("res://sounds/Dogu.mp3")
 Dogū: Ah, aquí estás.
@@ -55,7 +55,7 @@ Dogū: En realidad, solo quería darte las gracias por darme la piedra. Era just
 {{player_name}}: Vaya, me alegro mucho de haber acertado.
 Dogū: Ahora tengo un color tierra en-vi-di-a-ble.
 Dogū: Todo el mundo querrá ser como yo.
-{{player_name}}: *Se ríe* Marcar tendencia es bueno. (Supongo).
+{{player_name}}: *se ríe* Marcar tendencia es bueno. (Supongo).
 Dogū: ¡Ya lo creo que sí!
 Dogū: Voy a ir a casa para poner una buena reseña en la web. ¡Hasta luego!
 {{player_name}}: Muchas gracias.
@@ -72,7 +72,7 @@ do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
 do Audio.play_music_by_path("res://sounds/Dogu.mp3")
 Dogū: Ah, aquí estás.
 {{player_name}}: Oh, es usted.
-{{player_name}}: ¿Puedo ayudarle en...? 
+{{player_name}}: ¿Puedo ayudarle en..? 
 {{player_name}}: ...
 {{player_name}}: ¿Qué lleva puesto?
 Dogū: ¡Una sábana!
@@ -111,18 +111,18 @@ Lan'tek: Ahora me tuteas. ¿Acaso me recuerdas?
 Lan'tek: ¿Eso crees? Lo cierto es que me gustaría ver cómo lo intentas. Sobre todo con ese... cuerpo tan poco práctico que tienes.
 {{player_name}}: ¿Qué estás insinuando?
 Lan'tek: Que el cuerpo que tenías antes era mucho más... ágil.
-{{player_name}}: *Entrecierras los ojos* Basta ya. ¿De qué me conoces?
+{{player_name}}: *entrecierras los ojos* Basta ya. ¿De qué me conoces?
 Lan'tek: ...
 Lan'tek: Eras mi mejor [if Global.gender == 0]amigo[/if][if Global.gender == 1]amiga[/if][if Global.gender == 2]amigue[/if].
 {{player_name}}: ¿En serio? Permíteme que lo dude. No creo que me hiciera [if Global.gender == 0]amigo[/if][if Global.gender == 1]amiga[/if][if Global.gender == 2]amigue[/if] de alguien como tú.
-Lan'tek: *Se ríe*
+Lan'tek: *se ríe*
 {{player_name}}: ...
 {{player_name}}: Es una broma.
 Lan'tek: No, no lo es. Llevamos viajando muchos años, somos un buen equipo.
 {{player_name}}: ...
 {{player_name}}: Mientes.
-Lan'tek: *Se encoge de hombros* Como quieras.
-Lan'tek: *Echa un vistazo a su alrededor* Veo que te ha llegado más mercancía.
+Lan'tek: *se encoge de hombros* Como quieras.
+Lan'tek: *echa un vistazo a su alrededor* Veo que te ha llegado más mercancía.
 {{player_name}}: Eso parece, sí.
 Lan'tek: Hmm.
 Lan'tek: Me llevo esta.
@@ -157,17 +157,17 @@ Chancay: Hola.
 Chancay: ...
 Chancay: No lo sé. No parece que tengas mucha idea de cómo llevar este sitio.
 {{player_name}}: ...
-{{player_name}}: *Sonríes* Bueno, por suerte quien lo decide son mis jefes. (Lo que me faltaba para terminar el día, la soberbia personifcada).
+{{player_name}}: *sonríes* Bueno, por suerte quien lo decide son mis jefes. (Lo que me faltaba para terminar el día, la soberbia personifcada).
 Chancay: O igual no tenían a nadie más.
-Chancay: *Suspira* En fin. Estoy buscando algo para un problema que tengo.
+Chancay: *suspira* En fin. Estoy buscando algo para un problema que tengo.
 {{player_name}}: Y, ¿de qué se trata ese problema?
 Chancay: [font_size={38}]Quería [font_size={36}]la [font_size={34}]piedra [font_size={32}]y [font_size={30}]las [font_size={28}]runas [font_size={26}]adecuadas [font_size={24}]para [font_size={22}]poder [font_size={20}]ser [font_size={18}]mucho [font_size={16}]más [font_size={14}]alta.[/font_size]
 {{player_name}}: ...
 {{player_name}}: Perdone, no he oído bien lo que ha dicho.
-Chancay: *Masculla una maldición* ¡Que quiero ser más alta!
+Chancay: *masculla una maldición* ¡Que quiero ser más alta!
 {{player_name}}: Oh.
 {{player_name}}: (¿Querrá la Luna?) Bueno, *te aclaras la garganta* yo te veo muy bien de altura. 
-Chancay: *Resopla y te mira con condescendencia* Nadie ha pedido tu opinión.
+Chancay: *resopla y te mira con condescendencia* Nadie ha pedido tu opinión.
 Chancay: Tan solo búscame algo que me haga más alta.
 {{player_name}}: (Menos humos, señora). ¿Cuánto más de altura?
 Chancay: No sé, ¿te parecen bien cuarenta y siete metros?
@@ -228,7 +228,7 @@ do Audio.stop_music()
 
 ~ Chancay_end
 {{player_name}}: Aquí tiene. Seguro que está a la...
-Chancay: *Te quita la piedra de las manos* Déjame ver.
+Chancay: *te quita la piedra de las manos* Déjame ver.
 Chancay: ...
 Chancay: Bueno, parece que está bien.
 Chancay: ¡Más te vale que funcione!
@@ -237,10 +237,10 @@ do Audio.stop_music()
 {{player_name}}: Buenas tardes a ti también, eh. 
 
 ~ Tome
-{{player_name}}: *Suspiras*
+{{player_name}}: *suspiras*
 {{player_name}}: Está siendo el día más largo de esta semana. De verdad, solo quiero irme a mi casa.
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
-{{player_name}}: ¡Buenas t...!
+{{player_name}}: ¡Buenas t..!
 {{player_name}}: ¡No, largo!
 do show_chartacter("Tome")
 do Audio.play_music_by_path("res://sounds/Enanodia3.mp3")
@@ -283,11 +283,11 @@ Tomé: ¡No, no!
 Tomé: Si me das una última muestra gratis, ¡prometo no volver!
 {{player_name}}: ...
 {{player_name}}: ...
-{{player_name}}: ((¿Doy una piedra de manera gratuita?))
+{{player_name}}: ((¿Doy piedra de manera gratuita?))
 do show_chartacter("Tome")
 - Sí (Darle la muestra gratis).
 	do Global.change_affection_tome_by(-1)
-	{{player_name}}: *Apartas la escoba* Está bien. Pero como vuelvas por aquí, te echo a escobazos.
+	{{player_name}}: *apartas la escoba* Está bien. Pero como vuelvas por aquí, te echo a escobazos.
 	Tomé: ¡Mil gracias!
 	Tomé: Prometo no vol...
 	{{player_name}}: QUE TE VAYAS YA, PESAO.

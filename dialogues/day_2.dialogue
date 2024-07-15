@@ -172,7 +172,7 @@ Tlatoani: Ah.
 
 ~ Tlatoani_correct
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
-do show_chartacter("Tlatoani")
+do show_chartacter("Tlatoani_Feliz")
 do Audio.play_music_by_path("res://sounds/Tlatoani.mp3")
 {{player_name}}: ¿Hm? ¿Quién me tira de la túnica?
 Tlatoani: *Te entrega una tablilla*
