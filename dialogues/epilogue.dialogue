@@ -30,7 +30,7 @@ do show_chartacter("Djinn")
 	do Audio.play_music_by_path("res://sounds/Carneobarro.mp3")
 	{{player_name}}: Vale. Me fiaré de lo que dices. Si me muero vendré a atormentarte durante el resto de tu miserable vida.
 	Lan'tek: Correré el riesgo.
-	=> black_fade
+	=> black_fade_start_1
 
 - ¿Quieres seguir como hasta ahora? 
 	do Global.take_stone = false

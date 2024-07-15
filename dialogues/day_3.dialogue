@@ -91,6 +91,7 @@ do Audio.play_sfx("351565__bertrof__game-sound-incorrect-organic-violin.wav")
 => check_chancay 
 
 ~ Dogu_end
+do show_chartacter("Dogu")
 {{player_name}}: Creo que esto solucionará el problema de su aspecto.
 Dogū: ¡Oh! Tiene buena pinta. Ahora mismo voy a ponerla en práctica.
 {{player_name}}: Vaya con cuidado y no...
