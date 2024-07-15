@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://components/RuneBookItem.gd" id="1_dvt17"]
 [ext_resource type="Texture2D" uid="uid://b5y1224xn0xmj" path="res://icon.svg" id="2_cmmqy"]
-[ext_resource type="LabelSettings" uid="uid://ceoaqidwo70xd" path="res://theme/text_label_settings.tres" id="3_y5q32"]
-[ext_resource type="LabelSettings" uid="uid://o8vc8pq0t1no" path="res://theme/description_label_settings.tres" id="4_d7mt7"]
+[ext_resource type="LabelSettings" uid="uid://dhtvba1f1kock" path="res://theme/title__book_label_settings.tres" id="3_gip4t"]
+[ext_resource type="LabelSettings" uid="uid://bv8u170pit58j" path="res://theme/text_book_label_settings.tres" id="4_amjr5"]
 
 [node name="RuneBookItem" type="Control"]
 custom_minimum_size = Vector2(0, 64)
@@ -35,9 +35,10 @@ theme_override_constants/separation = 1
 
 [node name="TitleRuneLabel" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-label_settings = ExtResource("3_y5q32")
+theme_override_colors/font_color = Color(0.184314, 0.105882, 0.0509804, 1)
+label_settings = ExtResource("3_gip4t")
 
 [node name="DescriptionRuneLabel" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 12
-label_settings = ExtResource("4_d7mt7")
+label_settings = ExtResource("4_amjr5")

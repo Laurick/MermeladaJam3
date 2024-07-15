@@ -64,13 +64,13 @@ func title_pased(title:String):
 		runes_selected = []
 	elif title == "continue_for_riddle":
 		give_button.visible = true
-	elif title == "black_fade":
-		fader.fade_in()
-		await get_tree().create_timer(2).timeout
-		fader.fade_out()
 	elif title == "end_game":
 		Global.unlock_achivement("Al fin")
 		game_over()
+	elif title.begins_with("black_fade_start"):
+		fader.fade_in()
+		await get_tree().create_timer(2).timeout
+		fader.fade_out()
 	elif title.ends_with("_correct"):
 		Global.unlock_achivement(title.replace("_correct", ""))
 	elif title.begins_with("start_of_day"):

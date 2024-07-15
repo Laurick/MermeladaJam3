@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://components/StoneBookItem.gd" id="1_xhqg8"]
 [ext_resource type="Texture2D" uid="uid://beddhs43sdka1" path="res://images/Logro_Base_1.png" id="2_ry2wk"]
-[ext_resource type="LabelSettings" uid="uid://ceoaqidwo70xd" path="res://theme/text_label_settings.tres" id="3_wikdj"]
-[ext_resource type="LabelSettings" uid="uid://o8vc8pq0t1no" path="res://theme/description_label_settings.tres" id="4_vfil2"]
+[ext_resource type="LabelSettings" uid="uid://dhtvba1f1kock" path="res://theme/title__book_label_settings.tres" id="3_3sm4o"]
+[ext_resource type="LabelSettings" uid="uid://bv8u170pit58j" path="res://theme/text_book_label_settings.tres" id="4_pshcf"]
 
 [node name="StoneBookItem" type="Control"]
 custom_minimum_size = Vector2(0, 64)
@@ -43,9 +43,11 @@ theme_override_constants/separation = 1
 
 [node name="TitleStoneLabel" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-label_settings = ExtResource("3_wikdj")
+theme_override_colors/font_color = Color(0.184314, 0.105882, 0.0509804, 1)
+label_settings = ExtResource("3_3sm4o")
 
 [node name="DescriptionStoneLabel" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.184314, 0.105882, 0.0509804, 1)
 theme_override_font_sizes/font_size = 12
-label_settings = ExtResource("4_vfil2")
+label_settings = ExtResource("4_pshcf")
