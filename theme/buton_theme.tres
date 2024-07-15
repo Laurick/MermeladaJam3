@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=10 format=3 uid="uid://dc6dlmiffd7ot"]
+[gd_resource type="Theme" load_steps=23 format=3 uid="uid://dc6dlmiffd7ot"]
 
 [ext_resource type="FontFile" uid="uid://banwifxbjtnla" path="res://images/UI/fonts/Skranji-Bold.ttf" id="1_6r05i"]
 [ext_resource type="Texture2D" uid="uid://blss6p11qvqdy" path="res://images/UI/sprites/button_stone_512x128 _hover.png" id="2_3ibs7"]
@@ -12,6 +12,9 @@ texture_margin_left = 10.0
 texture_margin_top = 10.0
 texture_margin_right = 10.0
 texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2tkfs"]
+texture = ExtResource("2_3ibs7")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dvbln"]
 texture = ExtResource("2_3ibs7")
@@ -34,6 +37,42 @@ texture_margin_top = 10.0
 texture_margin_right = 10.0
 texture_margin_bottom = 10.0
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xq6l7"]
+texture = ExtResource("2_dgduj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_np7ep"]
+texture = ExtResource("2_3ibs7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fu020"]
+texture = ExtResource("2_3ibs7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0vnwj"]
+texture = ExtResource("2_3ibs7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cuwe0"]
+texture = ExtResource("3_r0guw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7tork"]
+texture = ExtResource("4_7fbcb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bjnet"]
+texture = ExtResource("2_dgduj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ki0pf"]
+texture = ExtResource("2_3ibs7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b573p"]
+texture = ExtResource("4_7fbcb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rdt00"]
+texture = ExtResource("4_7fbcb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eeoca"]
+texture = ExtResource("3_r0guw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tjtep"]
+texture = ExtResource("4_7fbcb")
+
 [resource]
 Button/colors/font_color = Color(1, 0.933333, 0.839216, 1)
 Button/colors/font_hover_color = Color(0.92549, 0.807843, 0.631373, 1)
@@ -44,6 +83,19 @@ Button/constants/outline_size = 6
 Button/font_sizes/font_size = 34
 Button/fonts/font = ExtResource("1_6r05i")
 Button/styles/disabled = SubResource("StyleBoxTexture_rpxa2")
+Button/styles/focus = SubResource("StyleBoxTexture_2tkfs")
 Button/styles/hover = SubResource("StyleBoxTexture_dvbln")
 Button/styles/normal = SubResource("StyleBoxTexture_wmbhg")
 Button/styles/pressed = SubResource("StyleBoxTexture_kpkt8")
+CheckBox/styles/disabled = SubResource("StyleBoxTexture_xq6l7")
+CheckBox/styles/focus = SubResource("StyleBoxTexture_np7ep")
+CheckBox/styles/hover = SubResource("StyleBoxTexture_fu020")
+CheckBox/styles/hover_pressed = SubResource("StyleBoxTexture_0vnwj")
+CheckBox/styles/normal = SubResource("StyleBoxTexture_cuwe0")
+CheckBox/styles/pressed = SubResource("StyleBoxTexture_7tork")
+CheckButton/styles/disabled = SubResource("StyleBoxTexture_bjnet")
+CheckButton/styles/focus = SubResource("StyleBoxTexture_ki0pf")
+CheckButton/styles/hover = SubResource("StyleBoxTexture_b573p")
+CheckButton/styles/hover_pressed = SubResource("StyleBoxTexture_rdt00")
+CheckButton/styles/normal = SubResource("StyleBoxTexture_eeoca")
+CheckButton/styles/pressed = SubResource("StyleBoxTexture_tjtep")

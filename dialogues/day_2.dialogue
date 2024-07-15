@@ -41,7 +41,7 @@ Tiki: ¿Tienes por ahí algo que me haga el apaño? Llevo unos días así y esto
 
 ~ Tiki_correct
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
-do show_chartacter("Tiki")
+do show_chartacter("Tiki_Con_Cara")
 do Audio.play_music_by_path("res://sounds/Tiki media cara.mp3")
 Tiki: ¡Eh! Oye!
 {{player_name}}: (Verás tú, otro rapapolvo). ¿sí?

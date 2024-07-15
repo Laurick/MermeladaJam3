@@ -84,7 +84,7 @@ Venus: No tendrás algo para ello, ¿verdad?
 
 ~ Venus_correct
 do Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
-do show_chartacter("Venus")
+do show_chartacter("Venus_Sin_Humedades")
 do Audio.play_music_by_path("res://sounds/Yaya.mp3")
 Venus: ¡Oye! Menos mal que he llegado antes de que cerrases la tienda. 
 {{player_name}}: ¿En qué puedo ayudarle? (Por favor, que sea rápido, que salgo en cinco minutos).
