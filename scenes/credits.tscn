@@ -31,7 +31,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.223529, 0.14902, 0.027451, 0.454902)
+color = Color(0.933333, 0.854902, 0.717647, 0.0980392)
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 layout_mode = 2

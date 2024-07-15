@@ -95,8 +95,8 @@ func game_over():
 	fader.fade_in()
 	await get_tree().create_timer(2).timeout
 	Audio.play_sfx("195309__the_very_real_horst__tibetan-silver-bells.wav")
-	await get_tree().create_timer(1).timeout
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
+	await get_tree().create_timer(3).timeout
+	get_tree().change_scene_to_file("res://scenes/credits.tscn")
 
 func show_name_edit():
 	var edit_instance = edit_scene.instantiate()
@@ -259,7 +259,7 @@ func show_achivement(achivement):
 	Audio.play_sfx("427570__maria_mannone__flute-a-short-sequence.wav")
 	trophy_achivements.setup(achivement)
 	await get_tree().create_tween().tween_property(trophy_achivements, "position", Vector2(trophy_achivements.position.x,trophy_achivements.position.y+150), 0.5).finished
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(5).timeout
 	get_tree().create_tween().tween_property(trophy_achivements, "position", Vector2(trophy_achivements.position.x,trophy_achivements.position.y-150), 0.2).finished
 
 func show_chartacter(name:String):
