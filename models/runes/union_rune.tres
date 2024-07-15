@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Rune" load_steps=3 format=3 uid="uid://dee5d8uemmfrf"]
 
 [ext_resource type="Script" path="res://models/runes/rune.gd" id="1_3npqb"]
-[ext_resource type="Texture2D" path="res://images/rune_H.tres" id="1_vdybo"]
+[ext_resource type="Texture2D" uid="uid://rec1l8aetrw" path="res://images/Runa-Union.png" id="1_ljmhs"]
 
 [resource]
 script = ExtResource("1_3npqb")
-name = "Unión."
-description = "Runa para aquellas cosas que\\nno deberían estar separadas."
-image = ExtResource("1_vdybo")
+name = "Unión"
+description = ""
+image = ExtResource("1_ljmhs")

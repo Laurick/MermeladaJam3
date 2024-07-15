@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Rune" load_steps=3 format=3 uid="uid://7idqp2bxie3c"]
 
-[ext_resource type="Texture2D" path="res://images/rune_G.tres" id="1_ls3by"]
+[ext_resource type="Texture2D" uid="uid://3eji40y5xe87" path="res://images/Runa-Brillante.png" id="1_6h3at"]
 [ext_resource type="Script" path="res://models/runes/rune.gd" id="2_ci5nq"]
 
 [resource]
 script = ExtResource("2_ci5nq")
-name = "Sirius"
-description = "La runa más brillante."
-image = ExtResource("1_ls3by")
+name = "Brillante"
+description = ""
+image = ExtResource("1_6h3at")

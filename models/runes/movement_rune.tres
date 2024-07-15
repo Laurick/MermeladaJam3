@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Rune" load_steps=3 format=3 uid="uid://d1n4uu1um0ud3"]
 
-[ext_resource type="Texture2D" path="res://images/rune_E.tres" id="1_2rg0o"]
 [ext_resource type="Script" path="res://models/runes/rune.gd" id="1_k74x4"]
+[ext_resource type="Texture2D" uid="uid://kne6vhp2fyl2" path="res://images/Runa-Movimiento.png" id="1_t1wrh"]
 
 [resource]
 script = ExtResource("1_k74x4")
-name = "Movimiento. "
-description = "La runa para no\\nquedarse quieto. "
-image = ExtResource("1_2rg0o")
+name = "Movimiento"
+description = ""
+image = ExtResource("1_t1wrh")

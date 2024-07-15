@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Rune" load_steps=3 format=3 uid="uid://gnug68tbw1a1"]
 
-[ext_resource type="Texture2D" uid="uid://drha2cwukli3p" path="res://images/rune_J.tres" id="1_6r8fx"]
+[ext_resource type="Texture2D" uid="uid://csayr7map7tdy" path="res://images/Runa-Intercambio.png" id="1_wx8fl"]
 [ext_resource type="Script" path="res://models/runes/rune.gd" id="2_1xxh1"]
 
 [resource]
 script = ExtResource("2_1xxh1")
 name = "Intercambio"
-description = "La runa de intercambio"
-image = ExtResource("1_6r8fx")
+description = ""
+image = ExtResource("1_wx8fl")

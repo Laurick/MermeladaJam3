@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_0l6xb")
 name = "Cuarzo azul"
-description = "Se respira tranquilidad y calma a su alrededor."
+description = "Su aspecto recuerda al cielo despejado, lo que calma todo a su alrededor."
 image = ExtResource("1_pljob")
